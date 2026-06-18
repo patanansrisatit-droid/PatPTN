@@ -608,6 +608,19 @@ function redrawAllCanvasesOnScreen() {
     canvases.forEach(c => redrawCanvas(c));
 }
 
+function syncAllCanvasesById(elementId, sourceCanvas) {
+    const normId = getNormalizedId(elementId);
+    document.querySelectorAll(`canvas[data-element-id]`).forEach(cvs => {
+        if (cvs === sourceCanvas) return;
+        const cId = cvs.getAttribute('data-element-id');
+        if (cId === elementId || getNormalizedId(cId) === normId) {
+            cvs.width  = sourceCanvas.width;
+            cvs.height = sourceCanvas.height;
+            redrawCanvas(cvs);
+        }
+    });
+}
+
 function handleVectorEraser(canvas, elementId, ex, ey) {
     const radius = toolSettings.eraser.size;
     let isMutated = false;
@@ -796,6 +809,9 @@ function openZoom(imgUrl, elementId) {
     if (zoomedImg.complete) {
         setTimeout(setupZoomCanvas, 60);
     }
+
+    hideViewportControls();
+    viewportReset();
 
     if (!viewport._panSetup) {
         setupPan();
@@ -1235,6 +1251,7 @@ function moveQuestion(step) {
 
 const viewportWorkspace = document.getElementById('viewport-workspace');
 const zoomableContent = document.getElementById('zoomable-content');
+const viewportControls = document.getElementById('viewport-controls');
 
 function viewportApplyTransform() {
     zoomableContent.style.transform = `translate(${panX}px, ${panY}px) scale(${zoomScale})`;
@@ -1280,7 +1297,12 @@ function viewportReset() {
     zoomScale = 1; panX = 0; panY = 0;
     viewportApplyTransform();
 }
-{
+
+function initViewportControls() {
+    if (!viewportWorkspace) return;
+
+    const contentArea = document.getElementById('content-area');
+
     function startPan(e) {
         if (e.button === 2 || (e.button === 0 && (spaceHeld || currentMode === 'mouse'))) {
             if (e.button === 0 && currentMode === 'mouse') {
@@ -1319,6 +1341,14 @@ function viewportReset() {
     if (contentArea) contentArea.addEventListener('mousedown', startPan);
     window.addEventListener('mousemove', onPan);
     window.addEventListener('mouseup', endPan);
+
+    viewportWorkspace.addEventListener('wheel', e => {
+        if (e.ctrlKey || e.metaKey) {
+            e.preventDefault();
+            const delta = e.deltaY > 0 ? -0.1 : 0.1;
+            viewportSetScale(zoomScale + delta, e.clientX, e.clientY);
+        }
+    }, { passive: false });
 
     viewportWorkspace.addEventListener('touchstart', e => {
         if (e.touches.length === 2) {
@@ -1368,4 +1398,13 @@ function viewportReset() {
     viewportWorkspace.addEventListener('contextmenu', e => {
         e.preventDefault();
     });
+}
+
+function showViewportControls() {
+    if (viewportControls) viewportControls.classList.remove('hidden');
+    if (window.lucide) lucide.createIcons();
+}
+
+function hideViewportControls() {
+    if (viewportControls) viewportControls.classList.add('hidden');
 }
