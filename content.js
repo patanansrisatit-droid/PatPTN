@@ -1558,7 +1558,7 @@ const examPackages = [
             }
         ]
     },
-    { // ฟ้าม่วง LC
+    { // ฟ้าม่วง LC Checked!
         "setId": "ฟ้าม่วง LC",
         "setTitle": "ฟ้าม่วง LC2",
         "setCover": "./assets/cover/LC-Test-cover-ฟ้าม่วง-2-update.webp",

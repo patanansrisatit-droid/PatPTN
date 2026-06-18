@@ -9,6 +9,25 @@ i[data-lucide] {
 #tutor-screen.layout-vertical #content-area {
     flex-direction: row;
 }
+#tutor-screen.layout-vertical #image-gallery {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#tutor-screen.layout-vertical #image-gallery .relative {
+    max-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#tutor-screen.layout-vertical #image-gallery .relative img {
+    max-height: calc(100vh - 200px);
+    width: auto;
+    object-fit: contain;
+}
 #tutor-screen.layout-vertical #left-panel {
     display: block;
     width: 60%;
@@ -51,7 +70,23 @@ i[data-lucide] {
     flex: 0 0 auto;
     height: 400px;
     width: auto;
-    aspect-ratio: 3 / 1;
+    align-items: center;
+    justify-content: center;
+}
+#tutor-screen.layout-horizontal #images-area.single-image {
+    justify-content: center !important;
+}
+#tutor-screen.layout-horizontal #images-area.single-image .relative {
+    flex: 0 0 auto;
+}
+#global-transcript-area {
+    width: 100%;
+    background: #fefce8;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+#global-transcript-area:not(.hidden) {
+    display: block;
 }
 #tutor-screen.layout-horizontal #images-area .relative img {
     height: 100%;

@@ -160,8 +160,6 @@ function startExam(setId) {
 
         resetAudioPlayer();
         renderQuestion();
-        showViewportControls();
-        viewportReset();
         if (window.lucide) { lucide.createIcons(); }
 }
 function renderExamDashboard() {
@@ -233,8 +231,6 @@ function goHome() {
     const layoutToggle2 = document.getElementById('layout-toggle'); if (layoutToggle2) layoutToggle2.classList.add('hidden');
     document.body.className = "bg-slate-900 text-slate-800 min-h-screen flex flex-col justify-center items-center overflow-hidden font-sans antialiased";
     closeZoom();
-    hideViewportControls();
-    viewportReset();
     resetAudioPlayer();
     if (window.lucide) { lucide.createIcons(); }
     }
@@ -775,9 +771,9 @@ function openZoom(imgUrl, elementId) {
     currentZoomElementId = elementId;
     const zoomedImg = document.getElementById('zoomed-image');
     document.getElementById('minimap-img').src = imgUrl;
-    zoomScale = 2; panX = 0; panY = 0;
-    document.getElementById('zoom-slider').value = 2;
-    document.getElementById('zoom-val').innerText = '2.0x';
+    zoomScale = 1.5; panX = 0; panY = 0;
+    document.getElementById('zoom-slider').value = 1.5;
+    document.getElementById('zoom-val').innerText = '1.5x';
     document.getElementById('mini-map-container').classList.remove('hidden');
     updateZoomTransform();
 
@@ -811,8 +807,6 @@ function openZoom(imgUrl, elementId) {
     }
 
     hideViewportControls();
-    viewportReset();
-
     if (!viewport._panSetup) {
         setupPan();
         viewport._panSetup = true;
@@ -878,12 +872,20 @@ function renderQuestion() {
 
     const ap = document.getElementById('audio-player');
     const ac = document.getElementById('audio-container');
-    const qAudio = screenQuestions.find(q => q.audioUrl?.trim());
+    // ใช้ข้อมูลจาก question แรกใน group สำหรับโหมด horizontal
+    const refQ = screenQuestions[0];
+    const qAudio = refQ?.audioUrl?.trim() ? refQ : screenQuestions.find(q => q.audioUrl?.trim());
     if (qAudio) { ap.src = qAudio.audioUrl; ac.classList.remove('hidden'); ap.load(); }
     else { ac.classList.add('hidden'); }
 
-        let allImages = [...new Set(screenQuestions.flatMap(q => q.images || []))];
-        carouselImages = allImages;
+    let allImages = [];
+    if (isHorizontal) {
+        // โหมด horizontal: รับรูปจาก question แรกใน group เท่านั้น
+        if (refQ?.images?.length) allImages = [...new Set(refQ.images)];
+    } else {
+        allImages = [...new Set(screenQuestions.flatMap(q => q.images || []))];
+    }
+    carouselImages = allImages;
 
     const gallery = document.getElementById('image-gallery');
     const imagesArea = document.getElementById('images-area');
@@ -891,7 +893,7 @@ function renderQuestion() {
                 const renderImage = (url, i) => {
                 const elementId = `img-${currentIdx}-${i}`;
                 return `
-                    <div class="relative rounded-xl bg-white border border-slate-200 shadow-sm ${isHorizontal ? 'flex-shrink-0' : 'w-full mb-4'}">
+                    <div class="relative rounded-xl bg-white border border-slate-200 shadow-sm ${isHorizontal ? 'flex-shrink-0 flex items-center justify-center' : 'w-full mb-4'}">
                         <img src="${url}" class="${isHorizontal ? 'h-[400px] w-auto' : 'w-full max-h-[65vh]'} object-contain block select-none pointer-events-none">
                         <canvas data-element-id="${elementId}" class="gallery-canvas absolute top-0 left-0 w-full h-full z-10"></canvas>
                         <div class="absolute top-2 right-2 z-[99999]">
@@ -902,16 +904,45 @@ function renderQuestion() {
                     </div>`;
     };
 
+    const globalTranscriptArea = document.getElementById('global-transcript-area');
+
     if (isHorizontal) {
         gallery.innerHTML = '';
         imagesArea.innerHTML = allImages.map(renderImage).join('');
         imagesArea.classList.remove('hidden');
         imagesArea.style.display = 'flex';
+        if (allImages.length === 1) {
+            imagesArea.classList.add('single-image');
+        } else {
+            imagesArea.classList.remove('single-image');
+        }
+
+        // Global transcript: find first question with transcript
+        const firstTranscriptQ = screenQuestions.find(q => q.transcript?.trim());
+        if (firstTranscriptQ) {
+            const isOn = !!transcriptVisible[firstTranscriptQ.id];
+            const btnLabel = isOn ? 'Hide Transcript' : 'Show Transcript';
+            const btnIcon = isOn ? 'eye-off' : 'eye';
+            globalTranscriptArea.innerHTML = `
+                <div class="px-6 py-3">
+                    <button id="btn-global-transcript" onpointerdown="event.stopPropagation(); event.preventDefault(); toggleGlobalTranscript()" class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold text-sm px-4 py-2.5 rounded-xl shadow-md shadow-yellow-200 transition flex items-center justify-center gap-2" style="position:relative;z-index:110;pointer-events:auto">
+                        <i data-lucide="${btnIcon}" class="w-4 h-4"></i> ${btnLabel}
+                    </button>
+                    <div id="global-transcript-box" class="${isOn ? '' : 'hidden'} mt-3 bg-yellow-50 border border-slate-200 p-4 rounded-2xl text-slate-700 text-base whitespace-pre-line text-center">${firstTranscriptQ.transcript}</div>
+                </div>
+            `;
+            globalTranscriptArea.classList.toggle('hidden', false);
+        } else {
+            globalTranscriptArea.classList.add('hidden');
+            globalTranscriptArea.innerHTML = '';
+        }
     } else {
         gallery.innerHTML = allImages.map(renderImage).join('');
         imagesArea.classList.add('hidden');
         imagesArea.innerHTML = '';
         imagesArea.style.display = 'none';
+        globalTranscriptArea.classList.add('hidden');
+        globalTranscriptArea.innerHTML = '';
     }
 
 
@@ -1021,27 +1052,35 @@ function generateQuestionHTML(q) {
     const transcriptToggleLabel = transcriptShown ? 'Hide Transcript' : 'Show Transcript';
     const transcriptToggleIcon = transcriptShown ? 'eye-off' : 'eye';
     const transcriptToggleClass = transcriptShown
-        ? `w-full bg-transparent hover:bg-slate-100 text-slate-400 hover:text-slate-600 font-medium ${isH ? 'text-sm px-4 py-3' : 'text-base px-5 py-3'} rounded-xl transition flex items-center gap-1 mb-2 border border-slate-200`
-        : `w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold ${isH ? 'text-sm px-4 py-3' : 'text-base px-5 py-3'} rounded-xl shadow-md shadow-yellow-200 transition flex items-center gap-1 mb-2`;
+        ? `w-full bg-transparent hover:bg-slate-100 text-slate-400 hover:text-slate-600 font-medium ${isH ? 'text-sm px-4 py-3' : 'text-base px-5 py-3'} rounded-xl transition flex items-center gap-1 border border-slate-200`
+        : `w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold ${isH ? 'text-sm px-4 py-3' : 'text-base px-5 py-3'} rounded-xl shadow-md shadow-yellow-200 transition flex items-center gap-1`;
     const toggleLabel = hideChoices ? 'Show Options' : 'Hide Options';
     const toggleIcon = hideChoices ? 'eye' : 'eye-off';
     const toggleClass = hideChoices
-        ? `w-full bg-red-600 hover:bg-red-700 text-white font-bold ${isH ? 'text-sm px-4 py-3' : 'text-base px-5 py-3'} rounded-xl shadow-md shadow-red-200 transition flex items-center gap-1 mb-2`
-        : `w-full bg-transparent hover:bg-slate-100 text-slate-400 hover:text-slate-600 font-medium ${isH ? 'text-sm px-4 py-3' : 'text-base px-5 py-3'} rounded-xl transition flex items-center gap-1 mb-2 border border-slate-200`;
+        ? `w-full bg-red-600 hover:bg-red-700 text-white font-bold ${isH ? 'text-sm px-4 py-3' : 'text-base px-5 py-3'} rounded-xl shadow-md shadow-red-200 transition flex items-center gap-1`
+        : `w-full bg-transparent hover:bg-slate-100 text-slate-400 hover:text-slate-600 font-medium ${isH ? 'text-sm px-4 py-3' : 'text-base px-5 py-3'} rounded-xl transition flex items-center gap-1 border border-slate-200`;
+
+    const btnGap = isH ? 'gap-2' : 'gap-3';
+    const optionsBtnHTML = q.hideOptions ? `<button id="btn-options-${q.id}" onpointerdown="event.stopPropagation(); event.preventDefault(); toggleOptions(${q.id});" class="${toggleClass}" style="position:relative;z-index:110;pointer-events:auto"><i data-lucide="${toggleIcon}" class="w-4 h-4"></i> ${toggleLabel}</button>` : '';
+    // In horizontal mode, transcript is shown globally above questions, not per-question
+    const showTranscriptPerQuestion = q.transcript && !isH;
+    const transcriptBtnHTML = showTranscriptPerQuestion ? `<button id="btn-transcript-${q.id}" onpointerdown="event.stopPropagation(); event.preventDefault(); toggleTranscript(${q.id});" class="${transcriptToggleClass}" style="position:relative;z-index:110;pointer-events:auto"><i data-lucide="${transcriptToggleIcon}" class="w-4 h-4"></i> ${transcriptToggleLabel}</button>` : '';
+    const answerBtnHTML = `<button id="btn-answer-${q.id}" onpointerdown="event.stopPropagation(); event.preventDefault(); checkAnswer(${q.id});" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold ${isH ? 'text-sm px-4 py-3' : 'text-base px-5 py-3'} rounded-xl shadow-md shadow-emerald-200 transition flex items-center gap-1" style="position:relative;z-index:110;pointer-events:auto"><i data-lucide="check-check" class="w-4 h-4"></i> Show Answer</button>`;
+
+    // Collect action buttons that exist
+    const actionButtons = [optionsBtnHTML, transcriptBtnHTML, answerBtnHTML].filter(b => b);
 
     return `
         <div class="${isH ? 'text-base' : 'text-lg'} font-bold text-slate-800 leading-snug mb-3">${q.questionText}</div>
-        ${q.hideOptions ? `<button id="btn-options-${q.id}" onpointerdown="event.stopPropagation(); event.preventDefault(); toggleOptions(${q.id});" class="${toggleClass}" style="position:relative;z-index:110;pointer-events:auto"><i data-lucide="${toggleIcon}" class="w-4 h-4"></i> ${toggleLabel}</button>` : ''}
+        ${showTranscriptPerQuestion ? `<div id="transcript-box-${q.id}" class="${transcriptShown ? '' : 'hidden'} mt-3 mb-3 bg-yellow-50 border border-slate-200 p-4 rounded-2xl text-slate-700 text-base whitespace-pre-line">${q.transcript}</div>` : ''}
         <div id="options-wrapper-${q.id}" class="mb-2" style="position:relative;z-index:1">
             <div id="options-container-${q.id}" class="flex flex-col ${isH ? 'gap-3' : 'gap-3'} ${hideChoices ? 'hidden' : ''}">
                 ${optionsMarkup}
             </div>
         </div>
-        ${q.transcript ? `<button id="btn-transcript-${q.id}" onpointerdown="event.stopPropagation(); event.preventDefault(); toggleTranscript(${q.id});" class="${transcriptToggleClass}" style="position:relative;z-index:110;pointer-events:auto"><i data-lucide="${transcriptToggleIcon}" class="w-4 h-4"></i> ${transcriptToggleLabel}</button>` : ''}
-        ${q.transcript ? `<div id="transcript-box-${q.id}" class="${transcriptShown ? '' : 'hidden'} mt-3 mb-3 bg-yellow-50 border border-slate-200 p-4 rounded-2xl text-slate-700 text-base whitespace-pre-line">${q.transcript}</div>` : ''}
-        <button id="btn-answer-${q.id}" onpointerdown="event.stopPropagation(); event.preventDefault(); checkAnswer(${q.id});" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold ${isH ? 'text-sm px-4 py-3' : 'text-base px-5 py-3'} rounded-xl shadow-md shadow-emerald-200 transition flex items-center gap-1 mb-2" style="position:relative;z-index:110;pointer-events:auto">
-            <i data-lucide="check-check" class="w-4 h-4"></i> Show Answer
-        </button>
+        <div class="flex flex-col ${btnGap} mb-2">
+            ${actionButtons.join('\n            ')}
+        </div>
         <div id="explanation-box-${q.id}" class="${explanationVisible[q.id] ? '' : 'hidden'} mt-3 bg-emerald-50 border-l-4 border-emerald-500 p-4 rounded-r-xl text-emerald-800 text-base leading-relaxed shadow-sm"></div>
     `;
 }
@@ -1160,6 +1199,24 @@ function toggleTranscript(qId) {
             classOff: 'w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold {sz} rounded-xl shadow-md shadow-yellow-200 transition flex items-center gap-1 mb-2',
         }
     );
+}
+
+function toggleGlobalTranscript() {
+    const screenQuestions = examScreens[currentIdx];
+    const firstTranscriptQ = screenQuestions.find(q => q.transcript?.trim());
+    if (!firstTranscriptQ) return;
+    const qId = firstTranscriptQ.id;
+    transcriptVisible[qId] = !transcriptVisible[qId];
+    const isOn = transcriptVisible[qId];
+    const box = document.getElementById('global-transcript-box');
+    const btn = document.getElementById('btn-global-transcript');
+    if (box) box.classList.toggle('hidden', !isOn);
+    if (btn) {
+        const icon = isOn ? 'eye-off' : 'eye';
+        const label = isOn ? 'Hide Transcript' : 'Show Transcript';
+        btn.innerHTML = `<i data-lucide="${icon}" class="w-4 h-4"></i> ${label}`;
+        if (window.lucide) lucide.createIcons();
+    }
 }
 
 function jumpToQuestion(index) {
@@ -1304,20 +1361,14 @@ function initViewportControls() {
     const contentArea = document.getElementById('content-area');
 
     function startPan(e) {
-        if (e.button === 2 || (e.button === 0 && (spaceHeld || currentMode === 'mouse'))) {
-            if (e.button === 0 && currentMode === 'mouse') {
-                const tag = e.target.tagName.toLowerCase();
-                if (tag === 'button' || tag === 'input' || tag === 'select' || tag === 'textarea') return;
-                if (e.target.closest('button') || e.target.closest('.question-column')) return;
-                if (e.target.closest('#viewport-controls')) return;
-            }
-            e.preventDefault();
-            isPanning = true;
-            rightClickPanning = e.button === 2;
-            panStartX = e.clientX - panX;
-            panStartY = e.clientY - panY;
-            viewportWorkspace.classList.add('panning');
-        }
+        // เฉพาะ right-click pan เท่านั้น — left-click ไม่ pan (ไม่ให้กระทบ scroll)
+        if (e.button !== 2) return;
+        e.preventDefault();
+        isPanning = true;
+        rightClickPanning = true;
+        panStartX = e.clientX - panX;
+        panStartY = e.clientY - panY;
+        viewportWorkspace.classList.add('panning');
     }
 
     function onPan(e) {
