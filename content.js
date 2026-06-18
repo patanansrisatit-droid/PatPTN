@@ -1563,509 +1563,1519 @@ const examPackages = [
         "setTitle": "ฟ้าม่วง LC2",
         "setCover": "./assets/cover/LC-Test-cover-ฟ้าม่วง-2-update.webp",
         "questions": [
-        {
-            "id": 1,
-            "groupId": "group-1",
-            "transcript": "",
-            "questionText": "",
-            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/1.mp3"],
-            "images": ["./assets/images/ฟ้าม่วง LC2/BP 1.png"],
-            "options": [
-            "She's folding a piece of paper.",
-            "She's smelling flowers in a garden.",
-            "She's holding a book in her hands.",
-            "She's closing up a box."
-            ],
-            "correctAnswer": "C",
-            "explanation": "เพราะภาพเป็นผู้หญิงกำลังถือหนังสืออยู่ในมือ ส่วนข้อ (A) folding แปลว่ากำลังพับ ซึ่งเธอไม่ได้พับกระดาษ (B) smelling แปลว่ากำลังดม ซึ่งเธอไม่ได้ดมดอกไม้ และ (D) closing up แปลว่ากำลังปิด แต่กล่องยังเปิดอยู่",
-            "hideOptions": false
-        },
-        {
-            "id": 2,
-            "groupId": "group-2",
-            "transcript": "",
-            "questionText": "",
-            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/2.mp3"],
-            "images": ["./assets/images/ฟ้าม่วง LC2/BP 2.png"],
-            "options": [
-            "He's looking at a picture.",
-            "She's opening her handbag.",
-            "They're fixing a railing.",
-            "They're walking down some steps."
-            ],
-            "correctAnswer": "D",
-            "explanation": "เพราะภาพเป็นชายหญิงกำลังเดินลงบันได ส่วนข้อ (A) looking at แปลว่ากำลังมอง แต่ผู้ชายกำลังเดินลงบันได (B) opening แปลว่ากำลังเปิด แต่ผู้หญิงไม่ได้เปิดกระเป๋า และ (C) fixing แปลว่ากำลังซ่อม แต่ไม่มีใครซ่อมราวบันได",
-            "hideOptions": false
-        },
-        {
-            "id": 3,
-            "groupId": "group-3",
-            "transcript": "",
-            "questionText": "",
-            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/3.mp3"],
-            "images": ["./assets/images/ฟ้าม่วง LC2/BP 3.png"],
-            "options": [
-            "One of the men is taking off his backpack.",
-            "One of the men is reading a brochure.",
-            "Some people are assembling a table.",
-            "Some people are rearranging chairs."
-            ],
-            "correctAnswer": "B",
-            "explanation": "เพราะภาพมีผู้ชายกำลังอ่านโบรชัวร์ ส่วนข้อ (A) taking off แปลว่ากำลังถอด แต่ไม่ได้ถอดกระเป๋า (C) assembling แปลว่ากำลังประกอบ แต่โต๊ะตั้งเรียบร้อยแล้ว และ (D) rearranging แปลว่ากำลังจัดเก้าอี้ใหม่ แต่ไม่มีใครจัดเก้าอี้",
-            "hideOptions": false
-        },
-        {
-            "id": 4,
-            "groupId": "group-4",
-            "transcript": "",
-            "questionText": "",
-            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/4.mp3"],
-            "images": ["./assets/images/ฟ้าม่วง LC2/BP 4.png"],
-            "options": [
-            "A server is setting up an umbrella.",
-            "A sign is being carried across a walkway.",
-            "Cars have been parked in the shade.",
-            "Customers are seated at a cafe."
-            ],
-            "correctAnswer": "C",
-            "explanation": "เพราะภาพมีรถจอดใต้ร่มเงาต้นไม้ ส่วนข้อ (A) setting up แปลว่ากำลังติดตั้ง แต่ไม่มีพนักงานกางร่ม (B) being carried แปลว่ากำลังถูกถือ แต่ป้ายตั้งอยู่กับที่ และ (D) seated แปลว่ากำลังนั่ง แต่เก้าอี้ว่างไม่มีลูกค้า",
-            "hideOptions": false
-        },
-        {
-            "id": 5,
-            "groupId": "group-5",
-            "transcript": "",
-            "questionText": "",
-            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/5.mp3"],
-            "images": ["./assets/images/ฟ้าม่วง LC2/BP 5.png"],
-            "options": [
-            "A drawer has been pulled open.",
-            "Files are being stored on shelves.",
-            "A monitor is being mounted on a wall.",
-            "A light has been hung from the ceiling."
-            ],
-            "correctAnswer": "B",
-            "explanation": "เพราะภาพมีแฟ้มเอกสารถูกเก็บบนชั้นวาง ส่วนข้อ (A) drawer แปลว่าลิ้นชัก แต่ลิ้นชักปิดอยู่ (C) mounted แปลว่ากำลังติดตั้ง แต่จอวางบนโต๊ะ และ (D) hung แปลว่าถูกแขวน แต่โคมไฟตั้งบนโต๊ะ",
-            "hideOptions": false
-        },
-        {
-            "id": 6,
-            "groupId": "group-6",
-            "transcript": "",
-            "questionText": "",
-            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/6.mp3"],
-            "images": ["./assets/images/ฟ้าม่วง LC2/BP 6.png"],
-            "options": [
-            "A man is standing near a construction site.",
-            "A worker is climbing a ladder.",
-            "A row of trees has been planted alongside a fence.",
-            "Vehicles are transporting materials to a building."
-            ],
-            "correctAnswer": "A",
-            "explanation": "เพราะภาพมีชายยืนใกล้พื้นที่ก่อสร้าง ส่วนข้อ (B) climbing แปลว่ากำลังปีน แต่ไม่มีใครปีนบันได (C) planted แปลว่าถูกปลูก แต่ไม่เห็นการปลูกต้นไม้ใหม่ และ (D) transporting แปลว่ากำลังขนส่ง แต่ไม่มีรถกำลังขนวัสดุ",
-            "hideOptions": false
-        },
-        {
-            "id": 7,
-            "groupId": "group-7",
-            "transcript": "Where can I find the most recent sales data?",
-            "questionText": "Mark your answer on your answer sheet.",
-            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/7.mp3"],
-            "images": [],
-            "options": [
-            "The store's having a sale.",
-            "It's on my computer.",
-            "No, not recently."
-            ],
-            "correctAnswer": "B",
-            "explanation": "เพราะคำถามถามว่า จะหาข้อมูลการขายล่าสุดได้จากที่ไหน ซึ่งข้อนี้ตอบตรงประเด็นว่าข้อมูลอยู่ในคอมพิวเตอร์ ส่วนข้อ (A) เป็นกับดักเปลี่ยนหัวข้อเรื่องการลดราคา และข้อ (C) ปฏิเสธแต่ไม่บอกตำแหน่ง",
-            "hideOptions": true
-        },
-        {
-            "id": 8,
-            "groupId": "group-8",
-            "transcript": "When is the next performance of the City Dance Troupe?",
-            "questionText": "Mark your answer on your answer sheet.",
-            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/8.mp3"],
-            "images": [],
-            "options": [
-            "This Saturday at eight P.M.",
-            "It was better than the last one.",
-            "It hasn't yet."
-            ],
-            "correctAnswer": "A",
-            "explanation": "เพราะคำถามถามว่า การแสดงครั้งต่อไปของกลุ่มแดนซ์จะมีเมื่อไหร่ ซึ่งข้อนี้บอกเวลาชัดเจนว่าเป็นวันเสาร์นี้ตอนสองทุ่ม ส่วนข้อ (B) เป็นการแสดงความเห็น และข้อ (C) บอกว่ายังไม่มีแต่ไม่ได้ระบุเวลา",
-            "hideOptions": true
-        },
-        {
-            "id": 9,
-            "groupId": "group-9",
-            "transcript": "Let's plan our camping trip tonight.",
-            "questionText": "Mark your answer on your answer sheet.",
-            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/9.mp3"],
-            "images": [],
-            "options": [
-            "I had a relaxing vacation.",
-            "OK, I'm free after six.",
-            "A tent and a sleeping bag."
-            ],
-            "correctAnswer": "B",
-            "explanation": "เพราะเป็นการตอบรับคำชวนวางแผนไปตั้งแคมป์คืนนี้ โดยบอกว่าตัวเองว่างหลังหกโมงเย็น ส่วนข้อ (A) พูดถึงวันหยุดที่ผ่านมา และข้อ (C) พูดถึงสิ่งของซึ่งไม่ตรงคำถาม",
-            "hideOptions": true
-        },
-        {
-            "id": 10,
-            "groupId": "group-10",
-            "transcript": "Isn't the client visit this month?",
-            "questionText": "Mark your answer on your answer sheet.",
-            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/10.mp3"],
-            "images": [],
-            "options": [
-            "It's in the supply cabinet.",
-            "A newer version.",
-            "Pablo's in charge of that."
-            ],
-            "correctAnswer": "C",
-            "explanation": "เพราะตอบคำถามที่ถามว่า ลูกค้าจะมาเยือนในเดือนนี้ใช่ไหม โดยบอกว่าปาโบลเป็นคนดูแลรับผิดชอบเรื่องนั้น ส่วนข้อ (A) เกี่ยวกับตู้เก็บของ และข้อ (B) เกี่ยวกับเวอร์ชันใหม่ซึ่งไม่เกี่ยวข้อง",
-            "hideOptions": true
-        },
-        {
-            "id": 11,
-            "groupId": "group-11",
-            "transcript": "Why are you transferring to the San Francisco branch?",
-            "questionText": "Mark your answer on your answer sheet.",
-            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/11.mp3"],
-            "images": [],
-            "options": [
-            "To be closer to my family.",
-            "Probably in February.",
-            "Yes, it's been open for a while."
-            ],
-            "correctAnswer": "A",
-            "explanation": "เพราะตอบเหตุผลของคำถามที่ว่า ทำไมถึงย้ายไปสาขาซานฟรานซิสโก โดยบอกว่าต้องการไปอยู่ใกล้ชิดกับครอบครัวมากขึ้น ส่วนข้อ (B) บอกเวลา และข้อ (C) ตอบรับแต่ไม่บอกเหตุผล",
-            "hideOptions": true
-        },
-        {
-            "id": 12,
-            "groupId": "group-12",
-            "transcript": "Do you have any hotel rooms available for tonight?",
-            "questionText": "Mark your answer on your answer sheet.",
-            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/12.mp3"],
-            "images": [],
-            "options": [
-            "They're due soon.",
-            "Almost every room has one.",
-            "We've just had a cancellation!"
-            ],
-            "correctAnswer": "C",
-            "explanation": "เพราะตอบคำถามที่ถามว่า มีห้องพักว่างสำหรับคืนนี้ไหม โดยแจ้งว่าเพิ่งมีการยกเลิกห้องพักทำให้มีห้องว่าง ส่วนข้อ (A) พูดถึงกำหนดส่ง และข้อ (B) พูดถึงสิ่งของในห้อง",
-            "hideOptions": true
-        },
-        {
-            "id": 13,
-            "groupId": "group-13",
-            "transcript": "Would you like me to arrange a shuttle to the airport?",
-            "questionText": "Mark your answer on your answer sheet.",
-            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/13.mp3"],
-            "images": [],
-            "options": [
-            "That flower arrangement is lovely.",
-            "Thanks, but I'll drive myself there.",
-            "A glass of water would be great."
-            ],
-            "correctAnswer": "B",
-            "explanation": "เพราะเป็นการปฏิเสธข้อเสนอที่จะจัดรถรับส่งไปสนามบินอย่างมีมารยาท โดยบอกว่าจะขับรถไปเอง ส่วนข้อ (A) และ (C) เป็นกับดักคำพ้องเสียงหรือคำที่เกี่ยวข้องแต่ไม่ตรงประเด็น",
-            "hideOptions": true
-        },
-        {
-            "id": 14,
-            "groupId": "group-14",
-            "transcript": "Does Marta know that we've made a lunch reservation for one o'clock?",
-            "questionText": "Mark your answer on your answer sheet.",
-            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/14.mp3"],
-            "images": [],
-            "options": [
-            "Yes, I sent her an e-mail about it.",
-            "The Town Plaza Cafe.",
-            "It's served with a side salad."
-            ],
-            "correctAnswer": "A",
-            "explanation": "เพราะตอบคำถามที่ถามว่า มาร์ต้ารู้เรื่องที่จองมื้อเที่ยงไว้ตอนบ่ายโมงหรือยัง โดยยืนยันว่ารู้แล้วเพราะส่งอีเมลแจ้งไปแล้ว ส่วนข้อ (B) บอกชื่อคาเฟ่ และข้อ (C) พูดถึงสลัดเคียง",
-            "hideOptions": true
-        },
-        {
-            "id": 15,
-            "groupId": "group-15",
-            "transcript": "Who should I contact to rent an office in this building?",
-            "questionText": "Mark your answer on your answer sheet.",
-            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/15.mp3"],
-            "images": [],
-            "options": [
-            "Yes, I'll update my contact list.",
-            "You can call Mr. Yamamoto.",
-            "The one in the financial center."
-            ],
-            "correctAnswer": "B",
-            "explanation": "เพราะตอบคำถามที่ถามว่า ควรติดต่อใครเพื่อเช่าสำนักงานในตึกนี้ โดยระบุชื่อบุคคลว่าให้โทรหาคุณยามาโมโตะ ส่วนข้อ (A) และ (C) เป็นกับดักคำศัพท์และไม่ระบุตัวบุคคล",
-            "hideOptions": true
-        },
-        {
-            "id": 16,
-            "groupId": "group-16",
-            "transcript": "What did you think of my presentation?",
-            "questionText": "Mark your answer on your answer sheet.",
-            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/16.mp3"],
-            "images": [],
-            "options": [
-            "No, not this time.",
-            "I was at another meeting.",
-            "Twenty pages long."
-            ],
-            "correctAnswer": "B",
-            "explanation": "เพราะให้เหตุผลว่าทำไมถึงไม่ได้ดูหรือให้ความเห็นต่อการนำเสนอได้ โดยบอกว่าติดประชุมอื่นอยู่ ส่วนข้อ (A) เป็นการปฏิเสธไม่ชัดเจน และข้อ (C) บอกความยาวหน้ากระดาษ",
-            "hideOptions": true
-        },
-        {
-            "id": 17,
-            "groupId": "group-17",
-            "transcript": "When will our Internet service be working again?",
-            "questionText": "Mark your answer on your answer sheet.",
-            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/17.mp3"],
-            "images": [],
-            "options": [
-            "No, I don't use it often.",
-            "It should be fixed by noon.",
-            "Over by the copier."
-            ],
-            "correctAnswer": "B",
-            "explanation": "เพราะตอบคำถามที่ถามว่า อินเทอร์เน็ตจะกลับมาใช้งานได้อีกเมื่อไหร่ โดยระบุกรอบเวลาชัดเจนว่าควรจะซ่อมเสร็จตอนเที่ยง ส่วนข้อ (A) บอกว่าไม่ค่อยได้ใช้ และข้อ (C) บอกตำแหน่งตู้สำเนา",
-            "hideOptions": true
-        },
-        {
-            "id": 18,
-            "groupId": "group-18",
-            "transcript": "Have you finished the draft of the report yet?",
-            "questionText": "Mark your answer on your answer sheet.",
-            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/18.mp3"],
-            "images": [],
-            "options": [
-            "I had a conference call all morning.",
-            "Ms. Yang is a reporter.",
-            "Thanks, I can wait."
-            ],
-            "correctAnswer": "A",
-            "explanation": "เพราะให้เหตุผลว่าทำไมยังทำร่างรายงานไม่เสร็จ โดยบอกว่าติดประชุมโทรศัพท์ตลอดทั้งเช้า ส่วนข้อ (B) พูดถึงผู้สื่อข่าว และข้อ (C) บอกว่ารอได้",
-            "hideOptions": true
-        },
-        {
-            "id": 19,
-            "groupId": "group-19",
-            "transcript": "You didn't leave your mobile phone on the train, did you?",
-            "questionText": "Mark your answer on your answer sheet.",
-            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/19.mp3"],
-            "images": [],
-            "options": [
-            "It's 555-0126.",
-            "A ticket to Amsterdam.",
-            "No, I have it right here."
-            ],
-            "correctAnswer": "C",
-            "explanation": "เพราะตอบคำถามที่ถามว่า ไม่ได้ลืมโทรศัพท์มือถือไว้บนรถไฟใช่ไหม โดยปฏิเสธว่าไม่ได้ลืมและบอกว่าโทรศัพท์อยู่ตรงนี้เลย ส่วนข้อ (A) บอกเบอร์โทร และข้อ (B) พูดถึงตั๋วไปอัมสเตอร์ดัม",
-            "hideOptions": true
-        },
-        {
-            "id": 20,
-            "groupId": "group-20",
-            "transcript": "Could you please replace the tires on my car?",
-            "questionText": "Mark your answer on your answer sheet.",
-            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/20.mp3"],
-            "images": [],
-            "options": [
-            "He's retiring in May.",
-            "That's a very nice place.",
-            "Yes, we could do it this afternoon."
-            ],
-            "correctAnswer": "C",
-            "explanation": "เพราะตอบรับคำขอให้เปลี่ยนยางรถยนต์ โดยแจ้งว่าสามารถจัดการให้ได้ในช่วงบ่ายวันนี้ ส่วนข้อ (A) เป็นกับดักคำพ้องเสียงเรื่องการเกษียณ และข้อ (B) พูดถึงสถานที่ที่สวยงาม",
-            "hideOptions": true
-        },
-        {
-            "id": 21,
-            "groupId": "group-21",
-            "transcript": "What time should we expect the keynote speaker to arrive?",
-            "questionText": "Mark your answer on your answer sheet.",
-            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/21.mp3"],
-            "images": [],
-            "options": [
-            "She'll be here by nine.",
-            "Yes, I was invited.",
-            "In the lobby."
-            ],
-            "correctAnswer": "A",
-            "explanation": "เพราะตอบคำถามที่ถามว่า วิทยากรหลักจะมาถึงตอนกี่โมง โดยให้กรอบเวลาชัดเจนว่าจะมาถึงก่อนเก้าโมง ส่วนข้อ (B) บอกว่าได้รับเชิญ และข้อ (C) บอกสถานที่ในล็อบบี้",
-            "hideOptions": true
-        },
-        {
-            "id": 22,
-            "groupId": "group-22",
-            "transcript": "Did you hear the news about the merger?",
-            "questionText": "Mark your answer on your answer sheet.",
-            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/22.mp3"],
-            "images": [],
-            "options": [
-            "A small construction firm.",
-            "No, was it announced?",
-            "He's a department head."
-            ],
-            "correctAnswer": "B",
-            "explanation": "เพราะตอบคำถามที่ถามว่า ได้ยินข่าวเรื่องการควบรวมกิจการหรือยัง โดยบอกว่าไม่เคยได้ยินและถามกลับว่ามีประกาศแล้วหรือ ส่วนข้อ (A) และ (C) พูดถึงบริษัทและตำแหน่งงานที่ไม่ตรงประเด็น",
-            "hideOptions": true
-        },
-        {
-            "id": 23,
-            "groupId": "group-23",
-            "transcript": "Does our budget include funding for one assistant or two?",
-            "questionText": "Mark your answer on your answer sheet.",
-            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/23.mp3"],
-            "images": [],
-            "options": [
-            "I didn't know we were hiring anyone.",
-            "At the reception desk.",
-            "It was paid for in cash."
-            ],
-            "correctAnswer": "A",
-            "explanation": "เพราะแสดงความประหลาดใจและไม่รู้เรื่องการจ้างงานเมื่อถูกถามว่า งบประมาณรวมการจ้างผู้ช่วยหนึ่งหรือสองคน ส่วนข้อ (B) บอกสถานที่ และข้อ (C) บอกวิธีชำระเงินด้วยเงินสด",
-            "hideOptions": true
-        },
-        {
-            "id": 24,
-            "groupId": "group-24",
-            "transcript": "That Indian restaurant is big enough for our annual party.",
-            "questionText": "Mark your answer on your answer sheet.",
-            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/24.mp3"],
-            "images": [],
-            "options": [
-            "They don't have a private dining room.",
-            "A direct flight to India.",
-            "Can I get you some more rice?"
-            ],
-            "correctAnswer": "A",
-            "explanation": "เพราะชี้ข้อจำกัดของร้านอาหารอินเดียเมื่อมีคนบอกว่าร้านใหญ่พอสำหรับจัดงานปาร์ตี้ประจำปี โดยบอกว่าร้านนั้นไม่มีห้องทานอาหารส่วนตัว ส่วนข้อ (B) พูดถึงเที่ยวบิน และข้อ (C) ถามเรื่องข้าว",
-            "hideOptions": true
-        },
-        {
-            "id": 25,
-            "groupId": "group-25",
-            "transcript": "Is there a computer available to use while mine is being repaired?",
-            "questionText": "Mark your answer on your answer sheet.",
-            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/25.mp3"],
-            "images": [],
-            "options": [
-            "Isn't it in two hours?",
-            "Michael's not using his today.",
-            "Some updated software."
-            ],
-            "correctAnswer": "B",
-            "explanation": "เพราะตอบคำถามที่ถามว่า มีคอมพิวเตอร์ให้ใช้ระหว่างรอซ่อมเครื่องเก่าไหม โดยแนะนำให้ใช้ของไมเคิลได้เพราะวันนี้เขาไม่ได้ใช้ ส่วนข้อ (A) ถามเวลา และข้อ (C) พูดถึงซอฟต์แวร์",
-            "hideOptions": true
-        },
-        {
-            "id": 26,
-            "groupId": "group-26",
-            "transcript": "Will you prepare handouts or a slide show for your workshop?",
-            "questionText": "Mark your answer on your answer sheet.",
-            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/26.mp3"],
-            "images": [],
-            "options": [
-            "Just the new sales director.",
-            "I plan to do both.",
-            "It starts at three o'clock."
-            ],
-            "correctAnswer": "B",
-            "explanation": "เพราะตอบคำถามที่ให้เลือกระหว่างเตรียมเอกสารแจกหรือสไลด์โชว์สำหรับเวิร์กชอป โดยบอกว่าวางแผนจะทำทั้งสองอย่าง ส่วนข้อ (A) พูดถึงผู้อำนวยการ และข้อ (C) บอกเวลาเริ่มงาน",
-            "hideOptions": true
-        },
-        {
-            "id": 27,
-            "groupId": "group-27",
-            "transcript": "The meeting's in Busan, isn't it?",
-            "questionText": "Mark your answer on your answer sheet.",
-            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/27.mp3"],
-            "images": [],
-            "options": [
-            "It isn't a company I've heard of.",
-            "Yes—I hope we can participate by phone.",
-            "The attendance sheet."
-            ],
-            "correctAnswer": "B",
-            "explanation": "เพราะยืนยันตามคำถามที่ว่า การประชุมจัดที่ปูซานใช่ไหม โดยตอบรับและบอกว่าหวังว่าจะได้เข้าร่วมผ่านทางโทรศัพท์ ส่วนข้อ (A) พูดถึงบริษัทที่ไม่เคยได้ยิน และข้อ (C) พูดถึงใบลงชื่อ",
-            "hideOptions": true
-        },
-        {
-            "id": 28,
-            "groupId": "group-28",
-            "transcript": "Can you give me a tour of the property on Thursday?",
-            "questionText": "Mark your answer on your answer sheet.",
-            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/28.mp3"],
-            "images": [],
-            "options": [
-            "An empty corner lot.",
-            "Leave the door open.",
-            "Let me check my calendar."
-            ],
-            "correctAnswer": "C",
-            "explanation": "เพราะเป็นการตอบรับคำขอให้นำชมอสังหาริมทรัพย์ในวันพฤหัสบดี โดยบอกว่าขอเช็คตารางงานในปฏิทินก่อน ส่วนข้อ (A) พูดถึงพื้นที่ว่าง และข้อ (B) สั่งให้เปิดประตูทิ้งไว้",
-            "hideOptions": true
-        },
-        {
-            "id": 29,
-            "groupId": "group-29",
-            "transcript": "How many days do we have to organize the convention?",
-            "questionText": "Mark your answer on your answer sheet.",
-            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/29.mp3"],
-            "images": [],
-            "options": [
-            "There are three hundred brochures.",
-            "Don't worry, it's later than last year.",
-            "We'll choose the cheapest one."
-            ],
-            "correctAnswer": "B",
-            "explanation": "เพราะตอบคำถามที่ถามว่า มีเวลาเตรียมจัดงานประชุมอีกกี่วัน โดยบอกว่าไม่ต้องกังวลเพราะปีนี้จัดช้ากว่าปีที่แล้ว (แปลว่ามีเวลาเหลือเฟือ) ส่วนข้อ (A) พูดถึงจำนวนโบรชัวร์ และข้อ (C) พูดถึงการเลือกสิ่งที่มีราคาถูกที่สุด",
-            "hideOptions": true
-        },
-        {
-            "id": 30,
-            "groupId": "group-30",
-            "transcript": "I don't think we can afford to start the store renovations yet.",
-            "questionText": "Mark your answer on your answer sheet.",
-            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/30.mp3"],
-            "images": [],
-            "options": [
-            "That's not what Susan said.",
-            "Yes, it's attracting more customers.",
-            "The product display areas."
-            ],
-            "correctAnswer": "A",
-            "explanation": "เพราะเป็นการทักท้วงความคิดเห็นของผู้พูดที่คิดว่าบริษัทยังไม่มีงบพอที่จะรีโนเวทร้านค้า โดยบอกว่าซูซานไม่ได้พูดแบบนั้น (ซูซานอาจจะบอกว่ามีงบพอ) ส่วนข้อ (B) พูดถึงการดึงดูดลูกค้า และข้อ (C) พูดถึงพื้นที่แสดงสินค้า",
-            "hideOptions": true
-        },
-        {
-            "id": 31,
-            "groupId": "group-31",
-            "transcript": "We've met these clients before, haven't we?",
-            "questionText": "Mark your answer on your answer sheet.",
-            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/31.mp3"],
-            "images": [],
-            "options": [
-            "Sure, I'd be happy to.",
-            "Actually, we shipped them already.",
-            "The manager is new, though."
-            ],
-            "correctAnswer": "C",
-            "explanation": "เพราะตอบคำถามที่ถามว่า เคยเจอเซตลูกค้าพวกนี้มาก่อนใช่ไหม โดยบอกว่าผู้จัดการเป็นคนใหม่แต่ลูกค้าคนอื่นเคยพบมาก่อน ส่วนข้อ (A) บอกว่ายินดีทำ และข้อ (B) พูดถึงการจัดส่งสินค้า",
-            "hideOptions": true
-        }
-        ]
+  {
+    "id": 1,
+    "groupId": "group-1",
+    "questionText": "1: ",
+    "images": ["./assets/images/ฟ้าม่วง LC2/BP 1.png"],
+    "options": [
+      "She's folding a piece of paper.",
+      "She's smelling flowers in a garden.",
+      "She's holding a book in her hands.",
+      "She's closing up a box."
+    ],
+    "correctAnswer": 2,
+    "explanation": "เฉลยข้อ C: เพราะภาพเป็นผู้หญิงกำลังถือหนังสืออยู่ในมือ ส่วนข้อ (A) folding แปลว่ากำลังพับ ซึ่งเธอไม่ได้พับกระดาษ (B) smelling แปลว่ากำลังดม ซึ่งเธอไม่ได้ดมดอกไม้ และ (D) closing up แปลว่ากำลังปิด แต่กล่องยังเปิดอยู่",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/1.mp3",
+    "hideOptions": true
+  },
+  {
+    "id": 2,
+    "groupId": "group-2",
+    "questionText": "2: ",
+    "images": ["./assets/images/ฟ้าม่วง LC2/BP 2.png"],
+    "options": [
+      "He's looking at a picture.",
+      "She's opening her handbag.",
+      "They're fixing a railing.",
+      "They're walking down some steps."
+    ],
+    "correctAnswer": 3,
+    "explanation": "เฉลยข้อ D: เพราะภาพเป็นชายหญิงกำลังเดินลงบันได ส่วนข้อ (A) looking at แปลว่ากำลังมอง แต่ผู้ชายกำลังเดินลงบันได (B) opening แปลว่ากำลังเปิด แต่ผู้หญิงไม่ได้เปิดกระเป๋า และ (C) fixing แปลว่ากำลังซ่อม แต่ไม่มีใครซ่อมราวบันได",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/2.mp3",
+    "hideOptions": true
+  },
+  {
+    "id": 3,
+    "groupId": "group-3",
+    "questionText": "3: ",
+    "images": ["./assets/images/ฟ้าม่วง LC2/BP 3.png"],
+    "options": [
+      "One of the men is taking off his backpack.",
+      "One of the men is reading a brochure.",
+      "Some people are assembling a table.",
+      "Some people are rearranging chairs."
+    ],
+    "correctAnswer": 1,
+    "explanation": "เฉลยข้อ B: เพราะภาพมีผู้ชายกำลังอ่านโบรชัวร์ ส่วนข้อ (A) taking off แปลว่ากำลังถอด แต่ไม่ได้ถอดกระเป๋า (C) assembling แปลว่ากำลังประกอบ แต่โต๊ะตั้งเรียบร้อยแล้ว และ (D) rearranging แปลว่ากำลังจัดเก้าอี้ใหม่ แต่ไม่มีใครจัดเก้าอี้",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/3.mp3",
+    "hideOptions": true
+  },
+  {
+    "id": 4,
+    "groupId": "group-4",
+    "questionText": "4: ",
+    "images": ["./assets/images/ฟ้าม่วง LC2/BP 4.png"],
+    "options": [
+      "A server is setting up an umbrella.",
+      "A sign is being carried across a walkway.",
+      "Cars have been parked in the shade.",
+      "Customers are seated at a cafe."
+    ],
+    "correctAnswer": 2,
+    "explanation": "เฉลยข้อ C: เพราะภาพมีรถจอดใต้ร่มเงาต้นไม้ ส่วนข้อ (A) setting up แปลว่ากำลังติดตั้ง แต่ไม่มีพนักงานกางร่ม (B) being carried แปลว่ากำลังถูกถือ แต่ป้ายตั้งอยู่กับที่ และ (D) seated แปลว่ากำลังนั่ง แต่เก้าอี้ว่างไม่มีลูกค้า",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/4.mp3",
+    "hideOptions": true
+  },
+  {
+    "id": 5,
+    "groupId": "group-5",
+    "questionText": "5: ",
+    "images": ["./assets/images/ฟ้าม่วง LC2/BP 5.png"],
+    "options": [
+      "A drawer has been pulled open.",
+      "Files are being stored on shelves.",
+      "A monitor is being mounted on a wall.",
+      "A light has been hung from the ceiling."
+    ],
+    "correctAnswer": 1,
+    "explanation": "เฉลยข้อ B: เพราะภาพมีแฟ้มเอกสารถูกเก็บบนชั้นวาง ส่วนข้อ (A) drawer แปลว่าลิ้นชัก แต่ลิ้นชักปิดอยู่ (C) mounted แปลว่ากำลังติดตั้ง แต่จอวางบนโต๊ะ และ (D) hung แปลว่าถูกแขวน แต่โคมไฟตั้งบนโต๊ะ",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/5.mp3",
+    "hideOptions": true
+  },
+  {
+    "id": 6,
+    "groupId": "group-6",
+    "questionText": "6: ",
+    "images": ["./assets/images/ฟ้าม่วง LC2/BP 6.png"],
+    "options": [
+      "A man is standing near a construction site.",
+      "A worker is climbing a ladder.",
+      "A row of trees has been planted alongside a fence.",
+      "Vehicles are transporting materials to a building."
+    ],
+    "correctAnswer": 0,
+    "explanation": "เฉลยข้อ A: เพราะภาพมีชายยืนใกล้พื้นที่ก่อสร้าง ส่วนข้อ (B) climbing แปลว่ากำลังปีน แต่ไม่มีใครปีนบันได (C) planted แปลว่าถูกปลูก แต่ไม่เห็นการปลูกต้นไม้ใหม่ และ (D) transporting แปลว่ากำลังขนส่ง แต่ไม่มีรถกำลังขนวัสดุ",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/6.mp3",
+    "hideOptions": true
+  },
+  {
+    "id": 7,
+    "groupId": "group-7",
+    "questionText": "7: Mark your answer on your answer sheet.",
+    "options": [
+      "The store's having a sale.",
+      "It's on my computer.",
+      "No, not recently."
+    ],
+    "correctAnswer": 1,
+    "explanation": "เฉลยข้อ B: เพราะคำถามถามว่า จะหาข้อมูลการขายล่าสุดได้จากที่ไหน ซึ่งข้อนี้ตอบตรงประเด็นว่าข้อมูลอยู่ในคอมพิวเตอร์ ส่วนข้อ (A) เป็นกับดักเปลี่ยนหัวข้อเรื่องการลดราคา และข้อ (C) ปฏิเสธแต่ไม่บอกตำแหน่ง",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/7.mp3",
+    "transcript": "Where can I find the most recent sales data?",
+    "hideOptions": true
+  },
+  {
+    "id": 8,
+    "groupId": "group-8",
+    "questionText": "8: Mark your answer on your answer sheet.",
+    "options": [
+      "This Saturday at eight P.M.",
+      "It was better than the last one.",
+      "It hasn't yet."
+    ],
+    "correctAnswer": 0,
+    "explanation": "เฉลยข้อ A: เพราะคำถามถามว่า การแสดงครั้งต่อไปของกลุ่มแดนซ์จะมีเมื่อไหร่ ซึ่งข้อนี้บอกเวลาชัดเจนว่าเป็นวันเสาร์นี้ตอนสองทุ่ม ส่วนข้อ (B) เป็นการแสดงความเห็น และข้อ (C) บอกว่ายังไม่มีแต่ไม่ได้ระบุเวลา",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/8.mp3",
+    "transcript": "When is the next performance of the City Dance Troupe?",
+    "hideOptions": true
+  },
+  {
+    "id": 9,
+    "groupId": "group-9",
+    "questionText": "9: Mark your answer on your answer sheet.",
+    "options": [
+      "I had a relaxing vacation.",
+      "OK, I'm free after six.",
+      "A tent and a sleeping bag."
+    ],
+    "correctAnswer": 1,
+    "explanation": "เฉลยข้อ B: เพราะเป็นการตอบรับคำชวนวางแผนไปตั้งแคมป์คืนนี้ โดยบอกว่าตัวเองว่างหลังหกโมงเย็น ส่วนข้อ (A) พูดถึงวันหยุดที่ผ่านมา และข้อ (C) พูดถึงสิ่งของซึ่งไม่ตรงคำถาม",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/9.mp3",
+    "transcript": "Let's plan our camping trip tonight.",
+    "hideOptions": true
+  },
+  {
+    "id": 10,
+    "groupId": "group-10",
+    "questionText": "10: Mark your answer on your answer sheet.",
+    "options": [
+      "It's in the supply cabinet.",
+      "A newer version.",
+      "Pablo's in charge of that."
+    ],
+    "correctAnswer": 2,
+    "explanation": "เฉลยข้อ C: เพราะตอบคำถามที่ถามว่า ลูกค้าจะมาเยือนในเดือนนี้ใช่ไหม โดยบอกว่าปาโบลเป็นคนดูแลรับผิดชอบเรื่องนั้น ส่วนข้อ (A) เกี่ยวกับตู้เก็บของ และข้อ (B) เกี่ยวกับเวอร์ชันใหม่ซึ่งไม่เกี่ยวข้อง",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/10.mp3",
+    "transcript": "Isn't the client visit this month?",
+    "hideOptions": true
+  },
+  {
+    "id": 11,
+    "groupId": "group-11",
+    "questionText": "11: Mark your answer on your answer sheet.",
+    "options": [
+      "To be closer to my family.",
+      "Probably in February.",
+      "Yes, it's been open for a while."
+    ],
+    "correctAnswer": 0,
+    "explanation": "เฉลยข้อ A: เพราะตอบเหตุผลของคำถามที่ว่า ทำไมถึงย้ายไปสาขาซานฟรานซิสโก โดยบอกว่าต้องการไปอยู่ใกล้ชิดกับครอบครัว ส่วนข้อ (B) บอกเวลา และข้อ (C) ตอบรับแต่ไม่บอกเหตุผล",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/11.mp3",
+    "transcript": "Why are you transferring to the San Francisco branch?",
+    "hideOptions": true
+  },
+  {
+    "id": 12,
+    "groupId": "group-12",
+    "questionText": "12: Mark your answer on your answer sheet.",
+    "options": [
+      "They're due soon.",
+      "Almost every room has one.",
+      "We've just had a cancellation!"
+    ],
+    "correctAnswer": 2,
+    "explanation": "เฉลยข้อ C: เพราะตอบคำถามที่ถามว่า มีห้องพักว่างสำหรับคืนนี้ไหม โดยแจ้งว่าเพิ่งมีการยกเลิกห้องพักทำให้มีห้องว่าง ส่วนข้อ (A) พูดถึงกำหนดส่ง และข้อ (B) พูดถึงสิ่งของในห้อง",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/12.mp3",
+    "transcript": "Do you have any hotel rooms available for tonight?",
+    "hideOptions": true
+  },
+  {
+    "id": 13,
+    "groupId": "group-13",
+    "questionText": "13: Mark your answer on your answer sheet.",
+    "options": [
+      "That flower arrangement is lovely.",
+      "Thanks, but I'll drive myself there.",
+      "A glass of water would be great."
+    ],
+    "correctAnswer": 1,
+    "explanation": "เฉลยข้อ B: เพราะเป็นการปฏิเสธข้อเสนอที่จะจัดรถรับส่งไปสนามบินอย่างมีมารยาท โดยบอกว่าจะขับรถไปเอง ส่วนข้อ (A) และ (C) เป็นกับดักคำพ้องเสียงหรือคำที่เกี่ยวข้องแต่ไม่ตรงประเด็น",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/13.mp3",
+    "transcript": "Would you like me to arrange a shuttle to the airport?",
+    "hideOptions": true
+  },
+  {
+    "id": 14,
+    "groupId": "group-14",
+    "questionText": "14: Mark your answer on your answer sheet.",
+    "options": [
+      "Yes, I sent her an e-mail about it.",
+      "The Town Plaza Cafe.",
+      "It's served with a side salad."
+    ],
+    "correctAnswer": 0,
+    "explanation": "เฉลยข้อ A: เพราะตอบคำถามที่ถามว่า มาร์ต้ารู้เรื่องที่จองมื้อเที่ยงไว้ตอนบ่ายโมงหรือยัง โดยยืนยันว่ารู้แล้วเพราะส่งอีเมลแจ้งไปแล้ว ส่วนข้อ (B) บอกชื่อคาเฟ่ และข้อ (C) พูดถึงสลัดเคียง",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/14.mp3",
+    "transcript": "Does Marta know that we've made a lunch reservation for one o'clock?",
+    "hideOptions": true
+  },
+  {
+    "id": 15,
+    "groupId": "group-15",
+    "questionText": "15: Mark your answer on your answer sheet.",
+    "options": [
+      "Yes, I'll update my contact list.",
+      "You can call Mr. Yamamoto.",
+      "The one in the financial center."
+    ],
+    "correctAnswer": 1,
+    "explanation": "เฉลยข้อ B: เพราะตอบคำถามที่ถามว่า ควรติดต่อใครเพื่อเช่าสำนักงานในตึกนี้ โดยระบุชื่อบุคคลว่าให้โทรหาคุณยามาโมโตะ ส่วนข้อ (A) และ (C) เป็นกับดักคำศัพท์และไม่ระบุตัวบุคคล",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/15.mp3",
+    "transcript": "Who should I contact to rent an office in this building?",
+    "hideOptions": true
+  },
+  {
+    "id": 16,
+    "groupId": "group-16",
+    "questionText": "16: Mark your answer on your answer sheet.",
+    "options": [
+      "No, not this time.",
+      "I was at another meeting.",
+      "Twenty pages long."
+    ],
+    "correctAnswer": 1,
+    "explanation": "เฉลยข้อ B: เพราะให้เหตุผลว่าทำไมถึงไม่ได้ดูหรือให้ความเห็นต่อการนำเสนอได้ โดยบอกว่าติดประชุมอื่นอยู่ ส่วนข้อ (A) เป็นการปฏิเสธไม่ชัดเจน และข้อ (C) บอกความยาวหน้ากระดาษ",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/16.mp3",
+    "transcript": "What did you think of my presentation?",
+    "hideOptions": true
+  },
+  {
+    "id": 17,
+    "groupId": "group-17",
+    "questionText": "17: Mark your answer on your answer sheet.",
+    "options": [
+      "No, I don't use it often.",
+      "It should be fixed by noon.",
+      "Over by the copier."
+    ],
+    "correctAnswer": 1,
+    "explanation": "เฉลยข้อ B: เพราะตอบคำถามที่ถามว่า อินเทอร์เน็ตจะกลับมาใช้งานได้อีกเมื่อไหร่ โดยระบุกรอบเวลาชัดเจนว่าควรจะซ่อมเสร็จตอนเที่ยง ส่วนข้อ (A) บอกว่าไม่ค่อยได้ใช้ และข้อ (C) บอกตำแหน่งตู้สำเนา",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/17.mp3",
+    "transcript": "When will our Internet service be working again?",
+    "hideOptions": true
+  },
+  {
+    "id": 18,
+    "groupId": "group-18",
+    "questionText": "18: Mark your answer on your answer sheet.",
+    "options": [
+      "I had a conference call all morning.",
+      "Ms. Yang is a reporter.",
+      "Thanks, I can wait."
+    ],
+    "correctAnswer": 0,
+    "explanation": "เฉลยข้อ A: เพราะให้เหตุผลว่าทำไมยังทำร่างรายงานไม่เสร็จ โดยบอกว่าติดประชุมโทรศัพท์ตลอดทั้งเช้า ส่วนข้อ (B) พูดถึงผู้สื่อข่าว และข้อ (C) บอกว่ารอได้",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/18.mp3",
+    "transcript": "Have you finished the draft of the report yet?",
+    "hideOptions": true
+  },
+  {
+    "id": 19,
+    "groupId": "group-19",
+    "questionText": "19: Mark your answer on your answer sheet.",
+    "options": [
+      "It's 555-0126.",
+      "A ticket to Amsterdam.",
+      "No, I have it right here."
+    ],
+    "correctAnswer": 2,
+    "explanation": "เฉลยข้อ C: เพราะตอบคำถามที่ถามว่า ไม่ได้ลืมโทรศัพท์มือถือไว้บนรถไฟใช่ไหม โดยปฏิเสธว่าไม่ได้ลืมและบอกว่าโทรศัพท์อยู่ตรงนี้เลย ส่วนข้อ (A) บอกเบอร์โทร และข้อ (B) พูดถึงตั๋วไปอัมสเตอร์ดัม",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/19.mp3",
+    "transcript": "You didn't leave your mobile phone on the train, did you?",
+    "hideOptions": true
+  },
+  {
+    "id": 20,
+    "groupId": "group-20",
+    "questionText": "20: Mark your answer on your answer sheet.",
+    "options": [
+      "He's retiring in May.",
+      "That's a very nice place.",
+      "Yes, we could do it this afternoon."
+    ],
+    "correctAnswer": 2,
+    "explanation": "เฉลยข้อ C: เพราะตอบรับคำขอให้เปลี่ยนยางรถยนต์ โดยแจ้งว่าสามารถจัดการให้ได้ในช่วงบ่ายวันนี้ ส่วนข้อ (A) เป็นกับดักคำพ้องเสียงเรื่องการเกษียณ และข้อ (B) พูดถึงสถานที่ที่สวยงาม",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/20.mp3",
+    "transcript": "Could you please replace the tires on my car?",
+    "hideOptions": true
+  },
+  {
+    "id": 21,
+    "groupId": "group-21",
+    "questionText": "21: Mark your answer on your answer sheet.",
+    "options": [
+      "She'll be here by nine.",
+      "Yes, I was invited.",
+      "In the lobby."
+    ],
+    "correctAnswer": 0,
+    "explanation": "เฉลยข้อ A: เพราะตอบคำถามที่ถามว่า วิทยากรหลักจะมาถึงตอนกี่โมง โดยให้กรอบเวลาชัดเจนว่าจะมาถึงก่อนเก้าโมง ส่วนข้อ (B) บอกว่าได้รับเชิญ และข้อ (C) บอกสถานที่ในล็อบบี้",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/21.mp3",
+    "transcript": "What time should we expect the keynote speaker to arrive?",
+    "hideOptions": true
+  },
+  {
+    "id": 22,
+    "groupId": "group-22",
+    "questionText": "22: Mark your answer on your answer sheet.",
+    "options": [
+      "A small construction firm.",
+      "No, was it announced?",
+      "He's a department head."
+    ],
+    "correctAnswer": 1,
+    "explanation": "เฉลยข้อ B: เพราะตอบคำถามที่ถามว่า ได้ยินข่าวเรื่องการควบรวมกิจการหรือยัง โดยบอกว่าไม่เคยได้ยินและถามกลับว่ามีประกาศแล้วหรือ ส่วนข้อ (A) และ (C) พูดถึงบริษัทและตำแหน่งงานที่ไม่ตรงประเด็น",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/22.mp3",
+    "transcript": "Did you hear the news about the merger?",
+    "hideOptions": true
+  },
+  {
+    "id": 23,
+    "groupId": "group-23",
+    "questionText": "23: Mark your answer on your answer sheet.",
+    "options": [
+      "I didn't know we were hiring anyone.",
+      "At the reception desk.",
+      "It was paid for in cash."
+    ],
+    "correctAnswer": 0,
+    "explanation": "เฉลยข้อ A: เพราะแสดงความประหลาดใจและไม่รู้เรื่องการจ้างงานเมื่อถูกถามว่า งบประมาณรวมการจ้างผู้ช่วยหนึ่งหรือสองคน ส่วนข้อ (B) บอกสถานที่ และข้อ (C) บอกวิธีชำระเงินด้วยเงินสด",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/23.mp3",
+    "transcript": "Does our budget include funding for one assistant or two?",
+    "hideOptions": true
+  },
+  {
+    "id": 24,
+    "groupId": "group-24",
+    "questionText": "24: Mark your answer on your answer sheet.",
+    "options": [
+      "They don't have a private dining room.",
+      "A direct flight to India.",
+      "Can I get you some more rice?"
+    ],
+    "correctAnswer": 0,
+    "explanation": "เฉลยข้อ A: เพราะชี้ข้อจำกัดของร้านอาหารอินเดียเมื่อมีคนบอกว่าร้านใหญ่พอสำหรับจัดงานปาร์ตี้ประจำปี โดยบอกว่าร้านนั้นไม่มีห้องทานอาหารส่วนตัว ส่วนข้อ (B) พูดถึงเที่ยวบิน และข้อ (C) ถามเรื่องข้าว",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/24.mp3",
+    "transcript": "That Indian restaurant is big enough for our annual party.",
+    "hideOptions": true
+  },
+  {
+    "id": 25,
+    "groupId": "group-25",
+    "questionText": "25: Mark your answer on your answer sheet.",
+    "options": [
+      "Isn't it in two hours?",
+      "Michael's not using his today.",
+      "Some updated software."
+    ],
+    "correctAnswer": 1,
+    "explanation": "เฉลยข้อ B: เพราะตอบคำถามที่ถามว่า มีคอมพิวเตอร์ให้ใช้ระหว่างรอซ่อมเครื่องเก่าไหม โดยแนะนำให้ใช้ของไมเคิลได้เพราะวันนี้เขาไม่ได้ใช้ ส่วนข้อ (A) ถามเวลา และข้อ (C) พูดถึงซอฟต์แวร์",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/25.mp3",
+    "transcript": "Is there a computer available to use while mine is being repaired?",
+    "hideOptions": true
+  },
+  {
+    "id": 26,
+    "groupId": "group-26",
+    "questionText": "26: Mark your answer on your answer sheet.",
+    "options": [
+      "Just the new sales director.",
+      "I plan to do both.",
+      "It starts at three o'clock."
+    ],
+    "correctAnswer": 1,
+    "explanation": "เฉลยข้อ B: เพราะตอบคำถามที่ให้เลือกระหว่างเตรียมเอกสารแจกหรือสไลด์โชว์สำหรับเวิร์กชอป โดยบอกว่าวางแผนจะทำทั้งสองอย่าง ส่วนข้อ (A) พูดถึงผู้อำนวยการ และข้อ (C) บอกเวลาเริ่มงาน",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/26.mp3",
+    "transcript": "Will you prepare handouts or a slide show for your workshop?",
+    "hideOptions": true
+  },
+  {
+    "id": 27,
+    "groupId": "group-27",
+    "questionText": "27: Mark your answer on your answer sheet.",
+    "options": [
+      "It isn't a company I've heard of.",
+      "Yes—I hope we can participate by phone.",
+      "The attendance sheet."
+    ],
+    "correctAnswer": 1,
+    "explanation": "เฉลยข้อ B: เพราะยืนยันตามคำถามที่ว่า การประชุมจัดที่ปูซานใช่ไหม โดยตอบรับและบอกว่าหวังว่าจะได้เข้าร่วมผ่านทางโทรศัพท์ ส่วนข้อ (A) พูดถึงบริษัท และข้อ (C) พูดถึงใบลงชื่อเข้าร่วม",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/27.mp3",
+    "transcript": "The meeting's in Busan, isn't it?",
+    "hideOptions": true
+  },
+  {
+    "id": 28,
+    "groupId": "group-28",
+    "questionText": "28: Mark your answer on your answer sheet.",
+    "options": [
+      "An empty corner lot.",
+      "Leave the door open.",
+      "Let me check my calendar."
+    ],
+    "correctAnswer": 2,
+    "explanation": "เฉลยข้อ C: เพราะตอบคำถามขอให้พาชมอสังหาริมทรัพย์ในวันพฤหัสบดี โดยบอกว่าขอเช็คปฏิทินงานก่อนว่าว่างไหม ส่วนข้อ (A) พูดถึงที่ดินว่าง และข้อ (B) บอกให้เปิดประตูทิ้งไว้",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/28.mp3",
+    "transcript": "Can you give me a tour of the property on Thursday?",
+    "hideOptions": true
+  },
+  {
+    "id": 29,
+    "groupId": "group-29",
+    "questionText": "29: Mark your answer on your answer sheet.",
+    "options": [
+      "There are three hundred brochures.",
+      "Don't worry, it's later than last year.",
+      "We'll choose the cheapest one."
+    ],
+    "correctAnswer": 1,
+    "explanation": "เฉลยข้อ B: เพราะตอบคำถามที่ถามว่า มีเวลากี่วันในการจัดงานประชุม โดยบอกว่าไม่ต้องกังวลเพราะปีนี้จัดช้ากว่าปีที่แล้วทำให้มีเวลามากกว่า ส่วนข้อ (A) บอกจำนวนโบรชัวร์ และข้อ (C) บอกว่าจะเลือกอันที่ถูกที่สุด",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/29.mp3",
+    "transcript": "How many days do we have to organize the convention?",
+    "hideOptions": true
+  },
+  {
+    "id": 30,
+    "groupId": "group-30",
+    "questionText": "30: Mark your answer on your answer sheet.",
+    "options": [
+      "That's not what Susan said.",
+      "Yes, it's attracting more customers.",
+      "The product display areas."
+    ],
+    "correctAnswer": 0,
+    "explanation": "เฉลยข้อ A: เพราะแสดงความเห็นแย้งกับผู้พูดที่บอกว่า ยังไม่พร้อมจ่ายค่าปรับปรุงร้าน โดยอ้างว่าซูซานไม่ได้พูดแบบนั้น ส่วนข้อ (B) พูดถึงการดึงดูดลูกค้า และข้อ (C) พูดถึงพื้นที่แสดงสินค้า",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/30.mp3",
+    "transcript": "I don't think we can afford to start the store renovations yet.",
+    "hideOptions": true
+  },
+  {
+    "id": 31,
+    "groupId": "group-31",
+    "questionText": "31: Mark your answer on your answer sheet.",
+    "options": [
+      "Sure, I'd be happy to.",
+      "Actually, we shipped them already.",
+      "The manager is new, though."
+    ],
+    "correctAnswer": 2,
+    "explanation": "เฉลยข้อ C: เพราะตอบคำถามที่ถามว่า เคยเจอเซตลูกค้าพวกนี้มาก่อนใช่ไหม โดยบอกว่าผู้จัดการเป็นคนใหม่แต่ลูกค้าคนอื่นเคยพบมาก่อน ส่วนข้อ (A) บอกว่ายินดีทำ และข้อ (B) พูดถึงการจัดส่งสินค้า",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/31.mp3",
+    "transcript": "We've met these clients before, haven't we?",
+    "hideOptions": true
+  },
+  {
+    "id": 32,
+    "groupId": "group-32-34",
+    "transcript": "W: Hi Kenji, you weren't at the restaurant staff meeting today so I wanted to let you know that all the servers will be getting new uniforms next month.\nM: OK, should I go to a specific store to buy one or will the restaurant supply them?\nW: I'm going to order black T-shirts with our restaurant logo from a supplier here in town, and I'll take care of the cost. I just need to know your size so I can complete the order.\nM: I usually wear a medium. Thanks!",
+    "questionText": "32: Where do the speakers work?",
+    "options": [
+      "At a department store",
+      "At a pharmacy",
+      "At a restaurant",
+      "At a dry cleaner"
+    ],
+    "correctAnswer": 2,
+    "explanation": "เฉลยข้อ C: เพราะในบทสนทนาผู้หญิงกล่าวถึงการประชุมพนักงานร้านอาหาร และพูดว่าพนักงานเสิร์ฟทุกคนจะได้รับชุดยูนิฟอร์มใหม่ในเดือนหน้า ร้านอาหารจึงเป็นสถานที่ทำงานของพวกเขา",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/32-34.mp3"
+  },
+  {
+    "id": 33,
+    "groupId": "group-32-34",
+    "transcript": "W: Hi Kenji, you weren't at the restaurant staff meeting today so I wanted to let you know that all the servers will be getting new uniforms next month.\nM: OK, should I go to a specific store to buy one or will the restaurant supply them?\nW: I'm going to order black T-shirts with our restaurant logo from a supplier here in town, and I'll take care of the cost. I just need to know your size so I can complete the order.\nM: I usually wear a medium. Thanks!",
+    "questionText": "33: What change does the woman mention?",
+    "options": [
+      "Employees will have to wear ID badges.",
+      "Credit cards will now be accepted.",
+      "Work shifts will be more flexible.",
+      "Staff will receive different uniforms."
+    ],
+    "correctAnswer": 3,
+    "explanation": "เฉลยข้อ D: เพราะผู้หญิงแจ้งข้อมูลให้ทราบว่า พนักงานเสิร์ฟทุกคนจะได้รับชุดยูนิฟอร์มใหม่ในเดือนหน้า ซึ่งเป็นการเปลี่ยนแปลงเรื่องเครื่องแต่งกายของพนักงาน",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/32-34.mp3"
+  },
+  {
+    "id": 34,
+    "groupId": "group-32-34",
+    "transcript": "W: Hi Kenji, you weren't at the restaurant staff meeting today so I wanted to let you know that all the servers will be getting new uniforms next month.\nM: OK, should I go to a specific store to buy one or will the restaurant supply them?\nW: I'm going to order black T-shirts with our restaurant logo from a supplier here in town, and I'll take care of the cost. I just need to know your size so I can complete the order.\nM: I usually wear a medium. Thanks!",
+    "questionText": "34: What does the woman need to know?",
+    "options": [
+      "The name of a bank",
+      "The size of some clothing",
+      "The day of a delivery",
+      "The color of an item"
+    ],
+    "correctAnswer": 1,
+    "explanation": "เฉลยข้อ B: เพราะผู้หญิงบอกว่าเธอต้องการทราบขนาดไซส์เสื้อผ้าของเคนจิ เพื่อที่จะสั่งซื้อเสื้อยืดสีดำที่มีโลโก้ร้านให้ได้ถูกต้องและดำเนินการสั่งซื้อให้เสร็จสิ้น",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/32-34.mp3"
+  },
+  {
+    "id": 35,
+    "groupId": "group-35-37",
+    "transcript": "W: Thanks, Frank and Ming, for coming by on such short notice. I just met with our chief financial officer and we need to reduce our company's costs. Our home appliances are selling well, but production costs are still too high.\nM1: Hmm... What about outsourcing some operations? If we hire someone else to do things like warehousing and delivery, it could cut down on our expenses. What do you think, Ming?\nM2: I agree, Frank. It sounds like something we should consider. Tell you what ... I can research some companies and put together a list of names for Thursday. Then we can start compiling some numbers.",
+    "questionText": "35: What does the woman want to do?",
+    "options": [
+      "Reduce the cost of operations",
+      "Organize a team-building event",
+      "Open a second warehouse",
+      "Try an advertising strategy"
+    ],
+    "correctAnswer": 0,
+    "explanation": "เฉลยข้อ A: เพราะผู้หญิงเปิดเผยว่าเธอเพิ่งประชุมกับประธานเจ้าหน้าที่บริหารฝ่ายการเงิน และบริษัทจำเป็นต้องลดค่าใช้จ่ายในการดำเนินงานลง เนื่องจากต้นทุนการผลิตเครื่องใช้ในบ้านยังสูงเกินไป",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/35-37.mp3"
+  },
+  {
+    "id": 36,
+    "groupId": "group-35-37",
+    "transcript": "W: Thanks, Frank and Ming, for coming by on such short notice. I just met with our chief financial officer and we need to reduce our company's costs. Our home appliances are selling well, but production costs are still too high.\nM1: Hmm... What about outsourcing some operations? If we hire someone else to do things like warehousing and delivery, it could cut down on our expenses. What do you think, Ming?\nM2: I agree, Frank. It sounds like something we should consider. Tell you what ... I can research some companies and put together a list of names for Thursday. Then we can start compiling some numbers.",
+    "questionText": "36: What solution does Frank propose?",
+    "options": [
+      "Hosting a business seminar",
+      "Reducing overtime hours",
+      "Hiring an outside company",
+      "Promoting a product on television"
+    ],
+    "correctAnswer": 2,
+    "explanation": "เฉลยข้อ C: เพราะแฟรงก์เสนอแนะทางแก้ไขปัญหาต้นทุนสูงด้วยการจ้างบริษัทภายนอก หรือการทำเอาต์ซอร์ซิงในการดูแลเรื่องคลังสินค้าและการจัดส่งเพื่อช่วยลดค่าใช้จ่าย",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/35-37.mp3"
+  },
+  {
+    "id": 37,
+    "groupId": "group-35-37",
+    "transcript": "W: Thanks, Frank and Ming, for coming by on such short notice. I just met with our chief financial officer and we need to reduce our company's costs. Our home appliances are selling well, but production costs are still too high.\nM1: Hmm... What about outsourcing some operations? If we hire someone else to do things like warehousing and delivery, it could cut down on our expenses. What do you think, Ming?\nM2: I agree, Frank. It sounds like something we should consider. Tell you what ... I can research some companies and put together a list of names for Thursday. Then we can start compiling some numbers.",
+    "questionText": "37: What will Ming prepare for Thursday?",
+    "options": [
+      "Some corrected numbers",
+      "Some meeting notes",
+      "A list of companies",
+      "A floor plan"
+    ],
+    "correctAnswer": 2,
+    "explanation": "เฉลยข้อ C: เพราะหมิงเห็นด้วยกับไอเดียของแฟรงก์และบอกว่าจะไปหาข้อมูลเกี่ยวกับบริษัทต่างๆ แล้วรวบรวมรายชื่อบริษัทมานำเสนอในการประชุมวันพฤหัสบดีนี้",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/35-37.mp3"
+  },
+  {
+    "id": 38,
+    "groupId": "group-38-40",
+    "transcript": "M: Hello, I saw an advertisement for your boat tours. Are there any at the end of September?\nW: Absolutely! They're actually crowded at that time of year because it's the last of the nice weather.\nM: Well, I'm glad I called early, then. I'd like to reserve two seats.\nW: Uh ... all our reservations are done through our Web site. Look for the calendar on the left-hand side. You can't miss it. Then you just choose the date you want.",
+    "questionText": "38: What does the woman say about tours in September?",
+    "options": [
+      "They are held on weekends only.",
+      "They are very popular.",
+      "Their price will be increased.",
+      "They have live music."
+    ],
+    "correctAnswer": 1,
+    "explanation": "เฉลยข้อ B: เพราะผู้หญิงบอกว่าทัวร์ล่องเรือในช่วงปลายเดือนกันยายนจะหนาแน่นและมีคนเยอะมาก เนื่องจากเป็นช่วงสุดท้ายที่สภาพอากาศยังดีอยู่ แสดงว่าเป็นช่วงที่ได้รับความนิยมสูงมาก",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/38-40.mp3"
+  },
+  {
+    "id": 39,
+    "groupId": "group-38-40",
+    "transcript": "M: Hello, I saw an advertisement for your boat tours. Are there any at the end of September?\nW: Absolutely! They're actually crowded at that time of year because it's the last of the nice weather.\nM: Well, I'm glad I called early, then. I'd like to reserve two seats.\nW: Uh ... all our reservations are done through our Web site. Look for the calendar on the left-hand side. You can't miss it. Then you just choose the date you want.",
+    "questionText": "39: What does the woman tell the man to do?",
+    "options": [
+      "Make an online reservation",
+      "View a brochure",
+      "Provide photo identification",
+      "Read some reviews"
+    ],
+    "correctAnswer": 0,
+    "explanation": "เฉลยข้อ A: เพราะผู้หญิงแนะนำให้ผู้ชายไปทำการจองตั๋วผ่านทางเว็บไซต์ของบริษัท โดยให้สังเกตดูปฏิทินที่อยู่ทางด้านซ้ายมือของหน้าเว็บ",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/38-40.mp3"
+  },
+  {
+    "id": 40,
+    "groupId": "group-38-40",
+    "transcript": "M: Hello, I saw an advertisement for your boat tours. Are there any at the end of September?\nW: Absolutely! They're actually crowded at that time of year because it's the last of the nice weather.\nM: Well, I'm glad I called early, then. I'd like to reserve two seats.\nW: Uh ... all our reservations are done through our Web site. Look for the calendar on the left-hand side. You can't miss it. Then you just choose the date you want.",
+    "questionText": "40: What does the woman imply when she says, \"You can't miss it\"?",
+    "options": [
+      "The tour is highly rated.",
+      "A map should be used.",
+      "The man must arrive on time.",
+      "A calendar is easy to find."
+    ],
+    "correctAnswer": 3,
+    "explanation": "เฉลยข้อ D: เพราะวลีที่ว่าคุณไม่มีทางพลาดมันหรอก หมายถึงปฏิทินบนเว็บไซต์นั้นสังเกตเห็นได้ง่ายมากและสามารถค้นหาเพื่อกดเลือกวันจองทัวร์ได้อย่างสะดวกสบาย",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/38-40.mp3"
+  },
+  {
+    "id": 41,
+    "groupId": "group-41-43",
+    "transcript": "W: Akira, do you have time to send an e-mail to the staff this afternoon? I'd do it myself but the Board of Trustees meeting starts in ten minutes, and I'm presenting the opening report.\nM: No problem at all. What would you like the memo to say?\nW: The entire law office will close early on Friday, at three P.M. Some contractors are coming in to paint the conference room and lobby walls.\nM: OK, I'll get that out right away.",
+    "questionText": "41: What does the woman ask the man to do?",
+    "options": [
+      "Send an e-mail",
+      "Revise a report",
+      "Schedule a repair",
+      "Hang a painting"
+    ],
+    "correctAnswer": 0,
+    "explanation": "เฉลยข้อ A: เพราะผู้หญิงเปิดบทสนทนาด้วยการถามอากิระว่า พอจะมีเวลาส่งอีเมลแจ้งพนักงานในช่วงบ่ายวันนี้แทนเธอได้หรือไม่ เนื่องจากเธอต้องไปเข้าประชุมบอร์ดบริหาร",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/41-43.mp3"
+  },
+  {
+    "id": 42,
+    "groupId": "group-41-43",
+    "transcript": "W: Akira, do you have time to send an e-mail to the staff this afternoon? I'd do it myself but the Board of Trustees meeting starts in ten minutes, and I'm presenting the opening report.\nM: No problem at all. What would you like the memo to say?\nW: The entire law office will close early on Friday, at three P.M. Some contractors are coming in to paint the conference room and lobby walls.\nM: OK, I'll get that out right away.",
+    "questionText": "42: Why is the woman unable to complete the task?",
+    "options": [
+      "She has a computer problem.",
+      "She has to consult with a coworker.",
+      "She has to give a presentation.",
+      "She has a business trip."
+    ],
+    "correctAnswer": 2,
+    "explanation": "เฉลยข้อ C: เพราะผู้หญิงไม่ว่างส่งอีเมลด้วยตัวเอง เนื่องจากเธอต้องเข้าร่วมการประชุมคณะกรรมการบริหารในอีกสิบนาทีข้างหน้า และมีหน้าที่ต้องนำเสนอรายงานเปิดการประชุม",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/41-43.mp3"
+  },
+  {
+    "id": 43,
+    "groupId": "group-41-43",
+    "transcript": "W: Akira, do you have time to send an e-mail to the staff this afternoon? I'd do it myself but the Board of Trustees meeting starts in ten minutes, and I'm presenting the opening report.\nM: No problem at all. What would you like the memo to say?\nW: The entire law office will close early on Friday, at three P.M. Some contractors are coming in to paint the conference room and lobby walls.\nM: OK, I'll get that out right away.",
+    "questionText": "43: What will happen on Friday afternoon?",
+    "options": [
+      "Some furniture will be installed.",
+      "Some walls will be painted.",
+      "A conference will begin.",
+      "A luncheon will take place."
+    ],
+    "correctAnswer": 1,
+    "explanation": "เฉลยข้อ B: เพราะในอีเมลที่ฝากส่งระบุว่า สำนักงานกฎหมายจะปิดเร็วขึ้นในวันศุกร์ตอนบ่ายสามโมง เนื่องจากจะมีผู้รับเหมาเข้ามาทาสีห้องประชุมและผนังตรงห้องโถงส่วนหน้า",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/41-43.mp3"
+  },
+  {
+    "id": 44,
+    "groupId": "group-44-46",
+    "transcript": "M: Hi, it's Jeff from Personnel calling. I'll be conducting the preliminary interviews for the project manager position in your division. Is there anything specific you want the candidates to be able to do?\nW: Well, I know you ask about their education credentials and work experience. But I really need someone who can travel as part of this position.\nM: Yes, I see frequent international and domestic travel in the job requirements, OK? I won't invite anyone for a second interview who isn't interested in that.\nW: Exactly. Oh, by the way, don't forget that I'll be out the week of July sixth on holiday. Please don't schedule suitable candidates to interview with me during that time.",
+    "questionText": "44: What are the speakers discussing?",
+    "options": [
+      "Interviewing job applicants",
+      "Making promotion decisions",
+      "Preparing for an urgent project",
+      "Attracting international clients"
+    ],
+    "correctAnswer": 0,
+    "explanation": "เฉลยข้อ A: เพราะเจฟฟ์จากแผนกบุคคลโทรมาคุยเรื่องการสัมภาษณ์งานรอบแรกสำหรับตำแหน่งผู้จัดการโครงการ เพื่อสอบถามคุณสมบัติเฉพาะเจาะจงที่ผู้สมัครควรมี",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/44-46.mp3"
+  },
+  {
+    "id": 45,
+    "groupId": "group-44-46",
+    "transcript": "M: Hi, it's Jeff from Personnel calling. I'll be conducting the preliminary interviews for the project manager position in your division. Is there anything specific you want the candidates to be able to do?\nW: Well, I know you ask about their education credentials and work experience. But I really need someone who can travel as part of this position.\nM: Yes, I see frequent international and domestic travel in the job requirements, OK? I won't invite anyone for a second interview who isn't interested in that.\nW: Exactly. Oh, by the way, don't forget that I'll be out the week of July sixth on holiday. Please don't schedule suitable candidates to interview with me during that time.",
+    "questionText": "45: What does the woman say staff should be able to do?",
+    "options": [
+      "Work on weekends",
+      "Handle multiple accounts",
+      "Speak a foreign language",
+      "Travel frequently"
+    ],
+    "correctAnswer": 3,
+    "explanation": "เฉลยข้อ D: เพราะผู้หญิงเน้นย้ำว่าเธอต้องการคนที่สามารถเดินทางไปปฏิบัติงานนอกสถานที่ได้ เนื่องจากตำแหน่งนี้จำเป็นต้องเดินทางทั้งภายในประเทศและต่างประเทศอยู่บ่อยครั้ง",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/44-46.mp3"
+  },
+  {
+    "id": 46,
+    "groupId": "group-44-46",
+    "transcript": "M: Hi, it's Jeff from Personnel calling. I'll be conducting the preliminary interviews for the project manager position in your division. Is there anything specific you want the candidates to be able to do?\nW: Well, I know you ask about their education credentials and work experience. But I really need someone who can travel as part of this position.\nM: Yes, I see frequent international and domestic travel in the job requirements, OK? I won't invite anyone for a second interview who isn't interested in that.\nW: Exactly. Oh, by the way, don't forget that I'll be out the week of July sixth on holiday. Please don't schedule suitable candidates to interview with me during that time.",
+    "questionText": "46: What does the woman remind the man about?",
+    "options": [
+      "Her letter of recommendation",
+      "Her upcoming vacation",
+      "A limited budget",
+      "A contract deadline"
+    ],
+    "correctAnswer": 1,
+    "explanation": "เฉลยข้อ B: เพราะผู้หญิงพูดเตือนความจำเจฟฟ์ว่า สัปดาห์ของวันที่หกกรกฎาคมเธอจะลาพักร้อน ดังนั้นห้ามจัดตารางให้ผู้สมัครที่ผ่านเกณฑ์มาสัมภาษณ์กับเธอในช่วงเวลานั้นเด็ดขาด",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/44-46.mp3"
+  },
+  {
+    "id": 47,
+    "groupId": "group-47-49",
+    "transcript": "M: Hi, I need some help with this mobile phone that I bought at your shop. Whenever I make a call, I can hear the person on the other end, but that person can't hear me.\nW: Hmm. It sounds like there might be something wrong with the microphone. Have you dropped the phone recently?\nM: No, I haven't. In fact, I just bought it yesterday!\nW: Sometimes there's a manufacturing defect. Let me take a look at your phone to see if that's the case. If it is, then we can give you a brand-new one at no cost.",
+    "questionText": "47: What is the man's problem?",
+    "options": [
+      "He cannot find a file.",
+      "He is late for an appointment.",
+      "His workplace is very noisy.",
+      "His phone is not working properly."
+    ],
+    "correctAnswer": 3,
+    "explanation": "เฉลยข้อ D: เพราะผู้ชายแจ้งปัญหาว่าโทรศัพท์มือถือที่เพิ่งซื้อมาทำงานผิดปกติ โดยเมื่อโทรออกเขาจะได้ยินเสียงปลายสายชัดเจน แต่ปลายสายกลับไม่ได้ยินเสียงของเขาเลย",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/47-49.mp3"
+  },
+  {
+    "id": 48,
+    "groupId": "group-47-49",
+    "transcript": "M: Hi, I need some help with this mobile phone that I bought at your shop. Whenever I make a call, I can hear the person on the other end, but that person can't hear me.\nW: Hmm. It sounds like there might be something wrong with the microphone. Have you dropped the phone recently?\nM: No, I haven't. In fact, I just bought it yesterday!\nW: Sometimes there's a manufacturing defect. Let me take a look at your phone to see if that's the case. If it is, then we can give you a brand-new one at no cost.",
+    "questionText": "48: What does the woman ask the man about?",
+    "options": [
+      "Who he is trying to contact",
+      "When he made a purchase",
+      "Whether he damaged a device",
+      "What the model number of an item is"
+    ],
+    "correctAnswer": 2,
+    "explanation": "เฉลยข้อ C: เพราะผู้หญิงตั้งข้อสงสัยว่าไมโครโฟนอาจมีปัญหา จึงสอบถามผู้ชายว่าช่วงนี้ได้ทำโทรศัพท์ตกพื้นบ้างหรือไม่ เพื่อเช็คว่าอุปกรณ์ได้รับความเสียหายจากการใช้งานไหม",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/47-49.mp3"
+  },
+  {
+    "id": 49,
+    "groupId": "group-47-49",
+    "transcript": "M: Hi, I need some help with this mobile phone that I bought at your shop. Whenever I make a call, I can hear the person on the other end, but that person can't hear me.\nW: Hmm. It sounds like there might be something wrong with the microphone. Have you dropped the phone recently?\nM: No, I haven't. In fact, I just bought it yesterday!\nW: Sometimes there's a manufacturing defect. Let me take a look at your phone to see if that's the case. If it is, then we can give you a brand-new one at no cost.",
+    "questionText": "49: What does the woman offer to do?",
+    "options": [
+      "Provide a replacement",
+      "Give a discount",
+      "Call a supervisor",
+      "Check a storage room"
+    ],
+    "correctAnswer": 0,
+    "explanation": "เฉลยข้อ A: เพราะผู้หญิงบอกว่าหากตรวจสอบแล้วพบว่าเป็นข้อบกพร่องที่เกิดจากขั้นตอนการผลิต ทางร้านจะเปลี่ยนเครื่องใหม่แกะกล่องให้ทันทีโดยไม่มีค่าใช้จ่ายใดๆ ทั้งสิ้น",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/47-49.mp3"
+  },
+  {
+    "id": 50,
+    "groupId": "group-50-52",
+    "transcript": "W: Hello. I've read great reviews of your bakery. You're famous for your strawberry muffins, right? I'd like to try one.\nM: Sorry, we have strawberry muffins only when fresh strawberries are in season. Would you like to try an almond muffin instead?\nW: Sure, and, by any chance, do you offer catering? I'm expecting some clients at the office early Tuesday morning, and I'd like to have some food available.\nM: We don't do formal catering, but if you're in the neighborhood, I can bring your order to your office.\nW: Great, thanks. We're around the corner from here. How about a dozen assorted muffins? Here's the address.",
+    "questionText": "50: Why is a product unavailable?",
+    "options": [
+      "A machine part is broken.",
+      "An ingredient is not in season.",
+      "A shipment was delayed.",
+      "A manufacturer went out of business."
+    ],
+    "correctAnswer": 1,
+    "explanation": "เฉลยข้อ B: เพราะพนักงานชายแจ้งว่าขนมมัฟฟินสตรอเบอร์รี่จะมีขายเฉพาะช่วงที่สตรอเบอร์รี่สดอยู่ในฤดูกาลเก็บเกี่ยวเท่านั้น ตอนนี้จึงไม่มีสินค้าชิ้นนี้จำหน่าย",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/50-52.mp3"
+  },
+  {
+    "id": 51,
+    "groupId": "group-50-52",
+    "transcript": "W: Hello. I've read great reviews of your bakery. You're famous for your strawberry muffins, right? I'd like to try one.\nM: Sorry, we have strawberry muffins only when fresh strawberries are in season. Would you like to try an almond muffin instead?\nW: Sure, and, by any chance, do you offer catering? I'm expecting some clients at the office early Tuesday morning, and I'd like to have some food available.\nM: We don't do formal catering, but if you're in the neighborhood, I can bring your order to your office.\nW: Great, thanks. We're around the corner from here. How about a dozen assorted muffins? Here's the address.",
+    "questionText": "51: What does the woman inquire about?",
+    "options": [
+      "The date of an event",
+      "The recipe for some baked goods",
+      "The availability of a catering service",
+      "The location of a business meeting"
+    ],
+    "correctAnswer": 2,
+    "explanation": "เฉลยข้อ C: เพราะผู้หญิงสอบถามเพิ่มเติมว่าทางร้านมีบริการจัดเลี้ยงอาหารหรือไม่ เนื่องจากเธอจะมีลูกค้ามาเยือนที่สำนักงานในเช้าวันอังคารและต้องการเตรียมอาหารไว้ต้อนรับ",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/50-52.mp3"
+  },
+  {
+    "id": 52,
+    "groupId": "group-50-52",
+    "transcript": "W: Hello. I've read great reviews of your bakery. You're famous for your strawberry muffins, right? I'd like to try one.\nM: Sorry, we have strawberry muffins only when fresh strawberries are in season. Would you like to try an almond muffin instead?\nW: Sure, and, by any chance, do you offer catering? I'm expecting some clients at the office early Tuesday morning, and I'd like to have some food available.\nM: We don't do formal catering, but if you're in the neighborhood, I can bring your order to your office.\nW: Great, thanks. We're around the corner from here. How about a dozen assorted muffins? Here's the address.",
+    "questionText": "52: What will the man most likely do on Tuesday?",
+    "options": [
+      "Change a display",
+      "Buy some supplies",
+      "Close a shop early",
+      "Make a delivery"
+    ],
+    "correctAnswer": 3,
+    "explanation": "เฉลยข้อ D: เพราะพนักงานชายบอกว่าแม้ร้านจะไม่มีบริการจัดเลี้ยงแบบเป็นทางการ แต่เขสามารถนำมัฟฟินที่สั่งไปส่งให้ที่สำนักงานของผู้หญิงในวันอังคารได้เนื่องจากอยู่ใกล้ๆ กัน",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/50-52.mp3"
+  },
+  {
+    "id": 53,
+    "groupId": "group-53-55",
+    "transcript": "W: Good afternoon, you've reached customer service at the Oxbridge Water Company. How can I help you?\nM: Hi, I just received my water bill and it's much higher than usual. I think it's because last month one of the pipes in my house broke-my whole ground floor was flooded. I shouldn't have to pay the full amount, should I?\nW: If you can send us a receipt for any repair work related to the leak, it's possible we can reduce the charges. If you're ready, I can give you the address to send that to.",
+    "questionText": "53: Where does the woman most likely work?",
+    "options": [
+      "At a bank",
+      "At a home goods store",
+      "At a utility company",
+      "At an apartment management agency"
+    ],
+    "correctAnswer": 2,
+    "explanation": "เฉลยข้อ C: เพราะผู้หญิงรับสายในนามฝ่ายบริการลูกค้าของบริษัทออกซ์บริดจ์วอเตอร์ ซึ่งเป็นหน่วยงานที่ดูแลและให้บริการด้านระบบสาธารณูปโภคน้ำประปา",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/53-55.mp3"
+  },
+  {
+    "id": 54,
+    "groupId": "group-53-55",
+    "transcript": "W: Good afternoon, you've reached customer service at the Oxbridge Water Company. How can I help you?\nM: Hi, I just received my water bill and it's much higher than usual. I think it's because last month one of the pipes in my house broke-my whole ground floor was flooded. I shouldn't have to pay the full amount, should I?\nW: If you can send us a receipt for any repair work related to the leak, it's possible we can reduce the charges. If you're ready, I can give you the address to send that to.",
+    "questionText": "54: Why is the man calling?",
+    "options": [
+      "To open an account",
+      "To request a fee reduction",
+      "To cancel an inspection",
+      "To reserve some materials"
+    ],
+    "correctAnswer": 1,
+    "explanation": "เฉลยข้อ B: เพราะผู้ชายโทรมาแย้งเรื่องค่าน้ำประปาที่สูงกว่าปกติมากเนื่องจากท่อน้ำในบ้านแตกจนน้ำท่วมชั้นล่าง เขาจึงต้องการขอลดหย่อนค่าบริการและไม่อยากจ่ายเต็มจำนวน",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/53-55.mp3"
+  },
+  {
+    "id": 55,
+    "groupId": "group-53-55",
+    "transcript": "W: Good afternoon, you've reached customer service at the Oxbridge Water Company. How can I help you?\nM: Hi, I just received my water bill and it's much higher than usual. I think it's because last month one of the pipes in my house broke-my whole ground floor was flooded. I shouldn't have to pay the full amount, should I?\nW: If you can send us a receipt for any repair work related to the leak, it's possible we can reduce the charges. If you're ready, I can give you the address to send that to.",
+    "questionText": "55: What does the woman ask the man to send?",
+    "options": [
+      "A copy of a warranty",
+      "A completed survey",
+      "A receipt for a repair",
+      "A deposit payment"
+    ],
+    "correctAnswer": 2,
+    "explanation": "เฉลยข้อ C: เพราะผู้หญิงแจ้งเงื่อนไขว่า หากผู้ชายส่งใบเสร็จรับเงินค่าซ่อมแซมท่อน้ำที่รั่วมาให้ ทางบริษัทก็อาจจะพิจารณาลดหย่อนและปรับลดค่าบริการค่าน้ำให้ได้",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/53-55.mp3"
+  },
+  {
+    "id": 56,
+    "groupId": "group-56-58",
+    "transcript": "M: Hi, Molly. How was your trip to meet with Xavier Retailers?\nW: Oh hi, Bryan. It went really well. The retailer really liked our women's footwear line, and they've decided to place an order with us for their department stores nationwide, so it's much bigger than we expected.\nM: Wow, congratulations!\nW: Thanks! Of course, I know you did most of the market analysis. It really helped me convince the client to carry our footwear.\nM: Don't worry - it was my pleasure. Oh, just so you know, there's been a policy change and the receipts from trips can be submitted electronically.\nW: Thanks. I'll take care of that this week.",
+    "questionText": "56: What has the woman recently accomplished?",
+    "options": [
+      "She designed a new line of shoes.",
+      "She founded an organization.",
+      "She advanced to an executive position.",
+      "She secured a large order from a client."
+    ],
+    "correctAnswer": 3,
+    "explanation": "เฉลยข้อ D: เพราะมอลลี่บอกข่าวดีว่า ทริปที่ไปพบกับผู้ค้าปลีกประสบความสำเร็จอย่างมาก โดยลูกค้าตกลงสั่งซื้อรองเท้าสตรีเพื่อไปวางขายในห้างสรรพสินค้าทุกสาขาทั่วประเทศ ซึ่งเป็นคำสั่งซื้อที่ใหญ่มาก",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/56-58.mp3"
+  },
+  {
+    "id": 57,
+    "groupId": "group-56-58",
+    "transcript": "M: Hi, Molly. How was your trip to meet with Xavier Retailers?\nW: Oh hi, Bryan. It went really well. The retailer really liked our women's footwear line, and they've decided to place an order with us for their department stores nationwide, so it's much bigger than we expected.\nM: Wow, congratulations!\nW: Thanks! Of course, I know you did most of the market analysis. It really helped me convince the client to carry our footwear.\nM: Don't worry - it was my pleasure. Oh, just so you know, there's been a policy change and the receipts from trips can be submitted electronically.\nW: Thanks. I'll take care of that this week.",
+    "questionText": "57: What does the woman mean when she says, \"I know you did most of the market analysis\"?",
+    "options": [
+      "She looks forward to reading a report.",
+      "She wants to take on a new task.",
+      "She is thankful for the man's help.",
+      "She needs some advice from the man."
+    ],
+    "correctAnswer": 2,
+    "explanation": "เฉลยข้อ C: เพราะผู้หญิงต้องการแสดงความขอบคุณต่อไบรอันที่ช่วยทำข้อมูลวิเคราะห์ตลาดให้ ซึ่งข้อมูลเหล่านั้นมีส่วนสำคัญอย่างยิ่งในการช่วยโน้มน้าวใจให้ลูกค้าตกลงสั่งซื้อสินค้า",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/56-58.mp3"
+  },
+  {
+    "id": 58,
+    "groupId": "group-56-58",
+    "transcript": "M: Hi, Molly. How was your trip to meet with Xavier Retailers?\nW: Oh hi, Bryan. It went really well. The retailer really liked our women's footwear line, and they've decided to place an order with us for their department stores nationwide, so it's much bigger than we expected.\nM: Wow, congratulations!\nW: Thanks! Of course, I know you did most of the market analysis. It really helped me convince the client to carry our footwear.\nM: Don't worry - it was my pleasure. Oh, just so you know, there's been a policy change and the receipts from trips can be submitted electronically.\nW: Thanks. I'll take care of that this week.",
+    "questionText": "58: What policy change does the man tell the woman about?",
+    "options": [
+      "How to book flights",
+      "How to submit receipts",
+      "How to enter data",
+      "How to pay vendors"
+    ],
+    "correctAnswer": 1,
+    "explanation": "เฉลยข้อ B: เพราะผู้ชายแจ้งให้ทราบเกี่ยวกับกฎระเบียบใหม่ของบริษัท ว่าตอนนี้พนักงานสามารถยื่นส่งใบเสร็จรับเงินจากการเดินทางไปปฏิบัติงานผ่านระบบอิเล็กทรอนิกส์ได้แล้ว",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/56-58.mp3"
+  },
+  {
+    "id": 59,
+    "groupId": "group-59-61",
+    "transcript": "M: Good morning, Jee-Eun. How's it going with the brochures for the Sports and Medicine Expo in July? I'm really eager to see what the public thinks about our company's new exercise equipment.\nW: Actually, not well. I printed a few yesterday, and for some reason the ink won't dry! I tried different types of photo paper and tested different printer settings, but no matter what I do ... the ink smears when I touch it.\nM: Strange. Well, since we're not in a hurry, why don't we just get the brochures printed at a place that specializes in this sort of thing? I want to make sure they look great.",
+    "questionText": "59: What is the company planning to do in July?",
+    "options": [
+      "Announce a new president",
+      "Participate in a product exhibition",
+      "Hold a company picnic",
+      "Buy some printing equipment"
+    ],
+    "correctAnswer": 1,
+    "explanation": "เฉลยข้อ B: เพราะในบทสนทนาระบุว่า บริษัทกำลังจัดเตรียมโบรชัวร์เพื่อนำไปใช้ในงานแสดงสินค้ากีฬาและการแพทย์ที่จะจัดขึ้นในเดือนกรกฎาคมนี้",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/59-61.mp3"
+  },
+  {
+    "id": 60,
+    "groupId": "group-59-61",
+    "transcript": "M: Good morning, Jee-Eun. How's it going with the brochures for the Sports and Medicine Expo in July? I'm really eager to see what the public thinks about our company's new exercise equipment.\nW: Actually, not well. I printed a few yesterday, and for some reason the ink won't dry! I tried different types of photo paper and tested different printer settings, but no matter what I do ... the ink smears when I touch it.\nM: Strange. Well, since we're not in a hurry, why don't we just get the brochures printed at a place that specializes in this sort of thing? I want to make sure they look great.",
+    "questionText": "60: What problem does the woman mention?",
+    "options": [
+      "A document is not printing correctly.",
+      "Some expenses have not been approved.",
+      "Some inventory is not selling well.",
+      "An invitation was not received."
+    ],
+    "correctAnswer": 0,
+    "explanation": "เฉลยข้อ A: เพราะจีอึนแจ้งปัญหาว่าโบรชัวร์ที่สั่งพิมพ์ออกมาเมื่อวานนี้มีปัญหาเรื่องน้ำหมึกไม่ยอมแห้ง และเมื่อเอามือไปโดนหมึกก็เลอะเปรอะเปื้อนจนทำให้เอกสารเสียหาย",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/59-61.mp3"
+  },
+  {
+    "id": 61,
+    "groupId": "group-59-61",
+    "transcript": "M: Good morning, Jee-Eun. How's it going with the brochures for the Sports and Medicine Expo in July? I'm really eager to see what the public thinks about our company's new exercise equipment.\nW: Actually, not well. I printed a few yesterday, and for some reason the ink won't dry! I tried different types of photo paper and tested different printer settings, but no matter what I do ... the ink smears when I touch it.\nM: Strange. Well, since we're not in a hurry, why don't we just get the brochures printed at a place that specializes in this sort of thing? I want to make sure they look great.",
+    "questionText": "61: What does the man suggest?",
+    "options": [
+      "Writing some new product descriptions",
+      "Rearranging some photographs",
+      "Getting consumer feedback",
+      "Using a professional service"
+    ],
+    "correctAnswer": 3,
+    "explanation": "เฉลยข้อ D: เพราะผู้ชายเห็นว่ายังมีเวลาเหลืออีกพอสมควรก่อนถึงวันงาน จึงแนะนำให้ส่งโบรชัวร์ไปพิมพ์กับร้านสิ่งพิมพ์ระดับมืออาชีพที่เชี่ยวชาญเฉพาะทางเพื่อให้งานออกมาสวยงามที่สุด",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/59-61.mp3"
+  },
+  {
+    "id": 62,
+    "groupId": "group-62-64",
+    "transcript": "M: Hi. I'm one of the new interns here at Manzi Technology. I'm here for the orientation session at nine o'clock.\nW: OK. I just need you to sign in, and I'll find your name tag. What's your name?\nM: Richard Edwards.\nW: Oh, there's a Rhonda Edwards in our public relations department. Are you related to her?\nM: Yes, she's my older sister. Actually, she's the one who told me about this internship. She thought I'd really enjoy working here during my break from university.\nW: I'm sure you will. Well, welcome to Manzi. Here's your name tag. Orientation is upstairs. It's the first room on your left when you get to the top of the staircase.\nM: Thank you.",
+    "questionText": "62: Why is the man at Manzi Technology?",
+    "images": ["./assets/images/ฟ้าม่วง LC2/BP 62-64.png"],
+    "options": [
+      "To lead a workshop",
+      "To pick up an application form",
+      "To have an interview",
+      "To start an internship"
+    ],
+    "correctAnswer": 3,
+    "explanation": "เฉลยข้อ D: เพราะริชาร์ดแนะนำตัวเองกับพนักงานต้อนรับว่าเขาเป็นหนึ่งในพนักงานฝึกหัดคนใหม่ที่เดินทางมาร่วมงานปฐมนิเทศที่จะเริ่มขึ้นในเวลาเก้าโมงเช้า",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/62-64.mp3"
+  },
+  {
+    "id": 63,
+    "groupId": "group-62-64",
+    "transcript": "M: Hi. I'm one of the new interns here at Manzi Technology. I'm here for the orientation session at nine o'clock.\nW: OK. I just need you to sign in, and I'll find your name tag. What's your name?\nM: Richard Edwards.\nW: Oh, there's a Rhonda Edwards in our public relations department. Are you related to her?\nM: Yes, she's my older sister. Actually, she's the one who told me about this internship. She thought I'd really enjoy working here during my break from university.\nW: I'm sure you will. Well, welcome to Manzi. Here's your name tag. Orientation is upstairs. It's the first room on your left when you get to the top of the staircase.\nM: Thank you.",
+    "questionText": "63: How did the man learn about Manzi Technology?",
+    "options": [
+      "From a university professor",
+      "From a family member",
+      "From a career fair",
+      "From an online advertisement"
+    ],
+    "correctAnswer": 1,
+    "explanation": "เฉลยข้อ B: เพราะริชาร์ดเล่าว่าพี่สาวของเขาซึ่งทำงานอยู่ในแผนกประชาสัมพันธ์ของบริษัทนี้ เป็นคนแนะนำและบอกข้อมูลเกี่ยวกับโครงการฝึกงานนี้ให้เขาทราบ",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/62-64.mp3"
+  },
+  {
+    "id": 64,
+    "groupId": "group-62-64",
+    "transcript": "M: Hi. I'm one of the new interns here at Manzi Technology. I'm here for the orientation session at nine o'clock.\nW: OK. I just need you to sign in, and I'll find your name tag. What's your name?\nM: Richard Edwards.\nW: Oh, there's a Rhonda Edwards in our public relations department. Are you related to her?\nM: Yes, she's my older sister. Actually, she's the one who told me about this internship. She thought I'd really enjoy working here during my break from university.\nW: I'm sure you will. Well, welcome to Manzi. Here's your name tag. Orientation is upstairs. It's the first room on your left when you get to the top of the staircase.\nM: Thank you.",
+    "questionText": "64: Look at the graphic. Which room will the man go to next?",
+    "options": [
+      "201",
+      "202",
+      "203",
+      "204"
+    ],
+    "correctAnswer": 0,
+    "explanation": "เฉลยข้อ A: เพราะพนักงานต้อนรับบอกทางว่า ห้องปฐมนิเทศอยู่ชั้นบน โดยเมื่อเดินขึ้นบันไดไปถึงด้านบนแล้ว จะเป็นห้องแรกสุดที่อยู่ทางด้านซ้ายมือ ซึ่งตรงกับห้องหมายเลข 201",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/62-64.mp3"
+  },
+  {
+    "id": 65,
+    "groupId": "group-65-67",
+    "transcript": "W: Hi, Mr. Polk. Thanks for meeting with me.\nM: Sure. It's a pleasure. So, you're writing an article for Forge Ahead Magazine?\nW: Yes, the piece is about how your car manufacturing plant dramatically changed the way it produces cars. Could you tell me about what you did?\nM: Certainly. Many factory employees are told to never stop the production line-no matter what. Recently I took the opposite approach. Whenever we found a defect, anyone could stop the assembly line and address the problem immediately.\nW: And this transition improved your quality control?\nM: Exactly. In fact, look at this production chart. You'll see that, compared to other factories, cars from this one have far fewer defects.",
+    "questionText": "65: Why is the woman meeting with the man?",
+    "images": ["./assets/images/ฟ้าม่วง LC2/BP 65-67.png"],
+    "options": [
+      "To select conference participants",
+      "To finalize an agreement",
+      "To research a news article",
+      "To purchase an automobile"
+    ],
+    "correctAnswer": 2,
+    "explanation": "เฉลยข้อ C: เพราะผู้หญิงแนะนำตัวว่าเธอกำลังเขียนบทความคอลัมน์พิเศษลงในนิตยสารฟอร์จอะเฮด และต้องการมาสัมภาษณ์เก็บข้อมูลเกี่ยวกับโรงงานผลิตรถยนต์ของคุณพอร์ค",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/65-67.mp3"
+  },
+  {
+    "id": 66,
+    "groupId": "group-65-67",
+    "transcript": "W: Hi, Mr. Polk. Thanks for meeting with me.\nM: Sure. It's a pleasure. So, you're writing an article for Forge Ahead Magazine?\nW: Yes, the piece is about how your car manufacturing plant dramatically changed the way it produces cars. Could you tell me about what you did?\nM: Certainly. Many factory employees are told to never stop the production line-no matter what. Recently I took the opposite approach. Whenever we found a defect, anyone could stop the assembly line and address the problem immediately.\nW: And this transition improved your quality control?\nM: Exactly. In fact, look at this production chart. You'll see that, compared to other factories, cars from this one have far fewer defects.",
+    "questionText": "66: What happened recently at Mr. Polk's factory?",
+    "options": [
+      "Better equipment was installed.",
+      "Additional employees were hired.",
+      "An office was renovated.",
+      "A production process was improved."
+    ],
+    "correctAnswer": 3,
+    "explanation": "เฉลยข้อ D: เพราะคุณพอร์คเล่าว่าเขาได้ปรับปรุงระบบการทำงานในสายการผลิต โดยอนุญาตให้พนักงานทุกคนสามารถสั่งหยุดสายพานการผลิตได้ทันทีหากตรวจพบข้อบกพร่องเพื่อแก้ไขปัญหาทันที",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/65-67.mp3"
+  },
+  {
+    "id": 67,
+    "groupId": "group-65-67",
+    "transcript": "W: Hi, Mr. Polk. Thanks for meeting with me.\nM: Sure. It's a pleasure. So, you're writing an article for Forge Ahead Magazine?\nW: Yes, the piece is about how your car manufacturing plant dramatically changed the way it produces cars. Could you tell me about what you did?\nM: Certainly. Many factory employees are told to never stop the production line-no matter what. Recently I took the opposite approach. Whenever we found a defect, anyone could stop the assembly line and address the problem immediately.\nW: And this transition improved your quality control?\nM: Exactly. In fact, look at this production chart. You'll see that, compared to other factories, cars from this one have far fewer defects.",
+    "questionText": "67: Look at the graphic. Which factory does Mr. Polk most likely manage?",
+    "options": [
+      "Lanslet",
+      "Crowsley",
+      "Farson",
+      "Harlington"
+    ],
+    "correctAnswer": 0,
+    "explanation": "เฉลยข้อ A: เพราะคุณพอร์คชี้ชวนให้ดูแผนภูมิเปรียบเทียบผลการผลิต ซึ่งแสดงให้เห็นว่าโรงงานภายใต้การดูแลของเขามีอัตราการเกิดชิ้นงานชำรุดหรือข้อบกพร่องน้อยที่สุดเมื่อเทียบกับโรงงานอื่น (Lanslet)",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/65-67.mp3"
+  },
+  {
+    "id": 68,
+    "groupId": "group-68-70",
+    "transcript": "W: Hello, it's Helen from your lawyer's office calling to make sure you received the contract we sent over.\nM: Hi, yes, and I had time to look it over. There's actually a spelling error on the second line; it should be Milt, M-I-L-T, Industries, not M-A-L-T.\nW: Oh, I'll have that corrected. Did you notice anything else?\nM: Well, I just received the building inspection report, and we learned that the electrical wiring is over fifteen years old. We're worried about having access to enough power to run all our computers and servers.\nW: That's a problem. I'll talk to the sellers about covering the cost of upgrading the electricity.",
+    "questionText": "68: Look at the graphic. According to the man, which information is incorrect?",
+    "images": ["./assets/images/ฟ้าม่วง LC2/BP 68-70.png"],
+    "options": [
+      "The type of property",
+      "The address",
+      "The buyer's name",
+      "The seller's name"
+    ],
+    "correctAnswer": 2,
+    "explanation": "เฉลยข้อ C: เพราะผู้ชายตรวจพบข้อผิดพลาดในสัญญาบรรทัดที่สอง โดยมีการสะกดชื่อบริษัทของผู้ซื้อผิดจาก มิลต์ อินดัสทรีส์ เป็น แมลต์ อินดัสทรีส์ ซึ่งเป็นชื่อของฝั่งผู้ซื้อ",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/68-70.mp3"
+  },
+  {
+    "id": 69,
+    "groupId": "group-68-70",
+    "transcript": "W: Hello, it's Helen from your lawyer's office calling to make sure you received the contract we sent over.\nM: Hi, yes, and I had time to look it over. There's actually a spelling error on the second line; it should be Milt, M-I-L-T, Industries, not M-A-L-T.\nW: Oh, I'll have that corrected. Did you notice anything else?\nM: Well, I just received the building inspection report, and we learned that the electrical wiring is over fifteen years old. We're worried about having access to enough power to run all our computers and servers.\nW: That's a problem. I'll talk to the sellers about covering the cost of upgrading the electricity.",
+    "questionText": "69: What does the man say he is worried about?",
+    "options": [
+      "The proximity of a highway",
+      "The condition of an electrical system",
+      "The cost of interior decorating",
+      "The lack of parking space"
+    ],
+    "correctAnswer": 1,
+    "explanation": "เฉลยข้อ B: เพราะผู้ชายแสดงความกังวลหลังจากอ่านรายงานผลการตรวจสอบอาคาร แล้วพบว่าระบบสายไฟในตึกมีอายุการใช้งานนานกว่าสิบห้าปีแล้ว ซึ่งกลัวว่าจะรองรับการใช้คอมพิวเตอร์และเซิร์ฟเวอร์ไม่ไหว",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/68-70.mp3"
+  },
+  {
+    "id": 70,
+    "groupId": "group-68-70",
+    "transcript": "W: Hello, it's Helen from your lawyer's office calling to make sure you received the contract we sent over.\nM: Hi, yes, and I had time to look it over. There's actually a spelling error on the second line; it should be Milt, M-I-L-T, Industries, not M-A-L-T.\nW: Oh, I'll have that corrected. Did you notice anything else?\nM: Well, I just received the building inspection report, and we learned that the electrical wiring is over fifteen years old. We're worried about having access to enough power to run all our computers and servers.\nW: That's a problem. I'll talk to the sellers about covering the cost of upgrading the electricity.",
+    "questionText": "70: What does the woman offer to do?",
+    "options": [
+      "Negotiate with a seller",
+      "Show an alternate property",
+      "Study some regulations",
+      "Contact a construction company"
+    ],
+    "correctAnswer": 0,
+    "explanation": "เฉลยข้อ A: เพราะทนายความหญิงเสนอตัวที่จะช่วยไปพูดคุยและเจรจาต่อรองกับทางฝั่งผู้ขายอาคาร เพื่อขอให้ฝ่ายผู้ขายเป็นคนออกค่าใช้จ่ายในการปรับปรุงระบบไฟฟ้าในตึกให้",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/68-70.mp3"
+  },
+  {
+    "id": 71,
+    "groupId": "group-71-73",
+    "transcript": "Before we end this meeting, I'd like to take a minute to recognize Janet Kalasky. She's led our department's marketing efforts for the past five years and has shown a tremendous amount of dedication to the company. Recently, Janet has been focusing on the displays that advertise our new line of smartphones for our booth at next week's trade show. The displays are very impressive, and I suggest that you drop by the staff lounge after this meeting to have a look at them. But first, let's have a round of applause to thank Janet for her work and dedication.",
+    "questionText": "71: What is the purpose of the announcement?",
+    "options": [
+      "To acknowledge a coworker",
+      "To introduce a guest",
+      "To explain a department policy",
+      "To discuss sales techniques"
+    ],
+    "correctAnswer": 0,
+    "explanation": "เฉลยข้อ A: เพราะผู้พูดประกาศในที่ประชุมเพื่อยกย่องและขอบคุณเจเน็ต คาลาสกี้ ที่ทุ่มเททำงานในตำแหน่งฝ่ายการตลาดมาตลอดระยะเวลาห้าปีเต็ม",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/71-73.mp3"
+  },
+  {
+    "id": 72,
+    "groupId": "group-71-73",
+    "transcript": "Before we end this meeting, I'd like to take a minute to recognize Janet Kalasky. She's led our department's marketing efforts for the past five years and has shown a tremendous amount of dedication to the company. Recently, Janet has been focusing on the displays that advertise our new line of smartphones for our booth at next week's trade show. The displays are very impressive, and I suggest that you drop by the staff lounge after this meeting to have a look at them. But first, let's have a round of applause to thank Janet for her work and dedication.",
+    "questionText": "72: What has Janet Kalasky been working on recently?",
+    "options": [
+      "Finalizing a conference agenda",
+      "Developing mobile phone software",
+      "Updating training manuals",
+      "Creating promotional displays"
+    ],
+    "correctAnswer": 3,
+    "explanation": "เฉลยข้อ D: เพราะผู้พูดกล่าวถึงผลงานล่าสุดของเจเน็ต ว่าเธอได้ทุ่มเทเวลาไปกับการออกแบบและจัดทำสื่อป้ายโฆษณาประชาสัมพันธ์สำหรับสมาร์ทโฟนรุ่นใหม่เพื่อนำไปจัดแสดงในงานสัปดาห์หน้า",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/71-73.mp3"
+  },
+  {
+    "id": 73,
+    "groupId": "group-71-73",
+    "transcript": "Before we end this meeting, I'd like to take a minute to recognize Janet Kalasky. She's led our department's marketing efforts for the past five years and has shown a tremendous amount of dedication to the company. Recently, Janet has been focusing on the displays that advertise our new line of smartphones for our booth at next week's trade show. The displays are very impressive, and I suggest that you drop by the staff lounge after this meeting to have a look at them. But first, let's have a round of applause to thank Janet for her work and dedication.",
+    "questionText": "73: Where does the speaker encourage the listeners to go?",
+    "options": [
+      "To the security desk",
+      "To the employee lounge",
+      "To a training session",
+      "To a trade show"
+    ],
+    "correctAnswer": 1,
+    "explanation": "เฉลยข้อ B: เพราะผู้พูดเชิญชวนให้พนักงานทุกคนแวะไปที่ห้องพักผ่อนของพนักงาน (staff lounge) หลังจากเสร็จสิ้นการประชุม เพื่อร่วมชมผลงานป้ายจัดแสดงที่เจเน็ตตั้งใจทำขึ้นมา",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/71-73.mp3"
+  },
+  {
+    "id": 74,
+    "groupId": "group-74-76",
+    "transcript": "This is Harold Rosen, with WKRN News, reporting from the newly opened Bradford Opera House. The building is ultramodern, and when plans for its construction were announced, locals expressed their concern about it. It's located right next to historic city hall, the oldest building in the city. But so far, residents who have visited seem to like it. In spite of its modern look, those who have been inside are impressed. The atrium is beautifully decorated, the theater is equipped with a state-of-the-art sound system, and, of course, the music program is spectacular. The schedule for this season's performances can be found on the WKRN Website.",
+    "questionText": "74: Where is the speaker reporting from?",
+    "options": [
+      "A movie theater",
+      "An opera house",
+      "A shopping mall",
+      "A convention center"
+    ],
+    "correctAnswer": 1,
+    "explanation": "เฉลยข้อ B: เพราะผู้สื่อข่าวรายงานสถานการณ์สดมาจากหน้าอาคารโรงละครโอเปร่าแบรดฟอร์ดที่เพิ่งเปิดทำการแห่งใหม่ของเมือง",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/74-76.mp3"
+  },
+  {
+    "id": 75,
+    "groupId": "group-74-76",
+    "transcript": "This is Harold Rosen, with WKRN News, reporting from the newly opened Bradford Opera House. The building is ultramodern, and when plans for its construction were announced, locals expressed their concern about it. It's located right next to historic city hall, the oldest building in the city. But so far, residents who have visited seem to like it. In spite of its modern look, those who have been inside are impressed. The atrium is beautifully decorated, the theater is equipped with a state-of-the-art sound system, and, of course, the music program is spectacular. The schedule for this season's performances can be found on the WKRN Website.",
+    "questionText": "75: What does the speaker imply when he says, \"It's located right next to historic city hall, the oldest building in the city\"?",
+    "options": [
+      "An old building needs to be repaired.",
+      "A historic landmark is worth visiting.",
+      "A new building contrasts with older ones.",
+      "A building is not difficult to get to."
+    ],
+    "correctAnswer": 2,
+    "explanation": "เฉลยข้อ C: เพราะผู้พูดระบุว่าอาคารนี้มีดีไซน์ที่ทันสมัยหลุดโลกแต่กลับตั้งอยู่ติดกับศาลากลางจังหวัดหลังเก่าซึ่งเป็นตึกที่เก่าแก่ที่สุดในเมือง เพื่อสื่อถึงความแตกต่างอย่างสิ้นเชิงทางสถาปัตยกรรม",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/74-76.mp3"
+  },
+  {
+    "id": 76,
+    "groupId": "group-74-76",
+    "transcript": "This is Harold Rosen, with WKRN News, reporting from the newly opened Bradford Opera House. The building is ultramodern, and when plans for its construction were announced, locals expressed their concern about it. It's located right next to historic city hall, the oldest building in the city. But so far, residents who have visited seem to like it. In spite of its modern look, those who have been inside are impressed. The atrium is beautifully decorated, the theater is equipped with a state-of-the-art sound system, and, of course, the music program is spectacular. The schedule for this season's performances can be found on the WKRN Website.",
+    "questionText": "76: What can the listeners do on a Web site?",
+    "options": [
+      "Purchase event merchandise",
+      "Read reviews",
+      "Register for a newsletter",
+      "View a performance schedule"
+    ],
+    "correctAnswer": 3,
+    "explanation": "เฉลยข้อ D: เพราะในช่วงท้ายของรายงานข่าวระบุว่า ผู้ฟังที่สนใจสามารถเข้าไปตรวจสอบตารางเวลาและกำหนดการแสดงประจำฤดูกาลนี้เพิ่มเติมได้ทางเว็บไซต์ของสำนักข่าว",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/74-76.mp3"
+  },
+  {
+    "id": 77,
+    "groupId": "group-77-79",
+    "transcript": "Hi , my name is Tomoko. I saw an advertisement for your motorcycle, and I'm interested in purchasing it. But I have a concern about the price. It's a little high considering it's a few years old. Could you lower the price by two hundred dollars? I also read in the ad that you'd be willing to drop the motorcycle off at the buyer's house, but I live an hour away so I don't want to make you drive too far. My friend and I can come pick it up on Saturday, if you accept my offer. Give me a call back tonight at 555-0108. Thanks.",
+    "questionText": "77: Why is the speaker calling?",
+    "options": [
+      "To report an accident",
+      "To inquire about an advertisement",
+      "To point out a mistake",
+      "To give driving directions"
+    ],
+    "correctAnswer": 1,
+    "explanation": "เฉลยข้อ B: เพราะโทโมโกะโทรมาสอบถามรายละเอียดหลังจากเห็นข้อความประกาศโฆษณาขายรถจักรยานยนต์มือสอง และเธอมีความสนใจที่จะขอซื้อรถคันดังกล่าว",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/77-79.mp3"
+  },
+  {
+    "id": 78,
+    "groupId": "group-77-79",
+    "transcript": "Hi , my name is Tomoko. I saw an advertisement for your motorcycle, and I'm interested in purchasing it. But I have a concern about the price. It's a little high considering it's a few years old. Could you lower the price by two hundred dollars? I also read in the ad that you'd be willing to drop the motorcycle off at the buyer's house, but I live an hour away so I don't want to make you drive too far. My friend and I can come pick it up on Saturday, if you accept my offer. Give me a call back tonight at 555-0108. Thanks.",
+    "questionText": "78: What does the speaker say she is concerned about?",
+    "options": [
+      "A selling price",
+      "The cost of a delivery",
+      "An application requirement",
+      "The time of an event"
+    ],
+    "correctAnswer": 0,
+    "explanation": "เฉลยข้อ A: เพราะผู้โทรแสดงความกังวลเกี่ยวกับราคาขายที่ตั้งไว้ โดยมองว่าค่อนข้างสูงเกินไปหน่อยเมื่อพิจารณาจากอายุการใช้งานของรถที่ผ่านมาแล้วหลายปี",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/77-79.mp3"
+  },
+  {
+    "id": 79,
+    "groupId": "group-77-79",
+    "transcript": "Hi , my name is Tomoko. I saw an advertisement for your motorcycle, and I'm interested in purchasing it. But I have a concern about the price. It's a little high considering it's a few years old. Could you lower the price by two hundred dollars? I also read in the ad that you'd be willing to drop the motorcycle off at the buyer's house, but I live an hour away so I don't want to make you drive too far. My friend and I can come pick it up on Saturday, if you accept my offer. Give me a call back tonight at 555-0108. Thanks.",
+    "questionText": "79: What does the speaker offer to do?",
+    "options": [
+      "Test a product",
+      "E-mail a contract",
+      "Pick up an item",
+      "Provide a photograph"
+    ],
+    "correctAnswer": 2,
+    "explanation": "เฉลยข้อ C: เพราะผู้หญิงเสนอเงื่อนไขว่าหากคนขายยอมลดราคาให้สองร้อยดอลลาร์ เธอและเพื่อนจะขับรถเดินทางมารับรถจักรยานยนต์คันนี้ด้วยตัวเองในวันเสาร์เพื่อไม่ให้คนขายต้องขับมาส่งไกล",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/7 .mp3"
+  },
+  {
+    "id": 80,
+    "groupId": "group-80-82",
+    "transcript": "OK everyone, this concludes our training on advanced hairstyling techniques. We hope you learned how combining products and tools can help you create new and exciting hairstyles for your clients. You'll notice on the way out that I placed some surveys by the door. And let me remind you that there are only a few openings left for our upcoming workshop on hair coloring, so be sure to sign up soon if you're interested. Have a great afternoon!",
+    "questionText": "80: Who most likely are the listeners?",
+    "options": [
+      "Marketing specialists",
+      "Fashion models",
+      "Interior designers",
+      "Hairstylists"
+    ],
+    "correctAnswer": 3,
+    "explanation": "เฉลยข้อ D: เพราะผู้พูดกล่าวสรุปจบโครงการฝึกอบรมเกี่ยวกับการใช้เทคนิคจัดแต่งทรงผมขั้นสูง และแนะนำเครื่องมือต่างๆ สำหรับสร้างสรรค์ทรงผมใหม่ๆ ให้กับลูกค้าของพวกเขา",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/80-82.mp3"
+  },
+  {
+    "id": 81,
+    "groupId": "group-80-82",
+    "transcript": "OK everyone, this concludes our training on advanced hairstyling techniques. We hope you learned how combining products and tools can help you create new and exciting hairstyles for your clients. You'll notice on the way out that I placed some surveys by the door. And let me remind you that there are only a few openings left for our upcoming workshop on hair coloring, so be sure to sign up soon if you're interested. Have a great afternoon!",
+    "questionText": "81: What does the speaker imply when she says, \"I placed some surveys by the door\"?",
+    "options": [
+      "Her documents are missing.",
+      "She hopes to receive feedback.",
+      "Participants should depart promptly.",
+      "A task has already been completed."
+    ],
+    "correctAnswer": 1,
+    "explanation": "เฉลยข้อ B: เพราะผู้พูดแจ้งว่าเธอได้วางแบบสอบถามความคิดเห็น (surveys) ไว้ที่บริเวณประตูทางออก เพื่อมุ่งหวังที่จะได้รับข้อมูลป้อนกลับและการประเมินผลการฝึกอบรมจากผู้เข้าร่วมทุกคน",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/80-82.mp3"
+  },
+  {
+    "id": 82,
+    "groupId": "group-80-82",
+    "transcript": "OK everyone, this concludes our training on advanced hairstyling techniques. We hope you learned how combining products and tools can help you create new and exciting hairstyles for your clients. You'll notice on the way out that I placed some surveys by the door. And let me remind you that there are only a few openings left for our upcoming workshop on hair coloring, so be sure to sign up soon if you're interested. Have a great afternoon!",
+    "questionText": "82: What does the speaker remind the listeners about?",
+    "options": [
+      "Contacting clients",
+      "Signing up for a workshop",
+      "Submitting a personal profile",
+      "Taking a brochure"
+    ],
+    "correctAnswer": 1,
+    "explanation": "เฉลยข้อ B: เพราะผู้พูดเอ่ยเตือนความจำกลุ่มผู้ฟังว่า ที่นั่งสำหรับเข้าร่วมกิจกรรมเวิร์กชอปเรื่องการทำสีผมที่กำลังจะจัดขึ้นเหลือโควตาอีกไม่มากแล้ว จึงขอให้รีบไปลงชื่อสมัครโดยเร็ว",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/80-82.mp3"
+  },
+  {
+    "id": 83,
+    "groupId": "group-83-85",
+    "transcript": "Thanks for listening to KQSP Radio. Remember to tune in next Saturday evening for our tenth-anniversary celebration. We'll be playing the top ten songs of the past decade, selected by you, the listeners. There's still time to vote for your favorite song. You can do that by sending a text message to 5143. The songs with the most votes will be played during our show next Saturday evening. And coming up after a short break, we've got a live in-studio interview with pop singer Ezra Ortiz. He'll be telling us about his upcoming world tour.",
+    "questionText": "83: According to the speaker, what will happen next Saturday?",
+    "options": [
+      "A recording session",
+      "A fund-raising dinner",
+      "A grand opening",
+      "An anniversary celebration"
+    ],
+    "correctAnswer": 3,
+    "explanation": "เฉลยข้อ D: เพราะสถานีวิทยุเชิญชวนให้ผู้ฟังติดตามรับฟังการจัดรายการพิเศษฉลองครบรอบปีที่สิบ (tenth-anniversary celebration) ของทางสถานีในค่ำคืนวันเสาร์หน้า",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/83-85.mp3"
+  },
+  {
+    "id": 84,
+    "groupId": "group-83-85",
+    "transcript": "Thanks for listening to KQSP Radio. Remember to tune in next Saturday evening for our tenth-anniversary celebration. We'll be playing the top ten songs of the past decade, selected by you, the listeners. There's still time to vote for your favorite song. You can do that by sending a text message to 5143. The songs with the most votes will be played during our show next Saturday evening. And coming up after a short break, we've got a live in-studio interview with pop singer Ezra Ortiz. He'll be telling us about his upcoming world tour.",
+    "questionText": "84: What does the speaker tell the listeners they can do?",
+    "options": [
+      "Vote for their favorite songs",
+      "Take a quiz",
+      "Post questions",
+      "Donate money to the radio station"
+    ],
+    "correctAnswer": 0,
+    "explanation": "เฉลยข้อ A: เพราะผู้จัดรายการบอกว่าผู้ฟังยังสามารถร่วมสนุกด้วยการส่งข้อความสั้นทางโทรศัพท์เข้ามาเพื่อร่วมลงคะแนนโหวตเลือกบทเพลงที่ตนเองชื่นชอบที่สุดในรอบทศวรรษได้",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/83-85.mp3"
+  },
+  {
+    "id": 85,
+    "groupId": "group-83-85",
+    "transcript": "Thanks for listening to KQSP Radio. Remember to tune in next Saturday evening for our tenth-anniversary celebration. We'll be playing the top ten songs of the past decade, selected by you, the listeners. There's still time to vote for your favorite song. You can do that by sending a text message to 5143. The songs with the most votes will be played during our show next Saturday evening. And coming up after a short break, we've got a live in-studio interview with pop singer Ezra Ortiz. He'll be telling us about his upcoming world tour.",
+    "questionText": "85: What will Ezra Ortiz be discussing next?",
+    "options": [
+      "His song-writing process",
+      "The release of a new song",
+      "An upcoming tour",
+      "Music programs in schools"
+    ],
+    "correctAnswer": 2,
+    "explanation": "เฉลยข้อ C: เพราะดีเจแจ้งว่าหลังจากพักโฆษณาสั้นๆ จะมีบทสัมภาษณ์สดของนักร้องเพลงป็อปชื่อดัง เอซรา ออร์ติซ ซึ่งเขาจะมาพูดคุยเปิดใจเกี่ยวกับตารางการเดินสายทัวร์คอนเสิร์ตรอบโลกที่กำลังจะเกิดขึ้น",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/83-85.mp3"
+  },
+  {
+    "id": 86,
+    "groupId": "group-86-88",
+    "transcript": "Hello, I'm calling from Mahmud's Printers about the business cards your company recently ordered from my printing shop. That's a very big order. So I wanted to talk with you before going through with it. Of course, I'll send you an example of the card before we print so many, but please call me back to confirm the number. Oh, and regarding the color scheme. I don't have the exact pale yellow you want for your logo, so I had to change that. I do have a similar hue, though-I hope you like it. Thanks!",
+    "questionText": "86: What does the speaker imply when he says, \"That's a very big order\"?",
+    "options": [
+      "He cannot fill an order in time.",
+      "He will charge more than usual.",
+      "He needs a favor from the listener.",
+      "He thinks a request may be incorrect."
+    ],
+    "correctAnswer": 3,
+    "explanation": "เฉลยข้อ D: เพราะช่างพิมพ์บอกว่ายอดสั่งทำนามบัตรรอบนี้มีจำนวนเยอะมาก เขาจึงต้องโทรมาตรวจสอบเพื่อความแน่ใจอีกครั้งเพราะเกรงว่าลูกค้าอาจจะใส่จำนวนตัวเลขคลาดเคลื่อนหรือสั่งผิดพลาด",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/86-88.mp3"
+  },
+  {
+    "id": 87,
+    "groupId": "group-86-88",
+    "transcript": "Hello, I'm calling from Mahmud's Printers about the business cards your company recently ordered from my printing shop. That's a very big order. So I wanted to talk with you before going through with it. Of course, I'll send you an example of the card before we print so many, but please call me back to confirm the number. Oh, and regarding the color scheme. I don't have the exact pale yellow you want for your logo, so I had to change that. I do have a similar hue, though-I hope you like it. Thanks!",
+    "questionText": "87: What will the speaker send the listener?",
+    "options": [
+      "A signed paper",
+      "A product sample",
+      "A color printer",
+      "A catalog"
+    ],
+    "correctAnswer": 1,
+    "explanation": "เฉลยข้อ B: เพราะช่างพิมพ์บอกว่าจะทำการจัดส่งตัวอย่างชิ้นงานนามบัตร (product sample / example) ไปให้ลูกค้าตรวจสอบความถูกต้องและดูหน้าตาก่อนที่จะเริ่มเดินเครื่องสั่งพิมพ์จริงในปริมาณมากๆ",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/86-88.mp3"
+  },
+  {
+    "id": 88,
+    "groupId": "group-86-88",
+    "transcript": "Hello, I'm calling from Mahmud's Printers about the business cards your company recently ordered from my printing shop. That's a very big order. So I wanted to talk with you before going through with it. Of course, I'll send you an example of the card before we print so many, but please call me back to confirm the number. Oh, and regarding the color scheme. I don't have the exact pale yellow you want for your logo, so I had to change that. I do have a similar hue, though-I hope you like it. Thanks!",
+    "questionText": "88: What does the speaker say he has changed?",
+    "options": [
+      "The color of a design",
+      "The placement of some information",
+      "The time of an appointment",
+      "The location of a sign"
+    ],
+    "correctAnswer": 0,
+    "explanation": "เฉลยข้อ A: เพราะผู้พูดแจ้งว่าสีเหลืองอ่อนที่ระบุมาสำหรับทำโลโก้นั้นที่ร้านไม่มีหมึกเฉดที่ตรงเป๊ะ เขาจึงจำเป็นต้องเปลี่ยนไปใช้สีเฉดอื่นที่มีโทนสีใกล้เคียงกันแทน",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/86-88.mp3"
+  },
+  {
+    "id": 89,
+    "groupId": "group-89-91",
+    "transcript": "Hello , I'm the director of the Human Resources Department, and I'm here to announce a new system for keeping track of your work hours. Instead of scanning employee ID cards at the Security Desk, we have instituted an online system for reporting when you arrive and leave work. Talk to your Human Resources representative during their office hours to get more detailed information about this new process. You'll be glad to know that the new system, which will be fully operational by the beginning of next week, will allow the Payroll Department to send out paychecks faster.",
+    "questionText": "89: What is the announcement mainly about?",
+    "options": [
+      "Finishing a team project",
+      "Reporting work hours",
+      "Issuing ID badges",
+      "Hiring more workers"
+    ],
+    "correctAnswer": 1,
+    "explanation": "เฉลยข้อ B: เพราะผู้อำนวยการฝ่ายทรัพยากรบุคคลมาแจ้งเรื่องการเปลี่ยนระบบบันทึกเวลาเข้าและออกจากการทำงานของพนักงาน (reporting work hours) จากเดิมที่ต้องสแกนบัตรที่โต๊ะรักษาความปลอดภัยมาเป็นระบบออนไลน์แทน",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/89-91.mp3"
+  },
+  {
+    "id": 90,
+    "groupId": "group-89-91",
+    "transcript": "Hello , I'm the director of the Human Resources Department, and I'm here to announce a new system for keeping track of your work hours. Instead of scanning employee ID cards at the Security Desk, we have instituted an online system for reporting when you arrive and leave work. Talk to your Human Resources representative during their office hours to get more detailed information about this new process. You'll be glad to know that the new system, which will be fully operational by the beginning of next week, will allow the Payroll Department to send out paychecks faster.",
+    "questionText": "90: According to the speaker, how can employees get more information?",
+    "options": [
+      "By watching a video",
+      "By reading a file",
+      "By filling out a form",
+      "By speaking with a representative"
+    ],
+    "correctAnswer": 3,
+    "explanation": "เฉลยข้อ D: เพราะในประกาศระบุว่าพนักงานคนใดที่ต้องการรายละเอียดหรือข้อมูลเพิ่มเติมเกี่ยวกับขั้นตอนระบบใหม่นี้ สามารถเข้าไปพูดคุยสอบถามกับตัวแทนฝ่ายบุคคล (representative) ได้ในช่วงเวลาทำการ",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/89-91.mp3"
+  },
+  {
+    "id": 91,
+    "groupId": "group-89-91",
+    "transcript": "Hello , I'm the director of the Human Resources Department, and I'm here to announce a new system for keeping track of your work hours. Instead of scanning employee ID cards at the Security Desk, we have instituted an online system for reporting when you arrive and leave work. Talk to your Human Resources representative during their office hours to get more detailed information about this new process. You'll be glad to know that the new system, which will be fully operational by the beginning of next week, will allow the Payroll Department to send out paychecks faster.",
+    "questionText": "91: What is an advantage of the new system?",
+    "options": [
+      "Company sales will increase.",
+      "Computer security will improve.",
+      "Staff will be paid more quickly.",
+      "Project timelines will be updated electronically."
+    ],
+    "correctAnswer": 2,
+    "explanation": "เฉลยข้อ C: เพราะผู้พูดชี้แจงข้อดีของระบบบันทึกเวลาออนไลน์ว่า จะช่วยให้ฝ่ายบัญชีและการเงินสามารถประมวลผลข้อมูลและจัดส่งเงินเดือนรวมถึงเช็คค่าจ้างให้แก่พนักงานได้รวดเร็วยิ่งขึ้นกว่าเดิม (paid more quickly)",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/89-91.mp3"
+  },
+  {
+    "id": 92,
+    "groupId": "group-92-94",
+    "transcript": "Thanks for coming to this product development meeting. As you know, we've recently reduced the amount of packaging we use for our TuckerTreats snack bags, in order to be more eco friendly. But customers aren't happy because our new packaging now offers smaller quantities of Tucker Treats at their original prices, which means they're paying more for less food. Our president, Young Soo Lee, has approved changing the size of the packaging to offer larger quantities of snacks at the original prices. So, your next task is to come up with a new package design to hold the larger quantities, while still using less plastic.",
+    "questionText": "92: What department does the speaker most likely work in?",
+    "options": [
+      "Product Development",
+      "Advertising",
+      "Legal Affairs",
+      "Finance"
+    ],
+    "correctAnswer": 0,
+    "explanation": "เฉลยข้อ A: เพราะผู้พูดกล่าวต้อนรับทุกคนเข้าสู่การประชุมฝ่ายพัฒนาผลิตภัณฑ์ใหม่ (Product Development) ของบริษัท",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/92-94.mp3"
+  },
+  {
+    "id": 93,
+    "groupId": "group-92-94",
+    "transcript": "Thanks for coming to this product development meeting. As you know, we've recently reduced the amount of packaging we use for our TuckerTreats snack bags, in order to be more eco friendly. But customers aren't happy because our new packaging now offers smaller quantities of Tucker Treats at their original prices, which means they're paying more for less food. Our president, Young Soo Lee, has approved changing the size of the packaging to offer larger quantities of snacks at the original prices. So, your next task is to come up with a new package design to hold the larger quantities, while still using less plastic.",
+    "questionText": "93: What are customers' complaints about Tucker Treats?",
+    "options": [
+      "The ingredient list is inaccurate.",
+      "The food amount has decreased.",
+      "The packaging is hard to open.",
+      "The new flavor does not taste good."
+    ],
+    "correctAnswer": 1,
+    "explanation": "เฉลยข้อ B: เพราะผู้พูดสรุปเรื่องร้องเรียนจากลูกค้าว่า ซองขนมแบบลดโลกร้อนเวอร์ชันใหม่มีปริมาณขนมข้างในน้อยลงแต่กลับขายในราคาเท่าเดิม ทำให้ลูกค้ารู้สึกว่าได้ของน้อยลง (food amount has decreased)",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/92-94.mp3"
+  },
+  {
+    "id": 94,
+    "groupId": "group-92-94",
+    "transcript": "Thanks for coming to this product development meeting. As you know, we've recently reduced the amount of packaging we use for our TuckerTreats snack bags, in order to be more eco friendly. But customers aren't happy because our new packaging now offers smaller quantities of Tucker Treats at their original prices, which means they're paying more for less food. Our president, Young Soo Lee, has approved changing the size of the packaging to offer larger quantities of snacks at the original prices. So, your next task is to come up with a new package design to hold the larger quantities, while still using less plastic.",
+    "questionText": "94: What task does the speaker assign to the listeners?",
+    "options": [
+      "Creating some designs",
+      "Conducting market research",
+      "Demonstrating a procedure",
+      "Finding potential vendors"
+    ],
+    "correctAnswer": 0,
+    "explanation": "เฉลยข้อ A: เพราะผู้พูดมอบหมายงานชิ้นต่อไปให้ทีมงานไปช่วยกันคิดค้นและออกแบบบรรจุภัณฑ์ซองขนมขนาดใหม่ (Creating some designs) ที่สามารถบรรจุขนมในปริมาณที่มากขึ้นได้โดยยังคงใช้พลาสติกในปริมาณที่ลดลง",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/92-94.mp3"
+  },
+  {
+    "id": 95,
+    "groupId": "group-95-97",
+    "transcript": "Hi Elizabeth, it's Becca. Thanks a lot for agreeing to water my plants and get the mail at my jewelry store while I'm in Singapore. This is my first buying trip, and I'm excited about finding new materials for my jewelry. I left the keys in an envelope under your door. The key to my store is the longest one with the square top, and the smallest one is for the mailbox. I e-mailed instructions about caring for each of the plants. Don't worry, though-I only have a few. Thanks again for your help, and see you next week.",
+    "questionText": "95: Why is the speaker traveling to Singapore?",
+    "images": ["./assets/images/ฟ้าม่วง LC2/BP 95-97.png"],
+    "options": [
+      "To see family",
+      "To go sightseeing",
+      "To purchase supplies",
+      "To meet overseas clients"
+    ],
+    "correctAnswer": 2,
+    "explanation": "เฉลยข้อ C: เพราะเบ็คก้าบอกว่าทริปเดินทางไปสิงคโปร์ในครั้งนี้เป็นทริปจัดซื้อของครั้งแรกของเธอ ซึ่งเธอรู้สึกตื่นเต้นมากที่จะได้ไปเสาะหาวัสดุและวัตถุดิบใหม่ๆ (purchase supplies / materials) มาใช้ในการทำเครื่องประดับของร้าน",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/95-97.mp3"
+  },
+  {
+    "id": 96,
+    "groupId": "group-95-97",
+    "transcript": "Hi Elizabeth, it's Becca. Thanks a lot for agreeing to water my plants and get the mail at my jewelry store while I'm in Singapore. This is my first buying trip, and I'm excited about finding new materials for my jewelry. I left the keys in an envelope under your door. The key to my store is the longest one with the square top, and the smallest one is for the mailbox. I e-mailed instructions about caring for each of the plants. Don't worry, though-I only have a few. Thanks again for your help, and see you next week.",
+    "questionText": "96: Look at the graphic. Which key is for the store?",
+    "images": ["./assets/images/ฟ้าม่วง LC2/96.png"],
+    "options": [
+      "Key #1",
+      "Key #2",
+      "Key #3",
+      "Key #4"
+    ],
+    "correctAnswer": 2,
+    "explanation": "เฉลยข้อ C: เพราะเบ็คก้าระบุรายละเอียดของกุญแจไว้ว่า กุญแจสำหรับเปิดร้านเครื่องประดับจะเป็นลูกที่ยาวที่สุดและมีหัวกุญแจเป็นรูปทรงสี่เหลี่ยม ซึ่งตรงกับคำอธิบายของหมายเลข 3 (Key #3)",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/95-97.mp3"
+  },
+  {
+    "id": 97,
+    "groupId": "group-95-97",
+    "transcript": "Hi Elizabeth, it's Becca. Thanks a lot for agreeing to water my plants and get the mail at my jewelry store while I'm in Singapore. This is my first buying trip, and I'm excited about finding new materials for my jewelry. I left the keys in an envelope under your door. The key to my store is the longest one with the square top, and the smallest one is for the mailbox. I e-mailed instructions about caring for each of the plants. Don't worry, though-I only have a few. Thanks again for your help, and see you next week.",
+    "questionText": "97: What did the speaker send in an e-mail?",
+    "options": [
+      "Special care instructions",
+      "A travel itinerary",
+      "Store blueprints",
+      "A technology article"
+    ],
+    "correctAnswer": 0,
+    "explanation": "เฉลยข้อ A: เพราะเบ็คก้าแจ้งเพื่อนว่าเธอได้ส่งอีเมลอธิบายขั้นตอนและวิธีการดูแลรักษาต้นไม้แต่ละต้นภายในร้านเอาไว้ให้เรียบร้อยแล้ว (Special care instructions)",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/95-97.mp3"
+  },
+  {
+    "id": 98,
+    "groupId": "group-98-100",
+    "transcript": "Next week marks the beginning of our holiday clearance sale here at Sarma's Department Store. Now, since this is such an important event, I'll be asking each of you to work an extra shift or two over the course of the week. We really need a total team effort in order to make this sale a success. This is the coupon that'll be printed in local newspapers. You'll notice that we're offering the largest discount on the merchandise that, truthfully, has not been selling very well this season. We'll be actively promoting it to reduce our inventory and make room for the new merchandise that we'll be receiving in April.",
+    "questionText": "98: What does the speaker ask the listeners to do?",
+    "images": ["./assets/images/ฟ้าม่วง LC2/BP 98-100.png"],
+    "options": [
+      "Take inventory",
+      "Decorate the store",
+      "Work extra hours",
+      "Hand out coupons"
+    ],
+    "correctAnswer": 2,
+    "explanation": "เฉลยข้อ C: เพราะผู้จัดการห้างสรรพสินค้าเอ่ยปากขอความร่วมมือให้พนักงานทุกคนช่วยเข้าเวรทำงานล่วงเวลาเพิ่มขึ้นอีกหนึ่งถึงสองกะ (Work extra hours / extra shift) ในช่วงสัปดาห์หน้าเนื่องจากเป็นช่วงเทศกาลเซลล์ครั้งใหญ่",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/98-100.mp3"
+  },
+  {
+    "id": 99,
+    "groupId": "group-98-100",
+    "transcript": "Next week marks the beginning of our holiday clearance sale here at Sarma's Department Store. Now, since this is such an important event, I'll be asking each of you to work an extra shift or two over the course of the week. We really need a total team effort in order to make this sale a success. This is the coupon that'll be printed in local newspapers. You'll notice that we're offering the largest discount on the merchandise that, truthfully, has not been selling very well this season. We'll be actively promoting it to reduce our inventory and make room for the new merchandise that we'll be receiving in April.",
+    "questionText": "99: Look at the graphic. According to the speaker, what merchandise has not sold well?",
+    "options": [
+      "Shoes",
+      "Clothing",
+      "Home décor",
+      "Luggage"
+    ],
+    "correctAnswer": 3,
+    "explanation": "เฉลยข้อ D: เพราะผู้พูดอธิบายว่าคูปองส่วนลดในหนังสือพิมพ์จะเน้นมอบส่วนลดเปอร์เซ็นต์ที่สูงที่สุดให้กับกลุ่มสินค้าประเภทกระเป๋าเดินทาง (Luggage) ซึ่งเป็นสินค้าที่ทำยอดขายได้ไม่ดีนักในฤดูกาลนี้เพื่อเร่งระบายสต็อกออกไป",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/98-100.mp3"
+  },
+  {
+    "id": 100,
+    "groupId": "group-98-100",
+    "transcript": "Next week marks the beginning of our holiday clearance sale here at Sarma's Department Store. Now, since this is such an important event, I'll be asking each of you to work an extra shift or two over the course of the week. We really need a total team effort in order to make this sale a success. This is the coupon that'll be printed in local newspapers. You'll notice that we're offering the largest discount on the merchandise that, truthfully, has not been selling very well this season. We'll be actively promoting it to reduce our inventory and make room for the new merchandise that we'll be receiving in April.",
+    "questionText": "100: According to the speaker, what will happen in April?",
+    "options": [
+      "New merchandise will be arriving.",
+      "A store department will be expanded.",
+      "A Web site will be improved.",
+      "Employee work schedules will change."
+    ],
+    "correctAnswer": 0,
+    "explanation": "เฉลยข้อ A: เพราะผู้จัดการแจ้งเหตุผลในการเร่งระบายสินค้าเก่าออกไป ว่าต้องการเคลียร์พื้นที่ในโกดังและหน้าร้านเพื่อเตรียมรองรับกลุ่มสินค้าล็อตใหม่ที่จะเดินทางมาถึงห้างในช่วงเดือนเมษายนที่จะถึงนี้ (New merchandise will be arriving.)",
+    "audioUrl": "./assets/audio/ฟ้าม่วง LC2/98-100.mp3"
+  }
+]
     },
     { // ฟ้าม่วง RC RC2 Checked!
         "setId": "ฟ้าม่วง RC2",
