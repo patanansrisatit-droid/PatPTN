@@ -816,7 +816,6 @@ function openZoom(imgUrl, elementId) {
         zoomOverlay._globalZoomSetup = true;
     }
 }
-
 function closeZoom() {
     zoomOverlay.classList.add('hidden');
     document.body.classList.remove('zoom-open');
@@ -831,7 +830,6 @@ function closeZoom() {
         viewportReset();
     }
 }
-
 function handleZoomSlider(val) {
     zoomScale = parseFloat(val);
     const slider = document.getElementById('zoom-slider');
@@ -841,12 +839,10 @@ function handleZoomSlider(val) {
     else document.getElementById('mini-map-container').classList.remove('hidden');
     updateZoomTransform();
 }
-
 function updateZoomTransform() {
     document.getElementById('zoom-transform-container').style.transform = `translate(${panX}px,${panY}px) scale(${zoomScale})`;
     updateMinimapViewer();
 }
-
 function updateMinimapViewer() {
     const viewer = document.getElementById('minimap-viewer');
     if (zoomScale <= 1) { viewer.style.cssText = 'width:100%;height:100%;left:0;top:0'; return; }
@@ -855,7 +851,6 @@ function updateMinimapViewer() {
     const t = Math.max(0, Math.min(100-h, 50 - h/2 - (panY / window.innerHeight * 100 / zoomScale)));
     viewer.style.cssText = `width:${w}%;height:${h}%;left:${l}%;top:${t}%`;
 }
-
 function renderQuestion() {
     console.log('renderQuestion called, currentIdx:', currentIdx, 'examScreens.length:', examScreens.length);
     if (!currentSet || examScreens.length === 0) { console.log('renderQuestion early return'); return; }
@@ -1014,7 +1009,6 @@ function renderQuestion() {
 
     if (window.lucide) lucide.createIcons();
 }
-
 function setupDrawingCanvas() {
     const canvas = document.getElementById('drawing-canvas');
     const tutorScreen = document.getElementById('tutor-screen');
@@ -1026,7 +1020,6 @@ function setupDrawingCanvas() {
         redrawCanvas(canvas);
     }
 }
-
 function generateQuestionHTML(q) {
     const isH = currentLayoutMode === 'horizontal';
     const selected = (qId, i) => selectedAnswers[qId] === i;
@@ -1097,7 +1090,6 @@ function generateQuestionHTML(q) {
                     : "w-full text-left bg-slate-50 hover:bg-slate-100/80 border border-slate-200 p-5 rounded-xl text-base font-medium transition flex items-center gap-3";
             });
         }
-
         function checkAnswer(qId, forceShow = false) {
                     const q = currentSet.questions.find(x => x.id === qId);
                     if (!q) return;
@@ -1153,8 +1145,7 @@ function generateQuestionHTML(q) {
                             }
                         }
                     }
-                }
-
+        }
 function _togglePanel(stateMap, qId, boxId, btnId, cfg) {
     stateMap[qId] = !stateMap[qId];
     const isOn  = stateMap[qId];
@@ -1167,9 +1158,8 @@ function _togglePanel(stateMap, qId, boxId, btnId, cfg) {
         btn.innerHTML = `<i data-lucide="${isOn ? cfg.iconOn : cfg.iconOff}" class="w-4 h-4"></i> ${isOn ? cfg.labelOn : cfg.labelOff}`;
         if (window.lucide) lucide.createIcons();
     }
-}
-
-function toggleOptions(qId) {
+        }
+        function toggleOptions(qId) {
     const q = currentSet?.questions.find(x => x.id === qId);
     if (!q || !q.hideOptions) return;
     const note = document.getElementById(`options-hidden-note-${qId}`);
@@ -1184,9 +1174,8 @@ function toggleOptions(qId) {
         }
     );
     if (note) note.style.display = hiddenChoices[qId] ? 'none' : 'block';
-}
-
-function toggleTranscript(qId) {
+        }
+        function toggleTranscript(qId) {
     const q = currentSet?.questions.find(x => x.id === qId);
     if (!q || !q.transcript) return;
     _togglePanel(transcriptVisible, qId,
@@ -1199,9 +1188,8 @@ function toggleTranscript(qId) {
             classOff: 'w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold {sz} rounded-xl shadow-md shadow-yellow-200 transition flex items-center gap-1 mb-2',
         }
     );
-}
-
-function toggleGlobalTranscript() {
+        }
+        function toggleGlobalTranscript() {
     const screenQuestions = examScreens[currentIdx];
     const firstTranscriptQ = screenQuestions.find(q => q.transcript?.trim());
     if (!firstTranscriptQ) return;
@@ -1217,72 +1205,67 @@ function toggleGlobalTranscript() {
         btn.innerHTML = `<i data-lucide="${icon}" class="w-4 h-4"></i> ${label}`;
         if (window.lucide) lucide.createIcons();
     }
-}
-
-function jumpToQuestion(index) {
-    const idx = parseInt(index);
-    if (idx >= 0 && idx < examScreens.length) {
-        currentIdx = idx;
-        renderQuestion();
-        document.getElementById('question-panel').scrollTop = 0;
-    }
-}
-
-function setupJumpSelect() {
-    const select = document.getElementById('jump-select');
-    if (!select) return;
-    select.addEventListener('change', function(e) {
-        const selected = this.value;
-        if (selected) {
-            jumpToQuestion(selected);
-            this.blur(); // ปิด dropdown หลังจากเลือก
         }
-    });
-}
-
-function populateJumpDropdown() {
-    const grid = document.getElementById('jump-grid');
-    if (!grid) return;
-    grid.innerHTML = '';
-
-    let globalQNum = 0;
-    examScreens.forEach((screen, idx) => {
-        screen.forEach((q, qIdx) => {
-            globalQNum++;
-            const btn = document.createElement('button');
-            btn.textContent = globalQNum;
-            btn.dataset.screenIdx = idx;
-            btn.className = 'w-7 h-7 text-xs font-medium rounded-md transition flex items-center justify-center';
-
-            if (idx === currentIdx) {
-                btn.className += ' bg-blue-500 text-white shadow-sm';
-            } else {
-                btn.className += ' bg-slate-50 hover:bg-blue-100 text-slate-600 border border-slate-200';
+        function jumpToQuestion(index) {
+            const idx = parseInt(index);
+            if (idx >= 0 && idx < examScreens.length) {
+                currentIdx = idx;
+                renderQuestion();
+                document.getElementById('question-panel').scrollTop = 0;
             }
+        }
+        function setupJumpSelect() {
+            const select = document.getElementById('jump-select');
+            if (!select) return;
+            select.addEventListener('change', function(e) {
+                const selected = this.value;
+                if (selected) {
+                    jumpToQuestion(selected);
+                    this.blur(); // ปิด dropdown หลังจากเลือก
+                }
+            });
+        }
+        function populateJumpDropdown() {
+            const grid = document.getElementById('jump-grid');
+            if (!grid) return;
+            grid.innerHTML = '';
 
-            btn.onclick = function() {
-                jumpToQuestion(parseInt(this.dataset.screenIdx));
+            let globalQNum = 0;
+            examScreens.forEach((screen, idx) => {
+                screen.forEach((q, qIdx) => {
+                    globalQNum++;
+                    const btn = document.createElement('button');
+                    btn.textContent = globalQNum;
+                    btn.dataset.screenIdx = idx;
+                    btn.className = 'w-7 h-7 text-xs font-medium rounded-md transition flex items-center justify-center';
+
+                    if (idx === currentIdx) {
+                        btn.className += ' bg-blue-500 text-white shadow-sm';
+                    } else {
+                        btn.className += ' bg-slate-50 hover:bg-blue-100 text-slate-600 border border-slate-200';
+                    }
+
+                    btn.onclick = function() {
+                        jumpToQuestion(parseInt(this.dataset.screenIdx));
+                        closeJumpDropdown();
+                    };
+                    grid.appendChild(btn);
+                });
+            });
+        }
+        function toggleJumpDropdown() {
+            const dropdown = document.getElementById('jump-dropdown');
+            if (dropdown.classList.contains('hidden')) {
+                dropdown.classList.remove('hidden');
+                populateJumpDropdown();
+            } else {
                 closeJumpDropdown();
-            };
-            grid.appendChild(btn);
-        });
-    });
-}
-
-function toggleJumpDropdown() {
-    const dropdown = document.getElementById('jump-dropdown');
-    if (dropdown.classList.contains('hidden')) {
-        dropdown.classList.remove('hidden');
-        populateJumpDropdown();
-    } else {
-        closeJumpDropdown();
-    }
-}
-
-function closeJumpDropdown() {
-    const dropdown = document.getElementById('jump-dropdown');
-    dropdown.classList.add('hidden');
-}
+            }
+        }
+        function closeJumpDropdown() {
+            const dropdown = document.getElementById('jump-dropdown');
+            dropdown.classList.add('hidden');
+        }
 
 document.addEventListener('click', function(e) {
     const dropdown = document.getElementById('jump-dropdown');
@@ -1358,18 +1341,23 @@ function viewportReset() {
 function initViewportControls() {
     if (!viewportWorkspace) return;
 
-    const contentArea = document.getElementById('content-area');
+    // เหลือไว้แค่ระบบ Spacebar สำหรับสลับเครื่องมือเมาส์/ปากกา (เพื่อไม่ให้กระทบตอนวาดเขียน)
+    document.addEventListener('keydown', e => {
+        if (e.code === 'Space' && !spaceHeld && document.activeElement.tagName !== 'INPUT') {
+            spaceHeld = true;
+            if (currentMode !== 'mouse') {
+                previousTool = currentMode;
+                setTool('mouse');
+            }
+        }
+    });
 
-    function startPan(e) {
-        // เฉพาะ right-click pan เท่านั้น — left-click ไม่ pan (ไม่ให้กระทบ scroll)
-        if (e.button !== 2) return;
-        e.preventDefault();
-        isPanning = true;
-        rightClickPanning = true;
-        panStartX = e.clientX - panX;
-        panStartY = e.clientY - panY;
-        viewportWorkspace.classList.add('panning');
-    }
+    document.addEventListener('keyup', e => {
+        if (e.code === 'Space') {
+            spaceHeld = false;
+        }
+    });
+}
 
     function onPan(e) {
         if (isPanning) {
@@ -1394,23 +1382,10 @@ function initViewportControls() {
     window.addEventListener('mouseup', endPan);
 
     viewportWorkspace.addEventListener('wheel', e => {
-    if (e.ctrlKey || e.metaKey) {
-        e.preventDefault();
-
-        // 1. คำนวณพิกัดให้แม่นยำ (เทียบกับตัว viewport)
-        const rect = viewportWorkspace.getBoundingClientRect();
-        const mouseX = e.clientX - rect.left;
-        const mouseY = e.clientY - rect.top;
-
-        // 2. ใช้การคูณแทนการบวก เพื่อให้สเกลเพิ่มขึ้นอย่างสมูท (Exponential)
-        // ใช้ 0.001 เป็นตัวคูณความไว (Sensitivity) เพื่อซับแรงรัวจาก Touchpad
-        const sensitivity = 0.0015;
-        const zoomFactor = Math.exp(-e.deltaY * sensitivity);
-        
-        // 3. จำกัดความเร็วไม่ให้ซูมพรวดพราดเกินไปใน 1 จังหวะ
-        const boundedFactor = Math.max(0.9, Math.min(1.1, zoomFactor));
-
-        viewportSetScale(zoomScale * boundedFactor, mouseX, mouseY);
+        if (e.ctrlKey || e.metaKey) {
+            e.preventDefault();
+            const delta = e.deltaY > 0 ? -0.1 : 0.1;
+            viewportSetScale(zoomScale + delta, e.clientX, e.clientY);
         }
     }, { passive: false });
 
@@ -1458,12 +1433,10 @@ function initViewportControls() {
             spaceHeld = false;
         }
     });
-
     viewportWorkspace.addEventListener('contextmenu', e => {
         e.preventDefault();
     });
-}
-
+    
 function showViewportControls() {
     if (viewportControls) viewportControls.classList.remove('hidden');
     if (window.lucide) lucide.createIcons();
