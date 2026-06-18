@@ -1320,14 +1320,6 @@ function viewportReset() {
     window.addEventListener('mousemove', onPan);
     window.addEventListener('mouseup', endPan);
 
-    viewportWorkspace.addEventListener('wheel', e => {
-        if (e.ctrlKey || e.metaKey) {
-            e.preventDefault();
-            const delta = e.deltaY > 0 ? -0.1 : 0.1;
-            viewportSetScale(zoomScale + delta, e.clientX, e.clientY);
-        }
-    }, { passive: false });
-
     viewportWorkspace.addEventListener('touchstart', e => {
         if (e.touches.length === 2) {
             e.preventDefault();
