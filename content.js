@@ -1563,38 +1563,508 @@ const examPackages = [
         "setTitle": "ฟ้าม่วง LC2",
         "setCover": "./assets/cover/LC-Test-cover-ฟ้าม่วง-2-update.webp",
         "questions": [
-            {
-                "id": 1,
-                "questionText": "1: The new marketing campaign ______ by the team last month.",
-                "images": [],
-                "options": ["was developed", "developed", "has developed", "developing"],
-                "correctAnswer": 0,
-                "explanation": "เฉลยข้อ A: ประโยคนี้เป็น passive voice ในรูป past simple (by the team) จึงใช้ 'was developed'"
-            },
-            {
-                "id": 2,
-                "questionText": "2: All employees are required to attend the training session, ______?",
-                "images": [],
-                "options": ["aren't they", "don't they", "isn't it", "won't they"],
-                "correctAnswer": 0,
-                "explanation": "เฉลยข้อ A: Question tag สำหรับ 'are required' ใช้ 'aren't they'"
-            },
-            {
-                "id": 3,
-                "questionText": "3: Please read the email below from Mr. Tanaka and choose the correct answer.\n\n---\nDear Team,\n\nI am writing to remind everyone that the deadline for submitting the project reports is next Friday. Please ensure all documents are complete before submission. If you have any questions, feel free to contact me.\n\nBest regards,\nMr. Tanaka\n---\n\nWhat is the purpose of this email?",
-                "images": [],
-                "options": ["To announce a meeting", "To remind about a deadline", "To request a vacation", "To introduce a new policy"],
-                "correctAnswer": 1,
-                "explanation": "เฉลยข้อ B: อีเมลมีวัตถุประสงค์เพื่อเตือนกำหนดส่งรายงานโครงการ"
-            },
-            {
-                "id": 4,
-                "questionText": "4: According to the email, what should employees do if they have questions?",
-                "images": [],
-                "options": ["Submit a form", "Contact Mr. Tanaka", "Wait for the meeting", "Ask a colleague"],
-                "correctAnswer": 1,
-                "explanation": "เฉลยข้อ B: Mr. Tanaka ระบุไว้ในอีเมลว่า 'feel free to contact me'"
-            }
+        {
+            "id": 1,
+            "groupId": "group-1",
+            "transcript": "",
+            "questionText": "",
+            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/1.mp3"],
+            "images": ["./assets/images/ฟ้าม่วง LC2/BP 1.png"],
+            "options": [
+            "She's folding a piece of paper.",
+            "She's smelling flowers in a garden.",
+            "She's holding a book in her hands.",
+            "She's closing up a box."
+            ],
+            "correctAnswer": "C",
+            "explanation": "เพราะภาพเป็นผู้หญิงกำลังถือหนังสืออยู่ในมือ ส่วนข้อ (A) folding แปลว่ากำลังพับ ซึ่งเธอไม่ได้พับกระดาษ (B) smelling แปลว่ากำลังดม ซึ่งเธอไม่ได้ดมดอกไม้ และ (D) closing up แปลว่ากำลังปิด แต่กล่องยังเปิดอยู่",
+            "hideOptions": false
+        },
+        {
+            "id": 2,
+            "groupId": "group-2",
+            "transcript": "",
+            "questionText": "",
+            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/2.mp3"],
+            "images": ["./assets/images/ฟ้าม่วง LC2/BP 2.png"],
+            "options": [
+            "He's looking at a picture.",
+            "She's opening her handbag.",
+            "They're fixing a railing.",
+            "They're walking down some steps."
+            ],
+            "correctAnswer": "D",
+            "explanation": "เพราะภาพเป็นชายหญิงกำลังเดินลงบันได ส่วนข้อ (A) looking at แปลว่ากำลังมอง แต่ผู้ชายกำลังเดินลงบันได (B) opening แปลว่ากำลังเปิด แต่ผู้หญิงไม่ได้เปิดกระเป๋า และ (C) fixing แปลว่ากำลังซ่อม แต่ไม่มีใครซ่อมราวบันได",
+            "hideOptions": false
+        },
+        {
+            "id": 3,
+            "groupId": "group-3",
+            "transcript": "",
+            "questionText": "",
+            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/3.mp3"],
+            "images": ["./assets/images/ฟ้าม่วง LC2/BP 3.png"],
+            "options": [
+            "One of the men is taking off his backpack.",
+            "One of the men is reading a brochure.",
+            "Some people are assembling a table.",
+            "Some people are rearranging chairs."
+            ],
+            "correctAnswer": "B",
+            "explanation": "เพราะภาพมีผู้ชายกำลังอ่านโบรชัวร์ ส่วนข้อ (A) taking off แปลว่ากำลังถอด แต่ไม่ได้ถอดกระเป๋า (C) assembling แปลว่ากำลังประกอบ แต่โต๊ะตั้งเรียบร้อยแล้ว และ (D) rearranging แปลว่ากำลังจัดเก้าอี้ใหม่ แต่ไม่มีใครจัดเก้าอี้",
+            "hideOptions": false
+        },
+        {
+            "id": 4,
+            "groupId": "group-4",
+            "transcript": "",
+            "questionText": "",
+            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/4.mp3"],
+            "images": ["./assets/images/ฟ้าม่วง LC2/BP 4.png"],
+            "options": [
+            "A server is setting up an umbrella.",
+            "A sign is being carried across a walkway.",
+            "Cars have been parked in the shade.",
+            "Customers are seated at a cafe."
+            ],
+            "correctAnswer": "C",
+            "explanation": "เพราะภาพมีรถจอดใต้ร่มเงาต้นไม้ ส่วนข้อ (A) setting up แปลว่ากำลังติดตั้ง แต่ไม่มีพนักงานกางร่ม (B) being carried แปลว่ากำลังถูกถือ แต่ป้ายตั้งอยู่กับที่ และ (D) seated แปลว่ากำลังนั่ง แต่เก้าอี้ว่างไม่มีลูกค้า",
+            "hideOptions": false
+        },
+        {
+            "id": 5,
+            "groupId": "group-5",
+            "transcript": "",
+            "questionText": "",
+            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/5.mp3"],
+            "images": ["./assets/images/ฟ้าม่วง LC2/BP 5.png"],
+            "options": [
+            "A drawer has been pulled open.",
+            "Files are being stored on shelves.",
+            "A monitor is being mounted on a wall.",
+            "A light has been hung from the ceiling."
+            ],
+            "correctAnswer": "B",
+            "explanation": "เพราะภาพมีแฟ้มเอกสารถูกเก็บบนชั้นวาง ส่วนข้อ (A) drawer แปลว่าลิ้นชัก แต่ลิ้นชักปิดอยู่ (C) mounted แปลว่ากำลังติดตั้ง แต่จอวางบนโต๊ะ และ (D) hung แปลว่าถูกแขวน แต่โคมไฟตั้งบนโต๊ะ",
+            "hideOptions": false
+        },
+        {
+            "id": 6,
+            "groupId": "group-6",
+            "transcript": "",
+            "questionText": "",
+            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/6.mp3"],
+            "images": ["./assets/images/ฟ้าม่วง LC2/BP 6.png"],
+            "options": [
+            "A man is standing near a construction site.",
+            "A worker is climbing a ladder.",
+            "A row of trees has been planted alongside a fence.",
+            "Vehicles are transporting materials to a building."
+            ],
+            "correctAnswer": "A",
+            "explanation": "เพราะภาพมีชายยืนใกล้พื้นที่ก่อสร้าง ส่วนข้อ (B) climbing แปลว่ากำลังปีน แต่ไม่มีใครปีนบันได (C) planted แปลว่าถูกปลูก แต่ไม่เห็นการปลูกต้นไม้ใหม่ และ (D) transporting แปลว่ากำลังขนส่ง แต่ไม่มีรถกำลังขนวัสดุ",
+            "hideOptions": false
+        },
+        {
+            "id": 7,
+            "groupId": "group-7",
+            "transcript": "Where can I find the most recent sales data?",
+            "questionText": "Mark your answer on your answer sheet.",
+            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/7.mp3"],
+            "images": [],
+            "options": [
+            "The store's having a sale.",
+            "It's on my computer.",
+            "No, not recently."
+            ],
+            "correctAnswer": "B",
+            "explanation": "เพราะคำถามถามว่า จะหาข้อมูลการขายล่าสุดได้จากที่ไหน ซึ่งข้อนี้ตอบตรงประเด็นว่าข้อมูลอยู่ในคอมพิวเตอร์ ส่วนข้อ (A) เป็นกับดักเปลี่ยนหัวข้อเรื่องการลดราคา และข้อ (C) ปฏิเสธแต่ไม่บอกตำแหน่ง",
+            "hideOptions": true
+        },
+        {
+            "id": 8,
+            "groupId": "group-8",
+            "transcript": "When is the next performance of the City Dance Troupe?",
+            "questionText": "Mark your answer on your answer sheet.",
+            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/8.mp3"],
+            "images": [],
+            "options": [
+            "This Saturday at eight P.M.",
+            "It was better than the last one.",
+            "It hasn't yet."
+            ],
+            "correctAnswer": "A",
+            "explanation": "เพราะคำถามถามว่า การแสดงครั้งต่อไปของกลุ่มแดนซ์จะมีเมื่อไหร่ ซึ่งข้อนี้บอกเวลาชัดเจนว่าเป็นวันเสาร์นี้ตอนสองทุ่ม ส่วนข้อ (B) เป็นการแสดงความเห็น และข้อ (C) บอกว่ายังไม่มีแต่ไม่ได้ระบุเวลา",
+            "hideOptions": true
+        },
+        {
+            "id": 9,
+            "groupId": "group-9",
+            "transcript": "Let's plan our camping trip tonight.",
+            "questionText": "Mark your answer on your answer sheet.",
+            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/9.mp3"],
+            "images": [],
+            "options": [
+            "I had a relaxing vacation.",
+            "OK, I'm free after six.",
+            "A tent and a sleeping bag."
+            ],
+            "correctAnswer": "B",
+            "explanation": "เพราะเป็นการตอบรับคำชวนวางแผนไปตั้งแคมป์คืนนี้ โดยบอกว่าตัวเองว่างหลังหกโมงเย็น ส่วนข้อ (A) พูดถึงวันหยุดที่ผ่านมา และข้อ (C) พูดถึงสิ่งของซึ่งไม่ตรงคำถาม",
+            "hideOptions": true
+        },
+        {
+            "id": 10,
+            "groupId": "group-10",
+            "transcript": "Isn't the client visit this month?",
+            "questionText": "Mark your answer on your answer sheet.",
+            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/10.mp3"],
+            "images": [],
+            "options": [
+            "It's in the supply cabinet.",
+            "A newer version.",
+            "Pablo's in charge of that."
+            ],
+            "correctAnswer": "C",
+            "explanation": "เพราะตอบคำถามที่ถามว่า ลูกค้าจะมาเยือนในเดือนนี้ใช่ไหม โดยบอกว่าปาโบลเป็นคนดูแลรับผิดชอบเรื่องนั้น ส่วนข้อ (A) เกี่ยวกับตู้เก็บของ และข้อ (B) เกี่ยวกับเวอร์ชันใหม่ซึ่งไม่เกี่ยวข้อง",
+            "hideOptions": true
+        },
+        {
+            "id": 11,
+            "groupId": "group-11",
+            "transcript": "Why are you transferring to the San Francisco branch?",
+            "questionText": "Mark your answer on your answer sheet.",
+            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/11.mp3"],
+            "images": [],
+            "options": [
+            "To be closer to my family.",
+            "Probably in February.",
+            "Yes, it's been open for a while."
+            ],
+            "correctAnswer": "A",
+            "explanation": "เพราะตอบเหตุผลของคำถามที่ว่า ทำไมถึงย้ายไปสาขาซานฟรานซิสโก โดยบอกว่าต้องการไปอยู่ใกล้ชิดกับครอบครัวมากขึ้น ส่วนข้อ (B) บอกเวลา และข้อ (C) ตอบรับแต่ไม่บอกเหตุผล",
+            "hideOptions": true
+        },
+        {
+            "id": 12,
+            "groupId": "group-12",
+            "transcript": "Do you have any hotel rooms available for tonight?",
+            "questionText": "Mark your answer on your answer sheet.",
+            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/12.mp3"],
+            "images": [],
+            "options": [
+            "They're due soon.",
+            "Almost every room has one.",
+            "We've just had a cancellation!"
+            ],
+            "correctAnswer": "C",
+            "explanation": "เพราะตอบคำถามที่ถามว่า มีห้องพักว่างสำหรับคืนนี้ไหม โดยแจ้งว่าเพิ่งมีการยกเลิกห้องพักทำให้มีห้องว่าง ส่วนข้อ (A) พูดถึงกำหนดส่ง และข้อ (B) พูดถึงสิ่งของในห้อง",
+            "hideOptions": true
+        },
+        {
+            "id": 13,
+            "groupId": "group-13",
+            "transcript": "Would you like me to arrange a shuttle to the airport?",
+            "questionText": "Mark your answer on your answer sheet.",
+            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/13.mp3"],
+            "images": [],
+            "options": [
+            "That flower arrangement is lovely.",
+            "Thanks, but I'll drive myself there.",
+            "A glass of water would be great."
+            ],
+            "correctAnswer": "B",
+            "explanation": "เพราะเป็นการปฏิเสธข้อเสนอที่จะจัดรถรับส่งไปสนามบินอย่างมีมารยาท โดยบอกว่าจะขับรถไปเอง ส่วนข้อ (A) และ (C) เป็นกับดักคำพ้องเสียงหรือคำที่เกี่ยวข้องแต่ไม่ตรงประเด็น",
+            "hideOptions": true
+        },
+        {
+            "id": 14,
+            "groupId": "group-14",
+            "transcript": "Does Marta know that we've made a lunch reservation for one o'clock?",
+            "questionText": "Mark your answer on your answer sheet.",
+            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/14.mp3"],
+            "images": [],
+            "options": [
+            "Yes, I sent her an e-mail about it.",
+            "The Town Plaza Cafe.",
+            "It's served with a side salad."
+            ],
+            "correctAnswer": "A",
+            "explanation": "เพราะตอบคำถามที่ถามว่า มาร์ต้ารู้เรื่องที่จองมื้อเที่ยงไว้ตอนบ่ายโมงหรือยัง โดยยืนยันว่ารู้แล้วเพราะส่งอีเมลแจ้งไปแล้ว ส่วนข้อ (B) บอกชื่อคาเฟ่ และข้อ (C) พูดถึงสลัดเคียง",
+            "hideOptions": true
+        },
+        {
+            "id": 15,
+            "groupId": "group-15",
+            "transcript": "Who should I contact to rent an office in this building?",
+            "questionText": "Mark your answer on your answer sheet.",
+            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/15.mp3"],
+            "images": [],
+            "options": [
+            "Yes, I'll update my contact list.",
+            "You can call Mr. Yamamoto.",
+            "The one in the financial center."
+            ],
+            "correctAnswer": "B",
+            "explanation": "เพราะตอบคำถามที่ถามว่า ควรติดต่อใครเพื่อเช่าสำนักงานในตึกนี้ โดยระบุชื่อบุคคลว่าให้โทรหาคุณยามาโมโตะ ส่วนข้อ (A) และ (C) เป็นกับดักคำศัพท์และไม่ระบุตัวบุคคล",
+            "hideOptions": true
+        },
+        {
+            "id": 16,
+            "groupId": "group-16",
+            "transcript": "What did you think of my presentation?",
+            "questionText": "Mark your answer on your answer sheet.",
+            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/16.mp3"],
+            "images": [],
+            "options": [
+            "No, not this time.",
+            "I was at another meeting.",
+            "Twenty pages long."
+            ],
+            "correctAnswer": "B",
+            "explanation": "เพราะให้เหตุผลว่าทำไมถึงไม่ได้ดูหรือให้ความเห็นต่อการนำเสนอได้ โดยบอกว่าติดประชุมอื่นอยู่ ส่วนข้อ (A) เป็นการปฏิเสธไม่ชัดเจน และข้อ (C) บอกความยาวหน้ากระดาษ",
+            "hideOptions": true
+        },
+        {
+            "id": 17,
+            "groupId": "group-17",
+            "transcript": "When will our Internet service be working again?",
+            "questionText": "Mark your answer on your answer sheet.",
+            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/17.mp3"],
+            "images": [],
+            "options": [
+            "No, I don't use it often.",
+            "It should be fixed by noon.",
+            "Over by the copier."
+            ],
+            "correctAnswer": "B",
+            "explanation": "เพราะตอบคำถามที่ถามว่า อินเทอร์เน็ตจะกลับมาใช้งานได้อีกเมื่อไหร่ โดยระบุกรอบเวลาชัดเจนว่าควรจะซ่อมเสร็จตอนเที่ยง ส่วนข้อ (A) บอกว่าไม่ค่อยได้ใช้ และข้อ (C) บอกตำแหน่งตู้สำเนา",
+            "hideOptions": true
+        },
+        {
+            "id": 18,
+            "groupId": "group-18",
+            "transcript": "Have you finished the draft of the report yet?",
+            "questionText": "Mark your answer on your answer sheet.",
+            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/18.mp3"],
+            "images": [],
+            "options": [
+            "I had a conference call all morning.",
+            "Ms. Yang is a reporter.",
+            "Thanks, I can wait."
+            ],
+            "correctAnswer": "A",
+            "explanation": "เพราะให้เหตุผลว่าทำไมยังทำร่างรายงานไม่เสร็จ โดยบอกว่าติดประชุมโทรศัพท์ตลอดทั้งเช้า ส่วนข้อ (B) พูดถึงผู้สื่อข่าว และข้อ (C) บอกว่ารอได้",
+            "hideOptions": true
+        },
+        {
+            "id": 19,
+            "groupId": "group-19",
+            "transcript": "You didn't leave your mobile phone on the train, did you?",
+            "questionText": "Mark your answer on your answer sheet.",
+            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/19.mp3"],
+            "images": [],
+            "options": [
+            "It's 555-0126.",
+            "A ticket to Amsterdam.",
+            "No, I have it right here."
+            ],
+            "correctAnswer": "C",
+            "explanation": "เพราะตอบคำถามที่ถามว่า ไม่ได้ลืมโทรศัพท์มือถือไว้บนรถไฟใช่ไหม โดยปฏิเสธว่าไม่ได้ลืมและบอกว่าโทรศัพท์อยู่ตรงนี้เลย ส่วนข้อ (A) บอกเบอร์โทร และข้อ (B) พูดถึงตั๋วไปอัมสเตอร์ดัม",
+            "hideOptions": true
+        },
+        {
+            "id": 20,
+            "groupId": "group-20",
+            "transcript": "Could you please replace the tires on my car?",
+            "questionText": "Mark your answer on your answer sheet.",
+            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/20.mp3"],
+            "images": [],
+            "options": [
+            "He's retiring in May.",
+            "That's a very nice place.",
+            "Yes, we could do it this afternoon."
+            ],
+            "correctAnswer": "C",
+            "explanation": "เพราะตอบรับคำขอให้เปลี่ยนยางรถยนต์ โดยแจ้งว่าสามารถจัดการให้ได้ในช่วงบ่ายวันนี้ ส่วนข้อ (A) เป็นกับดักคำพ้องเสียงเรื่องการเกษียณ และข้อ (B) พูดถึงสถานที่ที่สวยงาม",
+            "hideOptions": true
+        },
+        {
+            "id": 21,
+            "groupId": "group-21",
+            "transcript": "What time should we expect the keynote speaker to arrive?",
+            "questionText": "Mark your answer on your answer sheet.",
+            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/21.mp3"],
+            "images": [],
+            "options": [
+            "She'll be here by nine.",
+            "Yes, I was invited.",
+            "In the lobby."
+            ],
+            "correctAnswer": "A",
+            "explanation": "เพราะตอบคำถามที่ถามว่า วิทยากรหลักจะมาถึงตอนกี่โมง โดยให้กรอบเวลาชัดเจนว่าจะมาถึงก่อนเก้าโมง ส่วนข้อ (B) บอกว่าได้รับเชิญ และข้อ (C) บอกสถานที่ในล็อบบี้",
+            "hideOptions": true
+        },
+        {
+            "id": 22,
+            "groupId": "group-22",
+            "transcript": "Did you hear the news about the merger?",
+            "questionText": "Mark your answer on your answer sheet.",
+            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/22.mp3"],
+            "images": [],
+            "options": [
+            "A small construction firm.",
+            "No, was it announced?",
+            "He's a department head."
+            ],
+            "correctAnswer": "B",
+            "explanation": "เพราะตอบคำถามที่ถามว่า ได้ยินข่าวเรื่องการควบรวมกิจการหรือยัง โดยบอกว่าไม่เคยได้ยินและถามกลับว่ามีประกาศแล้วหรือ ส่วนข้อ (A) และ (C) พูดถึงบริษัทและตำแหน่งงานที่ไม่ตรงประเด็น",
+            "hideOptions": true
+        },
+        {
+            "id": 23,
+            "groupId": "group-23",
+            "transcript": "Does our budget include funding for one assistant or two?",
+            "questionText": "Mark your answer on your answer sheet.",
+            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/23.mp3"],
+            "images": [],
+            "options": [
+            "I didn't know we were hiring anyone.",
+            "At the reception desk.",
+            "It was paid for in cash."
+            ],
+            "correctAnswer": "A",
+            "explanation": "เพราะแสดงความประหลาดใจและไม่รู้เรื่องการจ้างงานเมื่อถูกถามว่า งบประมาณรวมการจ้างผู้ช่วยหนึ่งหรือสองคน ส่วนข้อ (B) บอกสถานที่ และข้อ (C) บอกวิธีชำระเงินด้วยเงินสด",
+            "hideOptions": true
+        },
+        {
+            "id": 24,
+            "groupId": "group-24",
+            "transcript": "That Indian restaurant is big enough for our annual party.",
+            "questionText": "Mark your answer on your answer sheet.",
+            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/24.mp3"],
+            "images": [],
+            "options": [
+            "They don't have a private dining room.",
+            "A direct flight to India.",
+            "Can I get you some more rice?"
+            ],
+            "correctAnswer": "A",
+            "explanation": "เพราะชี้ข้อจำกัดของร้านอาหารอินเดียเมื่อมีคนบอกว่าร้านใหญ่พอสำหรับจัดงานปาร์ตี้ประจำปี โดยบอกว่าร้านนั้นไม่มีห้องทานอาหารส่วนตัว ส่วนข้อ (B) พูดถึงเที่ยวบิน และข้อ (C) ถามเรื่องข้าว",
+            "hideOptions": true
+        },
+        {
+            "id": 25,
+            "groupId": "group-25",
+            "transcript": "Is there a computer available to use while mine is being repaired?",
+            "questionText": "Mark your answer on your answer sheet.",
+            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/25.mp3"],
+            "images": [],
+            "options": [
+            "Isn't it in two hours?",
+            "Michael's not using his today.",
+            "Some updated software."
+            ],
+            "correctAnswer": "B",
+            "explanation": "เพราะตอบคำถามที่ถามว่า มีคอมพิวเตอร์ให้ใช้ระหว่างรอซ่อมเครื่องเก่าไหม โดยแนะนำให้ใช้ของไมเคิลได้เพราะวันนี้เขาไม่ได้ใช้ ส่วนข้อ (A) ถามเวลา และข้อ (C) พูดถึงซอฟต์แวร์",
+            "hideOptions": true
+        },
+        {
+            "id": 26,
+            "groupId": "group-26",
+            "transcript": "Will you prepare handouts or a slide show for your workshop?",
+            "questionText": "Mark your answer on your answer sheet.",
+            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/26.mp3"],
+            "images": [],
+            "options": [
+            "Just the new sales director.",
+            "I plan to do both.",
+            "It starts at three o'clock."
+            ],
+            "correctAnswer": "B",
+            "explanation": "เพราะตอบคำถามที่ให้เลือกระหว่างเตรียมเอกสารแจกหรือสไลด์โชว์สำหรับเวิร์กชอป โดยบอกว่าวางแผนจะทำทั้งสองอย่าง ส่วนข้อ (A) พูดถึงผู้อำนวยการ และข้อ (C) บอกเวลาเริ่มงาน",
+            "hideOptions": true
+        },
+        {
+            "id": 27,
+            "groupId": "group-27",
+            "transcript": "The meeting's in Busan, isn't it?",
+            "questionText": "Mark your answer on your answer sheet.",
+            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/27.mp3"],
+            "images": [],
+            "options": [
+            "It isn't a company I've heard of.",
+            "Yes—I hope we can participate by phone.",
+            "The attendance sheet."
+            ],
+            "correctAnswer": "B",
+            "explanation": "เพราะยืนยันตามคำถามที่ว่า การประชุมจัดที่ปูซานใช่ไหม โดยตอบรับและบอกว่าหวังว่าจะได้เข้าร่วมผ่านทางโทรศัพท์ ส่วนข้อ (A) พูดถึงบริษัทที่ไม่เคยได้ยิน และข้อ (C) พูดถึงใบลงชื่อ",
+            "hideOptions": true
+        },
+        {
+            "id": 28,
+            "groupId": "group-28",
+            "transcript": "Can you give me a tour of the property on Thursday?",
+            "questionText": "Mark your answer on your answer sheet.",
+            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/28.mp3"],
+            "images": [],
+            "options": [
+            "An empty corner lot.",
+            "Leave the door open.",
+            "Let me check my calendar."
+            ],
+            "correctAnswer": "C",
+            "explanation": "เพราะเป็นการตอบรับคำขอให้นำชมอสังหาริมทรัพย์ในวันพฤหัสบดี โดยบอกว่าขอเช็คตารางงานในปฏิทินก่อน ส่วนข้อ (A) พูดถึงพื้นที่ว่าง และข้อ (B) สั่งให้เปิดประตูทิ้งไว้",
+            "hideOptions": true
+        },
+        {
+            "id": 29,
+            "groupId": "group-29",
+            "transcript": "How many days do we have to organize the convention?",
+            "questionText": "Mark your answer on your answer sheet.",
+            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/29.mp3"],
+            "images": [],
+            "options": [
+            "There are three hundred brochures.",
+            "Don't worry, it's later than last year.",
+            "We'll choose the cheapest one."
+            ],
+            "correctAnswer": "B",
+            "explanation": "เพราะตอบคำถามที่ถามว่า มีเวลาเตรียมจัดงานประชุมอีกกี่วัน โดยบอกว่าไม่ต้องกังวลเพราะปีนี้จัดช้ากว่าปีที่แล้ว (แปลว่ามีเวลาเหลือเฟือ) ส่วนข้อ (A) พูดถึงจำนวนโบรชัวร์ และข้อ (C) พูดถึงการเลือกสิ่งที่มีราคาถูกที่สุด",
+            "hideOptions": true
+        },
+        {
+            "id": 30,
+            "groupId": "group-30",
+            "transcript": "I don't think we can afford to start the store renovations yet.",
+            "questionText": "Mark your answer on your answer sheet.",
+            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/30.mp3"],
+            "images": [],
+            "options": [
+            "That's not what Susan said.",
+            "Yes, it's attracting more customers.",
+            "The product display areas."
+            ],
+            "correctAnswer": "A",
+            "explanation": "เพราะเป็นการทักท้วงความคิดเห็นของผู้พูดที่คิดว่าบริษัทยังไม่มีงบพอที่จะรีโนเวทร้านค้า โดยบอกว่าซูซานไม่ได้พูดแบบนั้น (ซูซานอาจจะบอกว่ามีงบพอ) ส่วนข้อ (B) พูดถึงการดึงดูดลูกค้า และข้อ (C) พูดถึงพื้นที่แสดงสินค้า",
+            "hideOptions": true
+        },
+        {
+            "id": 31,
+            "groupId": "group-31",
+            "transcript": "We've met these clients before, haven't we?",
+            "questionText": "Mark your answer on your answer sheet.",
+            "audioUrl": ["./assets/audio/ฟ้าม่วง LC2/31.mp3"],
+            "images": [],
+            "options": [
+            "Sure, I'd be happy to.",
+            "Actually, we shipped them already.",
+            "The manager is new, though."
+            ],
+            "correctAnswer": "C",
+            "explanation": "เพราะตอบคำถามที่ถามว่า เคยเจอเซตลูกค้าพวกนี้มาก่อนใช่ไหม โดยบอกว่าผู้จัดการเป็นคนใหม่แต่ลูกค้าคนอื่นเคยพบมาก่อน ส่วนข้อ (A) บอกว่ายินดีทำ และข้อ (B) พูดถึงการจัดส่งสินค้า",
+            "hideOptions": true
+        }
         ]
     },
     { // ฟ้าม่วง RC RC2 Checked!
