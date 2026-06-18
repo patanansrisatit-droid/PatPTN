@@ -1394,10 +1394,23 @@ function initViewportControls() {
     window.addEventListener('mouseup', endPan);
 
     viewportWorkspace.addEventListener('wheel', e => {
-        if (e.ctrlKey || e.metaKey) {
-            e.preventDefault();
-            const delta = e.deltaY > 0 ? -0.1 : 0.1;
-            viewportSetScale(zoomScale + delta, e.clientX, e.clientY);
+    if (e.ctrlKey || e.metaKey) {
+        e.preventDefault();
+
+        // 1. คำนวณพิกัดให้แม่นยำ (เทียบกับตัว viewport)
+        const rect = viewportWorkspace.getBoundingClientRect();
+        const mouseX = e.clientX - rect.left;
+        const mouseY = e.clientY - rect.top;
+
+        // 2. ใช้การคูณแทนการบวก เพื่อให้สเกลเพิ่มขึ้นอย่างสมูท (Exponential)
+        // ใช้ 0.001 เป็นตัวคูณความไว (Sensitivity) เพื่อซับแรงรัวจาก Touchpad
+        const sensitivity = 0.0015;
+        const zoomFactor = Math.exp(-e.deltaY * sensitivity);
+        
+        // 3. จำกัดความเร็วไม่ให้ซูมพรวดพราดเกินไปใน 1 จังหวะ
+        const boundedFactor = Math.max(0.9, Math.min(1.1, zoomFactor));
+
+        viewportSetScale(zoomScale * boundedFactor, mouseX, mouseY);
         }
     }, { passive: false });
 
