@@ -1,5 +1,5 @@
 const examPackages = [
-    { //ฟ้าเหลืองแดง RC2
+    { //ฟ้าเหลืองแดง RC2 Checked!
         "setId": "ฟ้าเหลืองแดง RC2",
         "setTitle": "ฟ้าเหลืองแดง RC2",
         "setCover": "./assets/cover/RC-Test-cover-RC-ฟ้าแดงเหลือง-2-update.webp",
@@ -8,7 +8,7 @@ const examPackages = [
                 "id": 101,
                 "groupId": "",
                 "questionText": "101: Busan Cosmetics is pleased to _____ Jin-Sook Kim, a new team member in product development.",
-                "audioUrl": "",
+                
                 "images": [],
                 "options": [
                 "welcoming",
@@ -23,7 +23,7 @@ const examPackages = [
                 "id": 102,
                 "groupId": "",
                 "questionText": "102: The seminar will be attended _____ professionals in the food service industry.",
-                "audioUrl": "",
+                
                 "images": [],
                 "options": [
                 "of",
@@ -38,7 +38,7 @@ const examPackages = [
                 "id": 103,
                 "groupId": "",
                 "questionText": "103: The Human Resources Department will _____ request that employees update their personal contact information for the company's records.",
-                "audioUrl": "",
+                
                 "images": [],
                 "options": [
                 "occasionally",
@@ -53,7 +53,7 @@ const examPackages = [
                 "id": 104,
                 "groupId": "",
                 "questionText": "104: All staff members should log in to their time and labor _____ daily to record their hours worked.",
-                "audioUrl": "",
+                
                 "images": [],
                 "options": [
                 "accounts",
@@ -68,7 +68,7 @@ const examPackages = [
                 "id": 105,
                 "groupId": "",
                 "questionText": "105: The Humson Company has just started a lunchtime fitness program, and employees are encouraged to _____.",
-                "audioUrl": "",
+                
                 "images": [],
                 "options": [
                 "win",
@@ -83,7 +83,7 @@ const examPackages = [
                 "id": 106,
                 "groupId": "",
                 "questionText": "106: To enroll in any course, either complete the online form _____ register in person at the Greerson Learning Center.",
-                "audioUrl": "",
+                
                 "images": [],
                 "options": [
                 "if",
@@ -98,7 +98,7 @@ const examPackages = [
                 "id": 107,
                 "groupId": "",
                 "questionText": "107: Mr. Yamagata is prepared to assist Ms. Hahn's clients while _____ conducts a training seminar in New York.",
-                "audioUrl": "",
+                
                 "images": [],
                 "options": [
                 "hers",
@@ -113,7 +113,7 @@ const examPackages = [
                 "id": 108,
                 "groupId": "",
                 "questionText": "108: Please return the signed copy of the _____ agreement to the apartment manager's office in the enclosed envelope.",
-                "audioUrl": "",
+                
                 "images": [],
                 "options": [
                 "rental",
@@ -128,7 +128,7 @@ const examPackages = [
                 "id": 109,
                 "groupId": "",
                 "questionText": "109: Employees who are affiliated with Corman Corporation will be seated _____ the third row of the auditorium.",
-                "audioUrl": "",
+                
                 "images": [],
                 "options": [
                 "except",
@@ -143,7 +143,7 @@ const examPackages = [
                 "id": 110,
                 "groupId": "group-110",
                 "questionText": "110: Yesterday's festival featured some of the most _____ dancers that the Palace Theater has ever hosted.",
-                "audioUrl": "",
+                
                 "images": [],
                 "options": [
                 "live",
@@ -158,7 +158,7 @@ const examPackages = [
                 "id": 111,
                 "groupId": "group-111",
                 "questionText": "111: Fulsome Flowers' delivery vans must be returned promptly to the store _____ the scheduled deliveries have been completed.",
-                "audioUrl": "",
+                
                 "images": [],
                 "options": [
                 "once",
@@ -173,7 +173,7 @@ const examPackages = [
                 "id": 112,
                 "groupId": "group-112",
                 "questionText": "112: To ensure stability and safety, it is important to follow the instructions _____ when assembling the office bookshelves.",
-                "audioUrl": "",
+                
                 "images": [],
                 "options": [
                 "exactly",
@@ -188,7 +188,7 @@ const examPackages = [
                 "id": 113,
                 "groupId": "group-113",
                 "questionText": "113: At the Podell Automotive plant, Ms. Krystle _____ workers who install rebuilt engines in vehicles.",
-                "audioUrl": "",
+                
                 "images": [],
                 "options": [
                 "conducts",
@@ -203,7 +203,7 @@ const examPackages = [
                 "id": 114,
                 "groupId": "group-114",
                 "questionText": "114: Yakubu Logistics will expand the warehouse loading area in preparation for an _____ in shipping activity.",
-                "audioUrl": "",
+                
                 "images": [],
                 "options": [
                 "increased",
@@ -218,7 +218,7 @@ const examPackages = [
                 "id": 115,
                 "groupId": "group-115",
                 "questionText": "115: The High Performance weather gauge is _____ accurate in measuring the level of humidity in the air.",
-                "audioUrl": "",
+                
                 "images": [],
                 "options": [
                 "surprising",
@@ -233,7 +233,7 @@ const examPackages = [
                 "id": 116,
                 "groupId": "group-116",
                 "questionText": "116: Ms. Oh's proposal highlights a _____ strategy for decreasing the company's transportation costs in the coming year.",
-                "audioUrl": "",
+                
                 "images": [],
                 "options": [
                 "surrounding",
@@ -248,7 +248,7 @@ const examPackages = [
                 "id": 117,
                 "groupId": "group-117",
                 "questionText": "117: To receive _____ updates regarding your journal subscription status, please provide an e-mail address on the order form.",
-                "audioUrl": "",
+                
                 "images": [],
                 "options": [
                 "period",
@@ -263,7 +263,7 @@ const examPackages = [
                 "id": 118,
                 "groupId": "group-118",
                 "questionText": "118: _____ when they are away conducting business, members of the sales team are usually available by e-mail.",
-                "audioUrl": "",
+                
                 "images": [],
                 "options": [
                 "Both",
@@ -278,7 +278,7 @@ const examPackages = [
                 "id": 119,
                 "groupId": "group-119",
                 "questionText": "119: There is a coffee machine _____ located on the second floor of the Tabor Building.",
-                "audioUrl": "",
+                
                 "images": [],
                 "options": [
                 "conveniently",
@@ -293,7 +293,7 @@ const examPackages = [
                 "id": 120,
                 "groupId": "group-120",
                 "questionText": "120: The editor granted Ms. Porter a deadline _____ so that some information in her building renovations report could be updated.",
-                "audioUrl": "",
+                
                 "images": [],
                 "options": [
                 "extend",
@@ -308,7 +308,7 @@ const examPackages = [
                 "id": 121,
                 "groupId": "group-121",
                 "questionText": "121: Youssouf Electronics' annual charity fund-raising event _____ next Saturday at Montrose Park.",
-                "audioUrl": "",
+                
                 "images": [],
                 "options": [
                 "will be held",
@@ -323,7 +323,7 @@ const examPackages = [
                 "id": 122,
                 "groupId": "group-122",
                 "questionText": "122: The buildings in the Jamison Complex are open until 7:00 P.M. on workdays, but staff with proper _____ may enter at any time.",
-                "audioUrl": "",
+                
                 "images": [],
                 "options": [
                 "reinforcement",
@@ -338,7 +338,7 @@ const examPackages = [
                 "id": 123,
                 "groupId": "group-123",
                 "questionText": "123: Kochi Engineering has proposed the construction of a drainage system _____ to keep the Route 480 highway dry during heavy rain.",
-                "audioUrl": "",
+                
                 "images": [],
                 "options": [
                 "was designed",
@@ -353,7 +353,7 @@ const examPackages = [
                 "id": 124,
                 "groupId": "group-124",
                 "questionText": "124: Customers can obtain coverage for replacement and repair of printers _____ the purchase of an extended warranty.",
-                "audioUrl": "",
+                
                 "images": [],
                 "options": [
                 "although",
@@ -368,7 +368,7 @@ const examPackages = [
                 "id": 125,
                 "groupId": "group-125",
                 "questionText": "125: We regret to announce that Mr. Charles Appiah has resigned his position as senior sales manager, _____ next Monday.",
-                "audioUrl": "",
+                
                 "images": [],
                 "options": [
                 "effect",
@@ -383,7 +383,7 @@ const examPackages = [
                 "id": 126,
                 "groupId": "group-126",
                 "questionText": "126: The Epsilon 3000 camera allows beginning photographers to enjoy professional-quality equipment, as it is _____ sophisticated yet inexpensive.",
-                "audioUrl": "",
+                
                 "images": [],
                 "options": [
                 "gradually",
@@ -398,7 +398,7 @@ const examPackages = [
                 "id": 127,
                 "groupId": "group-127",
                 "questionText": "127: Yee-Yin Xiong held interviews with numerous clients to determine _____ Echegaray Consulting, Inc., can improve customer service.",
-                "audioUrl": "",
+                
                 "images": [],
                 "options": [
                 "unless",
@@ -413,7 +413,7 @@ const examPackages = [
                 "id": 128,
                 "groupId": "group-128",
                 "questionText": "128: Several letters of reference from local community organizations are required for _____ into the Cypress Beach Business Association.",
-                "audioUrl": "",
+                
                 "images": [],
                 "options": [
                 "acquisition",
@@ -428,7 +428,7 @@ const examPackages = [
                 "id": 129,
                 "groupId": "group-129",
                 "questionText": "129: Rather than wearing business attire on Thursdays, staff may choose to wear casual clothing _____.",
-                "audioUrl": "",
+                
                 "images": [],
                 "options": [
                 "enough",
@@ -443,7 +443,7 @@ const examPackages = [
                 "id": 130,
                 "groupId": "group-130",
                 "questionText": "130: Your _____ registration card provides proof of ownership in case this product is lost or damaged.",
-                "audioUrl": "",
+                
                 "images": [],
                 "options": [
                 "frequent",
@@ -457,8 +457,8 @@ const examPackages = [
             {
                 "id": 131,
                 "groupId": "group-131",
-                "questionText": "131",
-                "audioUrl": "",
+                "questionText": "131:",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 31-34.png"],
                 "options": [
                 "Cooperatively",
@@ -472,8 +472,8 @@ const examPackages = [
             {
                 "id": 132,
                 "groupId": "group-132",
-                "questionText": "132",
-                "audioUrl": "",
+                "questionText": "132:",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 31-34.png"],
                 "options": [
                 "participate",
@@ -487,8 +487,8 @@ const examPackages = [
             {
                 "id": 133,
                 "groupId": "group-133",
-                "questionText": "133",
-                "audioUrl": "",
+                "questionText": "133:",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 31-34.png"],
                 "options": [
                 "We are not currently looking for volunteers.",
@@ -502,8 +502,8 @@ const examPackages = [
             {
                 "id": 134,
                 "groupId": "group-134",
-                "questionText": "134",
-                "audioUrl": "",
+                "questionText": "134:",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 31-34.png"],
                 "options": [
                 "outdoor",
@@ -517,8 +517,8 @@ const examPackages = [
             {
                 "id": 135,
                 "groupId": "group-135",
-                "questionText": "135",
-                "audioUrl": "",
+                "questionText": "135:",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 35-38.png"],
                 "options": [
                 "allowed",
@@ -532,8 +532,8 @@ const examPackages = [
             {
                 "id": 136,
                 "groupId": "group-136",
-                "questionText": "136",
-                "audioUrl": "",
+                "questionText": "136:",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 35-38.png"],
                 "options": [
                 "able",
@@ -547,8 +547,8 @@ const examPackages = [
             {
                 "id": 137,
                 "groupId": "group-137",
-                "questionText": "137",
-                "audioUrl": "",
+                "questionText": "137:",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 35-38.png"],
                 "options": [
                 "transfers",
@@ -562,8 +562,8 @@ const examPackages = [
             {
                 "id": 138,
                 "groupId": "group-138",
-                "questionText": "138",
-                "audioUrl": "",
+                "questionText": "138:",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 35-38.png"],
                 "options": [
                 "Please inquire at the service desk if it will be permitted on your flight.",
@@ -577,8 +577,8 @@ const examPackages = [
             {
                 "id": 139,
                 "groupId": "group-139",
-                "questionText": "139",
-                "audioUrl": "",
+                "questionText": "139:",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 39-42.png"],
                 "options": [
                 "trend",
@@ -592,8 +592,8 @@ const examPackages = [
             {
                 "id": 140,
                 "groupId": "group-140",
-                "questionText": "140",
-                "audioUrl": "",
+                "questionText": "140:",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 39-42.png"],
                 "options": [
                 "He will also be responsible for a staff of 25.",
@@ -607,8 +607,8 @@ const examPackages = [
             {
                 "id": 141,
                 "groupId": "group-141",
-                "questionText": "141",
-                "audioUrl": "",
+                "questionText": "141:",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 39-42.png"],
                 "options": [
                 "begins",
@@ -622,8 +622,8 @@ const examPackages = [
             {
                 "id": 142,
                 "groupId": "group-142",
-                "questionText": "142",
-                "audioUrl": "",
+                "questionText": "142:",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 39-42.png"],
                 "options": [
                 "manage",
@@ -637,8 +637,8 @@ const examPackages = [
             {
                 "id": 143,
                 "groupId": "group-143",
-                "questionText": "143",
-                "audioUrl": "",
+                "questionText": "143:",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 43-46.png"],
                 "options": [
                 "double",
@@ -652,8 +652,8 @@ const examPackages = [
             {
                 "id": 144,
                 "groupId": "group-144",
-                "questionText": "144",
-                "audioUrl": "",
+                "questionText": "144:",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 43-46.png"],
                 "options": [
                 "drawing",
@@ -667,8 +667,8 @@ const examPackages = [
             {
                 "id": 145,
                 "groupId": "group-145",
-                "questionText": "145",
-                "audioUrl": "",
+                "questionText": "145:",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 43-46.png"],
                 "options": [
                 "comparing",
@@ -682,8 +682,8 @@ const examPackages = [
             {
                 "id": 146,
                 "groupId": "group-146",
-                "questionText": "146",
-                "audioUrl": "",
+                "questionText": "146:",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 43-46.png"],
                 "options": [
                 "For example, you might ask her about the next project on her schedule.",
@@ -698,7 +698,7 @@ const examPackages = [
                 "id": 147,
                 "groupId": "group-147",
                 "questionText": "147: What is suggested about T-Star Tennis Clinic?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 47-48.png"],
                 "options": [
                 "It is owned by a famous athlete.",
@@ -713,7 +713,7 @@ const examPackages = [
                 "id": 148,
                 "groupId": "group-148",
                 "questionText": "148: What is true about the coupon?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 47-48.png"],
                 "options": [
                 "It expires at the end of the year.",
@@ -728,7 +728,7 @@ const examPackages = [
                 "id": 149,
                 "groupId": "group-149",
                 "questionText": "149: What does Mr. Bilecki indicate he will do?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 49-50.png"],
                 "options": [
                 "Arrive late to the gym",
@@ -743,7 +743,7 @@ const examPackages = [
                 "id": 150,
                 "groupId": "group-150",
                 "questionText": "150: At 8:58 A.M., what does Ms. Malone most likely mean when she writes, \"That works out perfectly\"?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 49-50.png"],
                 "options": [
                 "She likes Mr. Bilecki's idea.",
@@ -758,7 +758,7 @@ const examPackages = [
                 "id": 151,
                 "groupId": "",
                 "questionText": "151: Where would the notice most likely appear?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 51-52.png"],
                 "options": [
                 "In an airport terminal",
@@ -773,7 +773,7 @@ const examPackages = [
                 "id": 152,
                 "groupId": "",
                 "questionText": "152: What is being replaced?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 51-52.png"],
                 "options": [
                 "The air-conditioning system",
@@ -788,7 +788,7 @@ const examPackages = [
                 "id": 153,
                 "groupId": "",
                 "questionText": "153: What is suggested about Ms. Agrawal?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 53-54.png"],
                 "options": [
                 "She lives in Bangalore.",
@@ -803,7 +803,7 @@ const examPackages = [
                 "id": 154,
                 "groupId": "",
                 "questionText": "154: Why is Ms. Doshi writing to Ms. Agrawal?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 53-54.png"],
                 "options": [
                 "To recommend a travel partner",
@@ -818,7 +818,7 @@ const examPackages = [
                 "id": 155,
                 "groupId": "",
                 "questionText": "155: How will Starr Transportation most likely use information they collect from the form?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 55-57.png"],
                 "options": [
                 "To create effective marketing materials",
@@ -833,7 +833,7 @@ const examPackages = [
                 "id": 156,
                 "groupId": "",
                 "questionText": "156: What did Mr. Chen indicate about the vehicle?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 55-57.png"],
                 "options": [
                 "It was a bus.",
@@ -848,7 +848,7 @@ const examPackages = [
                 "id": 157,
                 "groupId": "",
                 "questionText": "157: What does Mr. Chen indicate about the service he received?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 55-57.png"],
                 "options": [
                 "The trip from Centerville took too long.",
@@ -863,7 +863,7 @@ const examPackages = [
                 "id": 158,
                 "groupId": "",
                 "questionText": "158: What is indicated about Blythe House?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 58-60.png"],
                 "options": [
                 "It is occupied by more than one resident.",
@@ -878,7 +878,7 @@ const examPackages = [
                 "id": 159,
                 "groupId": "",
                 "questionText": "159: What is included in the rental fee?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 58-60.png"],
                 "options": [
                 "Electricity costs",
@@ -893,7 +893,7 @@ const examPackages = [
                 "id": 160,
                 "groupId": "",
                 "questionText": "160: According to the advertisement, what are renters required to do?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 58-60.png"],
                 "options": [
                 "Sign a one-year contract",
@@ -908,7 +908,7 @@ const examPackages = [
                 "id": 161,
                 "groupId": "",
                 "questionText": "161: What is the article about?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 61-63.png"],
                 "options": [
                 "The expansion of a chain of stores",
@@ -923,7 +923,7 @@ const examPackages = [
                 "id": 162,
                 "groupId": "",
                 "questionText": "162: What does Mr. Chapworth mention that customers like about Riester's?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 61-63.png"],
                 "options": [
                 "Its friendly customer service",
@@ -938,7 +938,7 @@ const examPackages = [
                 "id": 163,
                 "groupId": "",
                 "questionText": "163: In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong? \"Two more will open at sites in Manchester and Edinburgh by summer of next year.\"",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 61-63.png"],
                 "options": [
                 "[1]",
@@ -953,7 +953,7 @@ const examPackages = [
                 "id": 164,
                 "groupId": "",
                 "questionText": "164: Why was the letter written?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 64-66.png"],
                 "options": [
                 "To ask for research proposals",
@@ -968,7 +968,7 @@ const examPackages = [
                 "id": 165,
                 "groupId": "",
                 "questionText": "165: When is a copy of the bank agreement due to MGSC?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 64-66.png"],
                 "options": [
                 "On April 15",
@@ -983,7 +983,7 @@ const examPackages = [
                 "id": 166,
                 "groupId": "",
                 "questionText": "166: What is indicated about the MGSC contract?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 64-66.png"],
                 "options": [
                 "It includes an itemized list of costs.",
@@ -998,7 +998,7 @@ const examPackages = [
                 "id": 167,
                 "groupId": "",
                 "questionText": "167: What is suggested about Ms. Kulp?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 64-66.png"],
                 "options": [
                 "She is in charge of approving grant applications.",
@@ -1013,7 +1013,7 @@ const examPackages = [
                 "id": 168,
                 "groupId": "",
                 "questionText": "168: At 9:38 A.M., what does Ms. Lo mean when she writes, \"I'd like your input\"?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 68-71.png"],
                 "options": [
                 "She needs some numerical data.",
@@ -1028,7 +1028,7 @@ const examPackages = [
                 "id": 169,
                 "groupId": "",
                 "questionText": "169: For what type of company does Ms. Lo most likely work?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 68-71.png"],
                 "options": [
                 "A package delivery business",
@@ -1043,7 +1043,7 @@ const examPackages = [
                 "id": 170,
                 "groupId": "",
                 "questionText": "170: According to the discussion, whose department must complete their work first?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 68-71.png"],
                 "options": [
                 "Mr. Belmore's department",
@@ -1058,7 +1058,7 @@ const examPackages = [
                 "id": 171,
                 "groupId": "",
                 "questionText": "171: What will Ms. Wilson most likely tell Mr. Tran?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 68-71.png"],
                 "options": [
                 "That she can meet his request for rush work",
@@ -1073,7 +1073,7 @@ const examPackages = [
                 "id": 172,
                 "groupId": "",
                 "questionText": "172: Why is Ms. Hendley writing to Mr. Vogel?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 72-75.png"],
                 "options": [
                 "To invite him to become an honorary library member",
@@ -1088,7 +1088,7 @@ const examPackages = [
                 "id": 173,
                 "groupId": "",
                 "questionText": "173: What is suggested about the Highbrook Library?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 72-75.png"],
                 "options": [
                 "It is going to close for renovation.",
@@ -1103,7 +1103,7 @@ const examPackages = [
                 "id": 174,
                 "groupId": "",
                 "questionText": "174: What is indicated about the computers at Highbrook Library?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 72-75.png"],
                 "options": [
                 "They are for library members only.",
@@ -1118,7 +1118,7 @@ const examPackages = [
                 "id": 175,
                 "groupId": "",
                 "questionText": "175: In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong? \"This policy also helps students who want to use library resources after school.\"",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 72-75.png"],
                 "options": [
                 "[1]",
@@ -1133,7 +1133,7 @@ const examPackages = [
                 "id": 176,
                 "groupId": "",
                 "questionText": "176: What is the purpose of the e-mail?",
-                "audioUrl": "",
+                
                 "images": [
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 76-80 (1).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 76-80 (2).png",
@@ -1152,7 +1152,7 @@ const examPackages = [
                 "id": 177,
                 "groupId": "",
                 "questionText": "177: In the e-mail, the word \"response\" in paragraph 1, line 2, is closest in meaning to",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 76-80 (1).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 76-80 (2).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 76-80 (3).png"],
@@ -1169,7 +1169,7 @@ const examPackages = [
                 "id": 178,
                 "groupId": "",
                 "questionText": "178: What is NOT mentioned about Aswebo Toys?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 76-80 (1).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 76-80 (2).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 76-80 (3).png"],
@@ -1186,7 +1186,7 @@ const examPackages = [
                 "id": 179,
                 "groupId": "",
                 "questionText": "179: What is suggested about the toys that were used in the research?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 76-80 (1).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 76-80 (2).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 76-80 (3).png"],
@@ -1203,7 +1203,7 @@ const examPackages = [
                 "id": 180,
                 "groupId": "",
                 "questionText": "180: According to the report, what toy were the research participants the least enthusiastic about?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 76-80 (1).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 76-80 (2).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 76-80 (3).png"],
@@ -1220,7 +1220,7 @@ const examPackages = [
                 "id": 181,
                 "groupId": "",
                 "questionText": "181: For whom is the Web page information most likely intended?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 81-85 (1).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 81-85 (2).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 81-85 (3).png"],
@@ -1237,7 +1237,7 @@ const examPackages = [
                 "id": 182,
                 "groupId": "",
                 "questionText": "182: According to the Web page information, what is true about the newsletter?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 81-85 (1).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 81-85 (2).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 81-85 (3).png"],
@@ -1254,7 +1254,7 @@ const examPackages = [
                 "id": 183,
                 "groupId": "",
                 "questionText": "183: On the Web page, the word \"impressions\" in paragraph 2, line 1, is closest in meaning to",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 81-85 (1).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 81-85 (2).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 81-85 (3).png"],
@@ -1271,7 +1271,7 @@ const examPackages = [
                 "id": 184,
                 "groupId": "",
                 "questionText": "184: What is suggested about Dr. Liu's submission?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 81-85 (1).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 81-85 (2).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 81-85 (3).png"],
@@ -1288,7 +1288,7 @@ const examPackages = [
                 "id": 185,
                 "groupId": "",
                 "questionText": "185: What is Dr. Liu asked to do?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 81-85 (1).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 81-85 (2).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 81-85 (3).png"],
@@ -1305,7 +1305,7 @@ const examPackages = [
                 "id": 186,
                 "groupId": "",
                 "questionText": "186: What activity can be customized?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 86-90 (1).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 86-90 (2).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 86-90 (3).png"],
@@ -1322,7 +1322,7 @@ const examPackages = [
                 "id": 187,
                 "groupId": "",
                 "questionText": "187: What is the purpose of the e-mail?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 86-90 (1).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 86-90 (2).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 86-90 (3).png"],
@@ -1339,7 +1339,7 @@ const examPackages = [
                 "id": 188,
                 "groupId": "",
                 "questionText": "188: In the comment form, the word \"skip\" in paragraph 1, line 3, is closest in meaning to",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 86-90 (1).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 86-90 (2).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 86-90 (3).png"],
@@ -1356,7 +1356,7 @@ const examPackages = [
                 "id": 189,
                 "groupId": "",
                 "questionText": "189: Who taught the course enjoyed by Ms. Toivanen and her daughter?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 86-90 (1).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 86-90 (2).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 86-90 (3).png"],
@@ -1373,7 +1373,7 @@ const examPackages = [
                 "id": 190,
                 "groupId": "",
                 "questionText": "190: What are Ms. Toivanen's children planning to do in Morocco?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 86-90 (1).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 86-90 (2).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 86-90 (3).png"],
@@ -1390,7 +1390,7 @@ const examPackages = [
                 "id": 191,
                 "groupId": "",
                 "questionText": "191: Why most likely is Mr. Giordano closing his business?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 91-95 (1).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 91-95 (2).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 91-95 (3).png"],
@@ -1407,7 +1407,7 @@ const examPackages = [
                 "id": 192,
                 "groupId": "",
                 "questionText": "192: What is indicated about Mr. Ribisi's bakery?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 91-95 (1).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 91-95 (2).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 91-95 (3).png"],
@@ -1424,7 +1424,7 @@ const examPackages = [
                 "id": 193,
                 "groupId": "",
                 "questionText": "193: In the review, the word \"kept\" in paragraph 1, line 3, is closest in meaning to",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 91-95 (1).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 91-95 (2).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 91-95 (3).png"],
@@ -1441,7 +1441,7 @@ const examPackages = [
                 "id": 194,
                 "groupId": "",
                 "questionText": "194: What is suggested about the Plaza Shopping Center?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 91-95 (1).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 91-95 (2).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 91-95 (3).png"],
@@ -1458,7 +1458,7 @@ const examPackages = [
                 "id": 195,
                 "groupId": "",
                 "questionText": "195: According to her statement, why does Ms. Portofino have a positive view of the Plaza Shopping Center?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 91-95 (1).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 91-95 (2).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 91-95 (3).png"],
@@ -1475,7 +1475,7 @@ const examPackages = [
                 "id": 196,
                 "groupId": "",
                 "questionText": "196: What does the notice suggest about the exhibition?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 96-100 (1).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 96-100 (2).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 96-100 (3).png"],
@@ -1492,7 +1492,7 @@ const examPackages = [
                 "id": 197,
                 "groupId": "",
                 "questionText": "197: What is implied in the notice?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 96-100 (1).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 96-100 (2).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 96-100 (3).png"],
@@ -1509,7 +1509,7 @@ const examPackages = [
                 "id": 198,
                 "groupId": "",
                 "questionText": "198: Where most likely did Ms. Finch hear Mr. Goodman speak?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 96-100 (1).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 96-100 (2).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 96-100 (3).png"],
@@ -1526,7 +1526,7 @@ const examPackages = [
                 "id": 199,
                 "groupId": "",
                 "questionText": "199: What is suggested about Mr. Goodman?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 96-100 (1).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 96-100 (2).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 96-100 (3).png"],
@@ -1543,7 +1543,7 @@ const examPackages = [
                 "id": 200,
                 "groupId": "",
                 "questionText": "200: In what field do Ms. Finch and Mr. Goodman share some expertise?",
-                "audioUrl": "",
+                
                 "images": ["./assets/images/ฟ้าแดงเหลือง RC2/BRY 96-100 (1).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 96-100 (2).png",
                     "./assets/images/ฟ้าแดงเหลือง RC2/BRY 96-100 (3).png"],
@@ -1565,7 +1565,7 @@ const examPackages = [
         "questions": [
             {
                 "id": 1,
-                "questionText": "The new marketing campaign ______ by the team last month.",
+                "questionText": "1: The new marketing campaign ______ by the team last month.",
                 "images": [],
                 "options": ["was developed", "developed", "has developed", "developing"],
                 "correctAnswer": 0,
@@ -1573,7 +1573,7 @@ const examPackages = [
             },
             {
                 "id": 2,
-                "questionText": "All employees are required to attend the training session, ______?",
+                "questionText": "2: All employees are required to attend the training session, ______?",
                 "images": [],
                 "options": ["aren't they", "don't they", "isn't it", "won't they"],
                 "correctAnswer": 0,
@@ -1581,7 +1581,7 @@ const examPackages = [
             },
             {
                 "id": 3,
-                "questionText": "Please read the email below from Mr. Tanaka and choose the correct answer.\n\n---\nDear Team,\n\nI am writing to remind everyone that the deadline for submitting the project reports is next Friday. Please ensure all documents are complete before submission. If you have any questions, feel free to contact me.\n\nBest regards,\nMr. Tanaka\n---\n\nWhat is the purpose of this email?",
+                "questionText": "3: Please read the email below from Mr. Tanaka and choose the correct answer.\n\n---\nDear Team,\n\nI am writing to remind everyone that the deadline for submitting the project reports is next Friday. Please ensure all documents are complete before submission. If you have any questions, feel free to contact me.\n\nBest regards,\nMr. Tanaka\n---\n\nWhat is the purpose of this email?",
                 "images": [],
                 "options": ["To announce a meeting", "To remind about a deadline", "To request a vacation", "To introduce a new policy"],
                 "correctAnswer": 1,
@@ -1589,7 +1589,7 @@ const examPackages = [
             },
             {
                 "id": 4,
-                "questionText": "According to the email, what should employees do if they have questions?",
+                "questionText": "4: According to the email, what should employees do if they have questions?",
                 "images": [],
                 "options": ["Submit a form", "Contact Mr. Tanaka", "Wait for the meeting", "Ask a colleague"],
                 "correctAnswer": 1,
@@ -1597,46 +1597,1595 @@ const examPackages = [
             }
         ]
     },
-    { // ฟ้าม่วง RC
+    { // ฟ้าม่วง RC RC2 Checked!
         "setId": "ฟ้าม่วง RC2",
         "setTitle": "ฟ้าม่วง RC2",
         "setCover": "./assets/cover/RC-Test-cover-RC-ฟ้าม่วง-2-update.webp",
         "questions": [
             {
-                "id": 100,
-                "questionText": "The new marketing campaign ______ by the team last month.",
+                "id": 101,
+                "questionText": "101: This discounted train ticket is _____ only at certain times of the day.",
+                "audioUrl": "",
                 "images": [],
-                "options": ["was developed", "developed", "has developed", "developing"],
+                "options": [
+                    "valid",
+                    "validate",
+                    "validating",
+                    "validation"
+                ],
                 "correctAnswer": 0,
-                "explanation": "เฉลยข้อ A: ประโยคนี้เป็น passive voice ในรูป past simple (by the team) จึงใช้ 'was developed'"
+                "explanation": "เพราะตำแหน่งหลัง is ต้องเป็นคำคุณศัพท์ (adj) แปลว่า ใช้ได้/มีผลบังคับใช้ ส่วนข้อ (B) validate เป็นคำกริยาช่อง 1 ใช้หลัง is ทันทีไม่ได้, (C) validating แปลว่า กำลังตรวจสอบ ซึ่งทำให้ความหมายเพี้ยน, (D) validation เป็นคำนาม แปลว่า การตรวจสอบ ให้ความหมายไม่เหมาะสม"
             },
             {
-                "id": 101,
-                "questionText": "All employees are required to attend the training session, ______?",
-                        "images": [],
-                        "options": ["aren't they", "don't they", "isn't it", "won't they"],
-                        "correctAnswer": 0,
-                        "explanation": "เพราะ pleased to เป็น infinitive with to ต้องใช้ verb ช่อง 1 ไม่ผัน ส่วนข้อ (A) welcoming เป็น gerund, (C) welcomed เป็น past participle, (D) welcomes เป็น verb เติม s จึงใช้ในตำแหน่งนี้ไม่ได้"
-                    },
-                    {
-                        "id": 102,
-                        "questionText": "Please read the email below from Mr. Tanaka and choose the correct answer.\n\n---\nDear Team,\n\nI am writing to remind everyone that the deadline for submitting the project reports is next Friday. Please ensure all documents are complete before submission. If you have any questions, feel free to contact me.\n\nBest regards,\nMr. Tanaka\n---\n\nWhat is the purpose of this email?",
-                        "images": [],
-                        "options": ["To announce a meeting", "To remind about a deadline", "To request a vacation", "To introduce a new policy"],
-                        "correctAnswer": 1,
-                        "explanation": "เพราะต้องใช้ preposition เชื่อมประโยคกับ professionals by แปลว่า \"โดย\" ส่วนข้อ (A) of=\"ของ, (B) over=\"มากกว่า/เหนือกว่า\", (C) as=\"เช่น/ดังเช่น\" ล้วนผิดความหมาย"
-                    },
-                    {
-                        "id": 103,
-                        "questionText": "According to the email, what should employees do if they have questions?",
-                        "images": [],
-                        "options": ["Submit a form", "Contact Mr. Tanaka", "Wait for the meeting", "Ask a colleague"],
-                        "correctAnswer": 1,
-                        "explanation": "เพราะตำแหน่งระหว่าง will กับ request ต้องเป็น adv ขยายกริยา แปลว่า \"เป็นครั้งคราว\" ส่วนข้อ (B) previously, (C) recently, (D) lately ต่างใช้กับเหตุการณ์ในอดีต ขัดกับ will ที่บอกอนาคต"
-                    }
-                ]
+                "id": 102,
+                "questionText": "102: To participate in the Advantage Discount program, _____ the registration form on our Web site.",
+                "audioUrl": "",
+                "images": [],
+                "options": [
+                    "reply",
+                    "inquire",
+                    "complete",
+                    "apply"
+                ],
+                "correctAnswer": 2,
+                "explanation": "เพราะเป็นประโยคคำสั่งที่ต้องการคำกริยาขึ้นต้น แปลว่า กรอกข้อมูล (ในฟอร์ม) ส่วนข้อ (A) reply แปลว่า ตอบ ซึ่งปกติมักใช้คู่กับ to, (B) inquire แปลว่า สอบถาม ไม่เกี่ยวกับการกรอก, (D) apply แปลว่า สมัคร มักใช้คู่กับ for"
+            },
+            {
+                "id": 103,
+                "questionText": "103: Ms. Srisati is unavailable today _____ she is flying to Mumbai.",
+                "audioUrl": "",
+                "images": [],
+                "options": [
+                    "because",
+                    "how",
+                    "regarding",
+                    "sooner"
+                ],
+                "correctAnswer": 0,
+                "explanation": "เพราะต้องการคำเชื่อมที่แปลว่า เพราะว่า เพื่อเชื่อมเหตุผลสองประโยคเข้าด้วยกัน ส่วนข้อ (B) how เป็นคำขยายกริยา, (C) regarding เป็นคำบุพบท แปลว่าเกี่ยวกับ, (D) sooner เป็นคำขยายแปลว่าเร็วขึ้น ทั้งหมดนี้ใช้เชื่อมประโยคไม่ได้"
+            },
+            {
+                "id": 104,
+                "questionText": "104: The contract _____ states that the tenants must renew their rental-property agreement by March 1.",
+                "audioUrl": "",
+                "images": [],
+                "options": [
+                    "clear",
+                    "clearly",
+                    "clearer",
+                    "cleared"
+                ],
+                "correctAnswer": 1,
+                "explanation": "เพราะตำแหน่งที่อยู่ระหว่างประธานและคำกริยาหลัก (states) ต้องใช้คำขยายกริยา (adv) เพื่อให้ประโยคชัดเจน ส่วนข้อ (A) clear เป็นคำคุณศัพท์ธรรมดา, (C) clearer เป็นการเปรียบเทียบขั้นกว่า, (D) cleared เป็นคำกริยารูปอดีต"
+            },
+            {
+                "id": 105,
+                "questionText": "105: Aiko Arts plans to host a reception _____ the artist, Remco Koeman.",
+                "audioUrl": "",
+                "images": [],
+                "options": [
+                    "except",
+                    "for",
+                    "off",
+                    "into"
+                ],
+                "correctAnswer": 1,
+                "explanation": "เพราะประโยคต้องการคำบุพบทที่แปลว่า สำหรับ แขกผู้เข้าพักทุกคน ส่วนข้อ (A) except แปลว่า ยกเว้น ซึ่งขัดแย้งกับเนื้อความ, (C) off แปลว่า ออกจาก, (D) into แปลว่า เข้าไปข้างใน ซึ่งใช้กับตัวบุคคลในบริบทนี้ไม่ได้"
+            },
+            {
+                "id": 106,
+                "questionText": "106: Unfortunately, replacing the copy machine will cost more than _____ had anticipated.",
+                "audioUrl": "",
+                "images": [],
+                "options": [
+                    "we",
+                    "us",
+                    "our",
+                    "ours"
+                ],
+                "correctAnswer": 0,
+                "explanation": "เพราะตำแหน่งนี้ต้องการคำสรรพนามที่ทำหน้าที่เป็นประธานหลักของกลุ่มคำ had anticipated ส่วนข้อ (B) us ทำหน้าที่เป็นกรรมของประโยค, (C) our แปลว่า ของพวกเรา ต้องมีคำนามตามหลัง, (D) ours แปลว่า ของพวกเรา แต่ใช้ลอย ๆ แทนคำนามไปแล้ว"
+            },
+            {
+                "id": 107,
+                "questionText": "107: Your Polytonics e-mail account will be set up _____ you arrive on your first day.",
+                "audioUrl": "",
+                "images": [],
+                "options": [
+                    "at",
+                    "around",
+                    "until",
+                    "before"
+                ],
+                "correctAnswer": 3,
+                "explanation": "เพราะต้องการคำเชื่อมประโยคแสดงลำดับเวลา แปลว่า ก่อนที่ จะมีการเซ็นสัญญา ส่วนข้อ (C) until แปลว่า จนกว่า ทำให้ความหมายไม่สมเหตุสมผล, (A) at และ (B) around เป็นคำระบุตำแหน่ง/เวลา ใช้เชื่อมประโยคแบบนี้ไม่ได้"
+            },
+            {
+                "id": 108,
+                "questionText": "108: Oaza Electronics worked _____ with our team to facilitate the development of the computerized training system.",
+                "audioUrl": "",
+                "images": [],
+                "options": [
+                    "hardly",
+                    "nearly",
+                    "closely",
+                    "relatively"
+                ],
+                "correctAnswer": 2,
+                "explanation": "เพราะตำแหน่งหลังคำกริยา (worked) ต้องการคำขยายกริยา แปลว่าทำงาน อย่างใกล้ชิด ส่วนข้อ (A) hardly แปลว่า แทบจะไม่ ซึ่งความหมายตรงข้าม, (B) nearly แปลว่า เกือบจะ ไม่ใช้ขยายคำว่าทำงาน, (D) relatively แปลว่า ค่อนข้าง ใช้กับการเปรียบเทียบระดับ"
+            },
+            {
+                "id": 109,
+                "questionText": "109: Financial adviser Jenna Sotulo helps professionals devise a _____ for managing their finances.",
+                "audioUrl": "",
+                "images": [],
+                "options": [
+                    "prediction",
+                    "gesture",
+                    "strategy",
+                    "request"
+                ],
+                "correctAnswer": 2,
+                "explanation": "เพราะหลังคำว่า a ต้องตามด้วยคำนามหลัก แปลว่า กลยุทธ์ (ทางด้านการเงิน) ส่วนข้อ (A) prediction แปลว่า การคาดการณ์ ไม่ใช่สิ่งที่เอาไว้ใช้จัดการ, (B) gesture แปลว่า ท่าทาง ไม่เกี่ยวกับเรื่องเงิน, (D) request แปลว่า คำขอ ไม่เข้ากับการวางแผน"
+            },
+            {
+                "id": 110,
+                "questionText": "110: Each employee must coordinate with management so that _____ time off can be properly scheduled.",
+                "audioUrl": "",
+                "images": [],
+                "options": [
+                    "alone",
+                    "individual",
+                    "isolating",
+                    "separated"
+                ],
+                "correctAnswer": 1,
+                "explanation": "เพราะต้องการคำคุณศัพท์ขยายเวลารับสิทธิ์ แปลว่า รายบุคคล (เวลาลาหยุดของแต่ละคน) ส่วนข้อ (A) alone แปลว่า ตามลำพัง ใช้ขยายช่วงเวลาไม่ได้, (C) isolating และ (D) separated แปลว่า ที่ถูกแยกออก ความหมายไม่สอดคล้องกับการลาหยุด"
+            },
+            {
+                "id": 111,
+                "questionText": "111: The cost of building Juniper High Towers exceeded the contractor's original _____ by over £5,000.00.",
+                "audioUrl": "",
+                "images": [],
+                "options": [
+                    "estimating",
+                    "estimate",
+                    "estimated",
+                    "estimator"
+                ],
+                "correctAnswer": 1,
+                "explanation": "เพราะหลังคำขยาย (original) ต้องตามด้วยคำนามหลัก แปลว่า การประเมิน ส่วนข้อ (A) estimating เป็นกริยาเติม -ing, (C) estimated เป็นคำขยายรูปอดีต, (D) estimator แปลว่า ผู้ประเมิน (คน) ซึ่งหากแปลจะกลายเป็น สูงกว่าผู้ประเมิน ทำให้ความหมายเพี้ยน"
+            },
+            {
+                "id": 112,
+                "questionText": "112: At Links Fine Meats, we pride _____ on providing the highest-quality products on the market.",
+                "audioUrl": "",
+                "images": [],
+                "options": [
+                    "oneself",
+                    "yourselves",
+                    "itself",
+                    "ourselves"
+                ],
+                "correctAnswer": 3,
+                "explanation": "เพราะประธานของประโยคคือ we (พวกเรา) จึงต้องใช้คำสะท้อนให้ตรงคู่กันคือ ourselves (ตัวพวกเราเอง) ส่วนข้อ (A) oneself ใช้กับคนทั่วไปที่ไม่เจาะจง, (B) yourselves ใช้กับคุณ (หลายคน), (C) itself ใช้กับสิ่งของหรือสัตว์"
+            },
+            {
+                "id": 113,
+                "questionText": "113: _____ he is usually quiet around the office, Mr. Heineman is known for his witty and engaging public speeches.",
+                "audioUrl": "",
+                "images": [],
+                "options": [
+                    "Although",
+                    "Otherwise",
+                    "Despite",
+                    "Instead"
+                ],
+                "correctAnswer": 0,
+                "explanation": "เพราะต้องการคำเชื่อมประโยคขัดแย้งที่แปลว่า ถึงแม้ว่า ส่วนข้อ (B) Otherwise แปลว่า มิฉะนั้น ความหมายไม่เข้ากัน, (C) Despite เป็นคำบุพบทใช้เชื่อมประโยคไม่ได้, (D) Instead แปลว่า แทนที่จะ"
+            },
+            {
+                "id": 114,
+                "questionText": "114: Ancient Chitimacha baskets are _____ featured in the Louisiana Museum of Archeology.",
+                "audioUrl": "",
+                "images": [],
+                "options": [
+                    "prominent",
+                    "prominently",
+                    "prominence",
+                    "prominences"
+                ],
+                "correctAnswer": 1,
+                "explanation": "เพราะตำแหน่งตรงกลางระหว่างกริยาช่วย (is) กับกริยาหลัก (featured) ต้องเป็นคำขยายกริยา (adv) ส่วนข้อ (A) prominent เป็นคำคุณศัพท์, (C) prominence และ (D) prominences เป็นคำนาม"
+            },
+            {
+                "id": 115,
+                "questionText": "115: _____ tea and coffee are available in the lobby for all guests of the Farrison Hotel.",
+                "audioUrl": "",
+                "images": [],
+                "options": [
+                    "Compliment",
+                    "To compliment",
+                    "Complimented",
+                    "Complimentary"
+                ],
+                "correctAnswer": 3,
+                "explanation": "เพราะต้องการคำคุณศัพท์มาขยายชา (tea) แปลว่า ฟรี/ให้เปล่า ส่วนข้อ (A) Compliment เป็นคำนาม แปลว่า คำชม, (B) To compliment เป็นรูปกริยาแสดงวัตถุประสงค์, (C) Complimented เป็นคำกริยารูปอดีต"
+            },
+            {
+                "id": 116,
+                "questionText": "116: _____ representatives of Light Cloud Airlines, flights are rarely overbooked.",
+                "audioUrl": "",
+                "images": [],
+                "options": [
+                    "As opposed to",
+                    "In addition to",
+                    "According to",
+                    "Prior to"
+                ],
+                "correctAnswer": 2,
+                "explanation": "เพราะต้องการคำเชื่อมกลุ่มคำที่แปลว่า ตามที่ / สอดคล้องกับ ส่วนข้อ (A) As opposed to แปลว่า ตรงข้ามกับ, (B) In addition to แปลว่า นอกเหนือจาก, (D) Prior to แปลว่า ก่อนหน้า ซึ่งต้องตามด้วยเวลาหรือเหตุการณ์"
+            },
+            {
+                "id": 117,
+                "questionText": "117: Mr. Krause will reorganize the supply room _____ the cabinets are delivered.",
+                "audioUrl": "",
+                "images": [],
+                "options": [
+                    "overall",
+                    "due to",
+                    "once",
+                    "soon"
+                ],
+                "correctAnswer": 2,
+                "explanation": "เพราะประโยคต้องการคำเชื่อมที่แปลว่า เมื่อ ส่วนข้อ (A) overall เป็นคำคุณศัพท์ทั่วไป, (B) due to แปลว่า เนื่องจาก ต้องตามด้วยกลุ่มคำนาม, (D) soon แปลว่า ในไม่ช้า"
+            },
+            {
+                "id": 118,
+                "questionText": "118: By completing employee-satisfaction surveys anonymously, workers can more _____ state their concerns about the workplace.",
+                "audioUrl": "",
+                "images": [],
+                "options": [
+                    "wholly",
+                    "openly",
+                    "favorably",
+                    "laboriously"
+                ],
+                "correctAnswer": 1,
+                "explanation": "เพราะตำแหน่งหน้าคำกริยา (state) ต้องการคำขยายกริยา เพื่อสื่อความหมายว่า สามารถระบุข้อกังวลเกี่ยวกับสถานที่ทำงานได้อย่างเปิดเผย (openly) มากขึ้น ส่วนข้อ (A) wholly แปลว่า ทั้งหมด/โดยสิ้นเชิง, (C) favorably แปลว่า ในแง่ดี, (D) laboriously แปลว่า อย่างยากลำบาก ทั้งหมดนี้ความหมายไม่เข้ากับบริบท"
+            },
+            {
+                "id": 119,
+                "questionText": "119: The final blueprints must _____ by Ms. Ito after the final draft is produced.",
+                "audioUrl": "",
+                "images": [],
+                "options": [
+                    "approve",
+                    "be approved",
+                    "approving",
+                    "to approve"
+                ],
+                "correctAnswer": 1,
+                "explanation": "เพราะหลังคำว่า must ต้องตามด้วยกริยาไม่ผัน และในบริบทนี้พิมพ์เขียว (blueprints) ต้อง ถูกอนุมัติ (เป็นผู้ถูกกระทำ) ส่วนข้อ (A) approve แปลว่าอนุมัติเอง, (C) approving เป็นรูปเติม -ing, (D) to approve มีคำว่า to ซึ่งใช้หลัง must ไม่ได้"
+            },
+            {
+                "id": 120,
+                "questionText": "120: This sewing workshop is ideal for beginner tailors _____ professionals who would like to refresh their knowledge.",
+                "audioUrl": "",
+                "images": [],
+                "options": [
+                    "but",
+                    "either",
+                    "as well as",
+                    "additionally"
+                ],
+                "correctAnswer": 2,
+                "explanation": "เพราะประโยคต้องการคำเชื่อมธรรมดาที่แปลว่า และ เพื่อรวมสองกลุ่มเข้าด้วยกัน ส่วนข้อ (A) but แปลว่า แต่ แสดงความขัดแย้งซึ่งบริบทนี้ไม่ได้ขัดแย้งกัน, (B) either ต้องใช้คู่กับคำว่า or เสมอ, (D) additionally เป็นคำขยายประโยคใหม่"
+            },
+            {
+                "id": 121,
+                "questionText": "121: All posters and flyers must be removed from the bulletin board _____ 48 hours after the event has occurred.",
+                "audioUrl": "",
+                "images": [],
+                "options": [
+                    "within",
+                    "among",
+                    "unless",
+                    "while"
+                ],
+                "correctAnswer": 0,
+                "explanation": "เพราะต้องการคำระบุเวลาที่แปลว่า ภายใน (ตามด้วยจำนวนเวลา เช่น ภายใน 5 วัน) ส่วนข้อ (B) among แปลว่า ท่ามกลาง ใช้กับกลุ่มคนหรือของหลายสิ่ง, (C) unless แปลว่า เว้นแต่ว่า, (D) while แปลว่า ในขณะที่ ทั้งสองข้อนี้ต้องตามด้วยประโยคยาว"
+            },
+            {
+                "id": 122,
+                "questionText": "122: The _____ technology used in pots by Claypol Housewares keeps the handles from getting too hot to touch.",
+                "audioUrl": "",
+                "images": [],
+                "options": [
+                    "warm",
+                    "frequent",
+                    "unattached",
+                    "innovative"
+                ],
+                "correctAnswer": 3,
+                "explanation": "เพราะต้องการคำคุณศัพท์ขยายหม้อหุงข้าว แปลว่า มีนวัตกรรมใหม่/ล้ำสมัย ส่วนข้อ (A) warm แปลว่า อบอุ่น ไม่เกี่ยวกับเทคโนโลยี, (B) frequent แปลว่า บ่อย ใช้กับเหตุการณ์, (C) unattached แปลว่า ไม่ได้ติดกัน ไม่เกี่ยวกับคุณสมบัติสินค้า"
+            },
+            {
+                "id": 123,
+                "questionText": "123: There are a number of free Web-based _____ that provide tips for locating information in historical databases.",
+                "audioUrl": "",
+                "images": [],
+                "options": [
+                    "tutorials",
+                    "tutoring",
+                    "tutored",
+                    "tutor"
+                ],
+                "correctAnswer": 0,
+                "explanation": "เพราะข้อความนี้ระบุถึง การให้คำปรึกษา/สอนพิเศษ และมีคำว่า a number of นำหน้า จึงต้องใช้คำนามรูปพหูพจน์ ส่วนข้อ (B) tutoring เป็นคำนามประเภทการเรียน, (C) tutored เป็นคำขยายรูปอดีต, (D) tutor เป็นคำนามเอกพจน์ (คนเดียว) ไม่สอดคล้องกับกริยาในประโยค"
+            },
+            {
+                "id": 124,
+                "questionText": "124: The person hired must be able to adapt _____ to changes in work assignments and schedules.",
+                "audioUrl": "",
+                "images": [],
+                "options": [
+                    "readies",
+                    "readily",
+                    "readiness",
+                    "ready"
+                ],
+                "correctAnswer": 1,
+                "explanation": "เพราะอยู่หน้าคำกริยา (adapt) จึงต้องใช้คำขยายกริยา (adv) เพื่อบอกลักษณะการปรับตัว ส่วนข้อ (A) readies เป็นคำกริยา, (C) readiness เป็นคำนาม แปลว่าความพร้อม, (D) ready เป็นคำคุณศัพท์ทั่วไป"
+            },
+            {
+                "id": 125,
+                "questionText": "125: Organizational behavior specialist Ray Majory believes a good sense of humor in a leader can increase the quality of _____ in the team.",
+                "audioUrl": "",
+                "images": [],
+                "options": [
+                    "declaration",
+                    "statement",
+                    "message",
+                    "communication"
+                ],
+                "correctAnswer": 3,
+                "explanation": "เพราะหลังคำว่า of ต้องเป็นคำนามที่สื่อถึงระบบหรือกระบวนการภายในทีม แปลว่า การสื่อสาร ส่วนข้อ (A) declaration แปลว่า การประกาศทางการ, (B) statement แปลว่า คำแถลง/คำพูด, (C) message แปลว่า ข้อความ ทั้งหมดนี้เจาะจงเกินไปและไม่ใช่ภาพรวมของระบบ"
+            },
+            {
+                "id": 126,
+                "questionText": "126: Portsmouth's agricultural industry has always found ways to _____ itself by growing different crops and finding new markets.",
+                "audioUrl": "",
+                "images": [],
+                "options": [
+                    "reinvest",
+                    "reuse",
+                    "reassess",
+                    "reinvent"
+                ],
+                "correctAnswer": 3,
+                "explanation": "เพราะโครงสร้างประโยคระบุวัตถุประสงค์ (to + กริยาช่อง 1) สื่อถึงการ สร้างใหม่ / เปลี่ยนแปลงตัวเอง ส่วนข้อ (A) reinvest แปลว่า ลงทุนใหม่ มักใช้กับเรื่องเงิน, (B) reuse แปลว่า นำกลับมาใช้ใหม่ ใช้กับสิ่งของ, (C) reassess แปลว่า ประเมินใหม่ ความหมายไม่ลึกซึ้งเท่ากับการเปลี่ยนแปลง"
+            },
+            {
+                "id": 127,
+                "questionText": "127: While some countries have made huge investments in the Caribbean lately, others have reduced _____.",
+                "audioUrl": "",
+                "images": [],
+                "options": [
+                    "themselves",
+                    "theirs",
+                    "their",
+                    "they"
+                ],
+                "correctAnswer": 1,
+                "explanation": "เพราะต้องการคำสรรพนามที่แสดงความเป็นเจ้าของ แปลว่า เงินลงทุนของประเทศอื่น ๆ (ย่อมาจากคำว่า their investments) ส่วนข้อ (A) themselves ใช้เมื่อประธานและกรรมเป็นสิ่งเดียวกัน, (C) their ต้องมีคำนามตามหลังเสมอ, (D) they ทำหน้าที่เป็นประธานหลัก"
+            },
+            {
+                "id": 128,
+                "questionText": "128: The ethics committee cited the potential benefits of the research project while _____ its high cost.",
+                "audioUrl": "",
+                "images": [],
+                "options": [
+                    "acknowledging",
+                    "to acknowledge",
+                    "has acknowledged",
+                    "acknowledge"
+                ],
+                "correctAnswer": 0,
+                "explanation": "เพราะเป็นการย่อประโยคบอกเวลา (ขณะที่กำลังทำสิ่งนั้นอยู่) จึงใช้รูปกริยาเติม -ing หลัง while ส่วนข้อ (B) to acknowledge แปลว่าเพื่อที่จะ, (C) has acknowledged และ (D) acknowledge เป็นคำกริยาเต็มประโยคซึ่งจุดนี้ไม่ต้องการกริยาแท้เพิ่ม"
+            },
+            {
+                "id": 129,
+                "questionText": "129: The report describes the environmental impact on lakes and rivers of using _____ energy sources.",
+                "audioUrl": "",
+                "images": [],
+                "options": [
+                    "together",
+                    "hopeful",
+                    "regulatory",
+                    "renewable"
+                ],
+                "correctAnswer": 3,
+                "explanation": "เพราะวางหน้าแหล่งพลังงาน จึงต้องใช้คำคุณศัพท์ที่เจาะจงประเภท แปลว่า พลังงานหมุนเวียน/ทดแทน ส่วนข้อ (A) together แปลว่าด้วยกัน, (B) hopeful แปลว่ามีความหวัง มักใช้กับคน, (C) regulatory แปลว่าเกี่ยวกับกฎข้อบังคับ"
+            },
+            {
+                "id": 130,
+                "questionText": "130: Any decorations on the ceilings or walls must be fully removed, including any material used to _____ them to the surfaces.",
+                "audioUrl": "",
+                "images": [],
+                "options": [
+                    "adhere",
+                    "attract",
+                    "construct",
+                    "sustain"
+                ],
+                "correctAnswer": 0,
+                "explanation": "เพราะมีสำนวน used to ที่แปลว่าเคยชิน หรือใช้ในบริบทที่แปลว่า ยึดติดอยู่กับ ส่วนข้อ (B) attract แปลว่าดึงดูด, (C) construct แปลว่าสร้าง, (D) sustain แปลว่าค้ำจุน/รักษาไว้ ซึ่งความหมายไม่เข้ากับคำว่าติดอยู่กับที่"
+            },
+            {
+                "id": 131,
+                "questionText": "131:",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 31-34.png"
+                ],
+                "options": [
+                    "is to introduce",
+                    "was introducing",
+                    "has introduced",
+                    "would have introduced"
+                ],
+                "correctAnswer": 2,
+                "explanation": "เพราะประโยคหลักยังไม่มีคำกริยาแท้ และเนื้อความพูดถึงเหตุการณ์ทั่วไปในปัจจุบัน จึงเลือกกริยาปัจจุบันธรรมดา ส่วนข้อ (A) รูปประโยคผิดหลักการวางกริยาซ้อน, (B) เป็นรูปอดีตที่กำลังทำอยู่, (D) เป็นรูปเงื่อนไขสมมุติอดีตซึ่งไม่เข้ากับบริบท"
+            },
+            {
+                "id": 132,
+                "questionText": "132:",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 31-34.png"
+                ],
+                "options": [
+                    "precise",
+                    "precisely",
+                    "precision",
+                    "preciseness"
+                ],
+                "correctAnswer": 1,
+                "explanation": "เพราะตำแหน่งที่อยู่หน้าคำกริยา (monitors) ต้องใช้คำขยายกริยา (adv) แปลว่า ตรวจสอบ อย่างแม่นยำ ส่วนข้อ (A) precise เป็นคำคุณศัพท์, (C) precision และ (D) preciseness เป็นคำนาม แปลว่าความแม่นยำ"
+            },
+            {
+                "id": 133,
+                "questionText": "133:",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 31-34.png"
+                ],
+                "options": [
+                    "inventory",
+                    "scheduling",
+                    "vendors",
+                    "ingredients"
+                ],
+                "correctAnswer": 0,
+                "explanation": "เพราะหลังคำกริยา (see) ต้องเป็นคำนามที่ระบบนี้เข้าไปตรวจสอบขยายความ แปลว่า สินค้าคงคลัง/สต๊อกสินค้า ส่วนข้อ (B) scheduling แปลว่าการจัดตาราง, (C) vendors แปลว่าผู้ขาย, (D) ingredients แปลว่าส่วนผสม"
+            },
+            {
+                "id": 134,
+                "questionText": "134:",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 31-34.png"
+                ],
+                "options": [
+                    "This system ensures that shoppers can always find what they want.",
+                    "This computer sends data to store security staff.",
+                    "The Mombasa store is gaining more and more customers.",
+                    "The most popular item at Incredible Cravings is the chocolate croissant."
+                ],
+                "correctAnswer": 0,
+                "explanation": "เพราะเนื้อหาพูดถึงประโยชน์ของระบบเซ็นเซอร์อัจฉริยะ ซึ่งช่วยเตือนและจัดการเรื่องการเติมสต๊อกสินค้าให้พอดี ส่วนข้อ (B) ส่งข้อมูลให้ รปภ., (C) มีลูกค้าเพิ่มขึ้น, (D) สินค้าขายดี เป็นข้อมูลที่ไม่เกี่ยวข้องกับระบบตรวจสต๊อก"
+            },
+            {
+                "id": 135,
+                "questionText": "135:",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 35-38.png"
+                ],
+                "options": [
+                    "Equally",
+                    "Rather",
+                    "In general",
+                    "As a result"
+                ],
+                "correctAnswer": 2,
+                "explanation": "เพราะต้องการคำขยายขึ้นต้นประโยคเพื่อบอกสถานการณ์ทั่วไป แปลว่า โดยทั่วไปแล้ว ส่วนข้อ (A) Equally แปลว่าในทำนองเดียวกัน, (B) Rather แปลว่าค่อนข้างจะ, (D) As a result แปลว่าส่งผลให้"
+            },
+            {
+                "id": 136,
+                "questionText": "136:",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 35-38.png"
+                ],
+                "options": [
+                    "This is true for both residential and commercial moves.",
+                    "Therefore, allow one to two weeks for your shipment to arrive.",
+                    "Most moving companies are based in large cities.",
+                    "Moving is stressful at any time of the year."
+                ],
+                "correctAnswer": 0,
+                "explanation": "เพราะเนื้อความด้านหลังคุยเรื่องความยืดหยุ่นของเวลา ซึ่งสัมพันธ์และเชื่อมโยงกับการย้ายออฟฟิศทั้งสองประเภท ส่วนข้อ (B) บอกให้รอ 1-2 สัปดาห์, (C) พูดถึงที่ตั้งบริษัทขนย้าย, (D) บอกว่าการย้ายบ้านเครียดตลอดปี ทั้งหมดนี้ไม่สอดคล้องกับบริบทความยืดหยุ่น"
+            },
+            {
+                "id": 137,
+                "questionText": "137:",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 35-38.png"
+                ],
+                "options": [
+                    "frustrating",
+                    "similar",
+                    "beneficial",
+                    "unusual"
+                ],
+                "correctAnswer": 2,
+                "explanation": "เพราะหลังคำว่า can be ต้องเป็นคำคุณศัพท์ที่บอกผลลัพธ์ในแง่ดี แปลว่า เป็นประโยชน์/ส่งผลดี ส่วนข้อ (A) frustrating แปลว่าน่าผิดหวังซึ่งตรงข้ามกับบริบท, (B) similar แปลว่าคล้ายคลึงกัน, (D) unusual แปลว่าไม่ปกติ ซึ่งไม่เกี่ยวกับการวางแผนงานที่ดี"
+            },
+            {
+                "id": 138,
+                "questionText": "138:",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 35-38.png"
+                ],
+                "options": [
+                    "reduced",
+                    "reduces",
+                    "reducing",
+                    "reduce"
+                ],
+                "correctAnswer": 3,
+                "explanation": "เพราะประโยคยังไม่มีคำกริยาแท้ และประธานคือ you (คุณ) ในเหตุการณ์ปัจจุบันทั่วไป จึงใช้กริยาช่อง 1 แบบไม่เติม s ส่วนข้อ (A) reduced เป็นรูปอดีต, (B) reduces เป็นรูปเติม s, (C) reducing เป็นรูปเติม -ing"
+            },
+            {
+                "id": 139,
+                "questionText": "139:",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 39-42.png"
+                ],
+                "options": [
+                    "provided",
+                    "provides",
+                    "will provide",
+                    "providing"
+                ],
+                "correctAnswer": 3,
+                "explanation": "เพราะเป็นการลดรูปประโยคขยาย โดยที่ประธาน (งานอีเวนต์) เป็นผู้ให้สิ่งนั้นเอง จึงเปลี่ยนกริยาเป็นรูปเติม -ing ส่วนข้อ (A) provided, (B) provides, (C) will provide ผิดหลักการลดรูปประโยคซ้อน"
+            },
+            {
+                "id": 140,
+                "questionText": "140:",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 39-42.png"
+                ],
+                "options": [
+                    "late",
+                    "well",
+                    "still",
+                    "yet"
+                ],
+                "correctAnswer": 3,
+                "explanation": "เพราะต้องการคำขยายที่แปลว่า ณ ขณะนี้ / ปัจจุบันนี้ ในบริบทที่บอกว่างานใหญ่ที่สุดเท่าที่เคยมีมา ส่วนข้อ (A) late แปลว่าสาย, (B) well แปลว่าดี, (C) still แปลว่ายังคง ซึ่งไม่เข้ากับโครงสร้างเปรียบเทียบขั้นสุด"
+            },
+            {
+                "id": 141,
+                "questionText": "141:",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 39-42.png"
+                ],
+                "options": [
+                    "The event will take place August 6 to 8 at the Durham Convention Center.",
+                    "Changes to the schedule will be announced in the coming weeks.",
+                    "Most reviews of the event have been positive.",
+                    "It is not necessary to provide a credit card number at this time."
+                ],
+                "correctAnswer": 0,
+                "explanation": "เพราะเนื้อหาประโยคนี้ให้ข้อมูลระบุวัน เวลา และสถานที่จัดงาน ซึ่งจำเป็นอย่างยิ่งสำหรับผู้ที่สนใจจะเข้าร่วมงาน ส่วนข้ออื่น ๆ ไม่สอดคล้องกับป้ายประกาศเชิญชวน"
+            },
+            {
+                "id": 142,
+                "questionText": "142:",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 39-42.png"
+                ],
+                "options": [
+                    "vehicle",
+                    "space",
+                    "upgrade",
+                    "date"
+                ],
+                "correctAnswer": 1,
+                "explanation": "เพราะหลังคำว่า your ต้องเป็นคำนามที่จองได้ในงานแสดงสินค้า แปลว่า พื้นที่ (บูธแสดงสินค้า) ส่วนข้อ (A) vehicle แปลว่ายานพาหนะ, (C) upgrade แปลว่าการอัปเกรด, (D) date แปลว่าวันเวลา ซึ่งไม่ใช่สิ่งที่จะมาจับจองพื้นที่กัน"
+            },
+            {
+                "id": 143,
+                "questionText": "143:",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 43-46.png"
+                ],
+                "options": [
+                    "left out",
+                    "put down",
+                    "let go",
+                    "shut off"
+                ],
+                "correctAnswer": 3,
+                "explanation": "เพราะประโยคระบุถึงระบบน้ำประปาที่ ต้องถูกปิด (เป็นผู้ถูกกระทำ) จึงใช้รูปกริยาช่อง 3 ส่วนข้อ (A) left out แปลว่าตกหล่น, (B) put down แปลว่าวางลง, (C) let go แปลว่าปล่อยไป ซึ่งไม่เกี่ยวกับการปิดวาล์วน้ำ"
+            },
+            {
+                "id": 144,
+                "questionText": "144:",
+                "questionText": "141: ข้อสอบประเภทเลือกประโยคที่เหมาะสมเติมลงในช่องว่าง ข้อ 141]",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 43-46.png"
+                ],
+                "options": [
+                    "needed",
+                    "in need of",
+                    "a need for",
+                    "necessary"
+                ],
+                "correctAnswer": 1,
+                "explanation": "เพราะต้องการสื่อความหมายว่า กำลังเป็นที่ต้องการ โดยวางไว้ตามหลัง verb to be ส่วนข้อ (A) needed เป็นรูปอดีต, (C) a need for มักใช้ตามหลังโครงสร้าง There is, (D) necessary เป็นคำคุณศัพท์ทั่วไป แปลว่าจำเป็น"
+            },
+            {
+                "id": 145,
+                "questionText": "145:",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 43-46.png"
+                ],
+                "options": [
+                    "The total cost is still not known.",
+                    "The hours of operation are subject to change.",
+                    "Sales are expected to increase steadily.",
+                    "The work will be done in several stages."
+                ],
+                "correctAnswer": 3,
+                "explanation": "เพราะเนื้อความตอนท้ายสรุปและบอกกำหนดการชัดเจนว่า โครงการทั้งหมดจะใช้เวลาทำรวมทั้งสิ้น 3 เดือน จึงสอดคล้องกับการอธิบายว่าแบ่งทำเป็นระยะ ๆ"
+            },
+            {
+                "id": 146,
+                "questionText": "146:",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 43-46.png"
+                ],
+                "options": [
+                    "essential",
+                    "temporary",
+                    "expensive",
+                    "unexpected"
+                ],
+                "correctAnswer": 0,
+                "explanation": "เพราะตามหลังคำว่า are ต้องเป็นคำคุณศัพท์ที่บอกเหตุผลของการซ่อมแซม แปลว่า จำเป็น/เลี่ยงไม่ได้ ส่วนข้อ (B) temporary แปลว่าชั่วคราว, (C) expensive แปลว่าแพง, (D) unexpected แปลว่าไม่คาดคิด"
+            },
+            {
+                "id": 147,
+                "questionText": "147: What is NOT a requirement for the job?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 47-48.png"
+                ],
+                "options": [
+                    "Personal tools",
+                    "Carpentry skills",
+                    "A driver's license",
+                    "Plumbing experience"
+                ],
+                "correctAnswer": 3,
+                "explanation": "เพราะในใบประกาศระบุคำว่า preferred ซึ่งหมายถึง ถ้ามีจะพิจารณาเป็นพิเศษแต่ไม่บังคับ จึงไม่ใช่ข้อกำหนดตายตัว ส่วนข้ออื่น ๆ เป็นกฎเกณฑ์หรือทักษะที่ระบุว่าจำเป็นต้องมี"
+            },
+            {
+                "id": 148,
+                "questionText": "148: What is suggested about the job?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 47-48.png"
+                ],
+                "options": [
+                    "It will start on June 4.",
+                    "It is a temporary position.",
+                    "It takes place in an office.",
+                    "It will involve training other workers."
+                ],
+                "correctAnswer": 1,
+                "explanation": "เพราะในข้อความระบุช่วงเวลารับประกันงานไว้ชัดเจนคือ ตั้งแต่เดือนกรกฎาคมถึงกันยายน ซึ่งนับรวมได้ 3 เดือนพอดี เป็นตำแหน่งชั่วคราว ส่วนวันที่ 4 มิถุนายนคือวันสุดท้ายที่ส่งใบสมัคร ไม่ใช่วันเริ่มงาน"
+            },
+            {
+                "id": 149,
+                "questionText": "149: What is indicated about the package?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 49-50.png"
+                ],
+                "options": [
+                    "It was damaged during shipping.",
+                    "It must be picked up at the post office.",
+                    "It could not be delivered previously.",
+                    "It does not require a signature."
+                ],
+                "correctAnswer": 2,
+                "explanation": "เพราะหัวข้อเขียนว่าเป็นการส่งของครั้งที่สอง (second attempt) แสดงว่าก่อนหน้านี้เคยมาส่งแล้วแต่ไม่สำเร็จเนื่องจากไม่มีคนเซ็นรับ ส่วนข้ออื่น ๆ ไม่มีข้อมูลสนับสนุนในเนื้อหา"
+            },
+            {
+                "id": 150,
+                "questionText": "150: What is Ms. Park asked to do?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 49-50.png"
+                ],
+                "options": [
+                    "Obtain a tracking number",
+                    "Contact a delivery company",
+                    "Leave a document in her mailbox",
+                    "Pay an overnight delivery fee"
+                ],
+                "correctAnswer": 1,
+                "explanation": "เพราะในข้อความแจ้งว่า โปรดโทรหาเราเพื่อนัดวันเวลาเข้ารับของหรือให้ไปส่งใหม่อีกครั้ง ซึ่งก็คือการติดต่อบริษัทขนส่งสินค้า"
+            },
+            {
+                "id": 151,
+                "questionText": "151: At 8:32 A.M., what does Mr. Chun most likely mean when he writes, \"No idea\"?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 51-52.png"
+                ],
+                "options": [
+                    "He does not know when the event begins.",
+                    "He does not know whether the cables are connected.",
+                    "He does not know where to deliver a message.",
+                    "He does not know why the equipment is not working."
+                ],
+                "correctAnswer": 3,
+                "explanation": "เพราะสำนวน No idea เป็นการตอบประโยคก่อนหน้าว่า ไม่รู้เลย ว่าทำไมเครื่องโปรเจกเตอร์หรืออุปกรณ์ถึงเปิดไม่ติด"
+            },
+            {
+                "id": 152,
+                "questionText": "152: What will Ms. Lind most likely do next?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 51-52.png"
+                ],
+                "options": [
+                    "Call for technical support",
+                    "Purchase a new projector",
+                    "Go to the conference room",
+                    "Make a short presentation"
+                ],
+                "correctAnswer": 2,
+                "explanation": "เพราะแชตของ Hannah (Ms. Lind) ระบุว่า ขอเวลาฉันสักหนึ่งนาทีเพื่อเดินไปที่ห้องนั้น แสดงว่าเธอกำลังจะเดินไปช่วยดูความเรียบร้อยให้ที่ห้องประชุม"
+            },
+            {
+                "id": 153,
+                "questionText": "153: What is the purpose of the notice?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 53-55.png"
+                ],
+                "options": [
+                    "To advertise new job openings",
+                    "To publicize an upcoming event",
+                    "To confirm a change in schedule",
+                    "To announce an employee promotion"
+                ],
+                "correctAnswer": 1,
+                "explanation": "เพราะเนื้อหาประกาศเชิญชวนคนในชุมชนให้มาร่วมกิจกรรม ฟังการอ่านบทกวี (poetry reading) ที่ร้านหนังสือ ซึ่งเป็นการประชาสัมพันธ์กิจกรรมที่กำลังจะเกิดขึ้น"
+            },
+            {
+                "id": 154,
+                "questionText": "154: Who is Mr. Lefevre?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 53-55.png"
+                ],
+                "options": [
+                    "A café manager",
+                    "A writing professor",
+                    "A university student",
+                    "A professional writer"
+                ],
+                "correctAnswer": 2,
+                "explanation": "เพราะในข้อความเขียนแนะนำตัวไว้ว่า Richard Lefevre เป็น หนึ่งในนักเรียนวิชาเขียนเชิงสร้างสรรค์ของเขา จึงหมายถึงเขายังเป็นนักศึกษาของมหาวิทยาลัยอยู่"
+            },
+            {
+                "id": 155,
+                "questionText": "155: What are members of the public invited to do?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 53-55.png"
+                ],
+                "options": [
+                    "Submit a writing sample for consideration",
+                    "Apply for a position in person",
+                    "Enroll in a creative-writing class",
+                    "Purchase a book released in June"
+                ],
+                "correctAnswer": 0,
+                "explanation": "เพราะกติการะบุให้ผู้ที่สนใจส่งบทกวีที่แต่งเองและยังไม่เคยได้รับการตีพิมพ์มาทางอีเมลเพื่อรับการพิจารณาคัดเลือก (writing sample)"
+            },
+            {
+                "id": 156,
+                "questionText": "156: What is mentioned about Really Real?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 56-58.png"
+                ],
+                "options": [
+                    "It must approve all reviews.",
+                    "It does not verify product information.",
+                    "It will not advertise by e-mail.",
+                    "It charges a fee for registration."
+                ],
+                "correctAnswer": 2,
+                "explanation": "เพราะในข้อตกลงมีคำสัญญาอย่างชัดเจนว่า คุณจะไม่ได้รับอีเมลโฆษณาสินค้าใด ๆ ทั้งสิ้นหลังจากกรอกข้อมูลรีวิวบนเว็บไซต์นี้"
+            },
+            {
+                "id": 157,
+                "questionText": "157: What does Really Real's service allow companies to do?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 56-58.png"
+                ],
+                "options": [
+                    "Advertise new offerings",
+                    "Improve their products",
+                    "Contact consumers directly",
+                    "Host an online store"
+                ],
+                "correctAnswer": 1,
+                "explanation": "เพราะระบุผลประโยชน์ว่า ผู้ผลิตสินค้าจะได้เข้าใจแนวโน้มความต้องการและคำติชมของผู้บริโภคเพื่อนำไปปรับปรุงและพัฒนาสินค้าให้ดียิ่งขึ้น"
+            },
+            {
+                "id": 158,
+                "questionText": "158: In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong? \"Beginning in January, we plan to include furniture as well.\"",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 56-58.png"
+                ],
+                "options": [
+                    "[1]",
+                    "[2]",
+                    "[3]",
+                    "[4]"
+                ],
+                "correctAnswer": 1,
+                "explanation": "เพราะประโยคก่อนหน้าบอกว่า ปัจจุบันเว็บนี้จำกัดการรีวิวเฉพาะกลุ่มเครื่องใช้ไฟฟ้าและอิเล็กทรอนิกส์ การนำประโยคที่บอกว่าจะเพิ่มหมวดหมู่เฟอร์นิเจอร์มาวางต่อท้ายตรงช่อง [2] จึงสอดคล้องที่สุด"
+            },
+            {
+                "id": 159,
+                "questionText": "159: What did Ms. Garza ask Caivano Printing Services to do?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 59-60.png"
+                ],
+                "options": [
+                    "Call her when an order is ready",
+                    "Use certain colors in a printing job",
+                    "Ensure that text is visible from a distance",
+                    "Reprint posters to correct a mistake that was made"
+                ],
+                "correctAnswer": 2,
+                "explanation": "เพราะคำสั่งบอกให้ขยายขนาดรูปภาพ (enlarge image) เพื่อทดสอบดูว่าจะสามารถอ่านข้อความหรือตัวหนังสือได้ชัดเจนจากระยะ 3 เมตรหรือไม่ (visible from a distance)"
+            },
+            {
+                "id": 160,
+                "questionText": "160: What is true about the posters?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 59-60.png"
+                ],
+                "options": [
+                    "They are not a standard size.",
+                    "Ms. Garza still owes money for them.",
+                    "Each conference participant will receive one of them.",
+                    "Ms. Garza will pick them up the day before a conference."
+                ],
+                "correctAnswer": 3,
+                "explanation": "เพราะเมื่อดูวันที่ระบุในเอกสาร จะพบว่าพนักงานจะไปรับของวันที่ 1 ตุลาคม ส่วนงานนิทรรศการหรือคอนเฟอเรนซ์จะเริ่มวันที่ 2 ตุลาคม ซึ่งก็คือไปรับล่วงหน้าหนึ่งวันพอดี"
+            },
+            {
+                "id": 161,
+                "questionText": "161: What is NOT indicated about Young Roboticists Canada?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 61-63.png"
+                ],
+                "options": [
+                    "Its participants have received university scholarships.",
+                    "It teaches children how to build robots.",
+                    "It prepares children for international competitions.",
+                    "It gives young students the chance to work in a laboratory."
+                ],
+                "correctAnswer": 2,
+                "explanation": "เพราะในบทความไม่มีการพูดถึงเกณฑ์หรือการเตรียมตัวเพื่อส่งเด็กไปแข่งในระดับเวทีการแข่งขันนานาชาติเลย ส่วนข้ออื่น ๆ มีระบุไว้ในรายละเอียดของกิจกรรมค่ายหุ่นยนต์"
+            },
+            {
+                "id": 162,
+                "questionText": "162: What is mentioned about the instructors?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 61-63.png"
+                ],
+                "options": [
+                    "They provide references for their students.",
+                    "They give tours of their laboratories.",
+                    "They are involved in research.",
+                    "They have written many publications."
+                ],
+                "correctAnswer": 2,
+                "explanation": "เพราะข้อความทิ้งท้ายเขียนบอกว่า ให้เข้าไปที่หน้าเว็บ Instructors เพื่อศึกษาเพิ่มเติมเกี่ยวกับงานวิจัย (research) ของอาจารย์แต่ละท่าน"
+            },
+            {
+                "id": 163,
+                "questionText": "163: What are parents asked to do?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 61-63.png"
+                ],
+                "options": [
+                    "Complete scholarship applications",
+                    "Check course requirements",
+                    "Attend an information session",
+                    "Purchase some equipment"
+                ],
+                "correctAnswer": 1,
+                "explanation": "เพราะคำแนะนำระบุเตือนผู้ปกครองให้ตรวจสอบรายละเอียดและเงื่อนไขของแต่ละวิชาให้ดี เพื่อให้แน่ใจว่าบุตรหลานมีคุณสมบัติผ่านเกณฑ์ขั้นต่ำก่อนลงเรียน"
+            },
+            {
+                "id": 164,
+                "questionText": "164: What information does Mr. Sento ask for?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 64-67.png"
+                ],
+                "options": [
+                    "The floor plan of the office",
+                    "The color selection for the walls",
+                    "The quality of the blinds",
+                    "The design of the flooring materials"
+                ],
+                "correctAnswer": 3,
+                "explanation": "เพราะเนื้อหาในอีเมลเขียนเน้นย้ำว่า ต้องการให้ช่วยเลือกรูปแบบ ลวดลาย หรือดีไซน์ของวัสดุที่จะนำมาใช้ปูพื้นห้องน้ำ (flooring materials)"
+            },
+            {
+                "id": 165,
+                "questionText": "165: At 11:17 A.M., what does Mr. Han most likely mean when he writes, \"Never mind\"?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 64-67.png"
+                ],
+                "options": [
+                    "He is not concerned with the estimated cost.",
+                    "He has changed his mind about the color choice.",
+                    "Ms. Charbel is no longer talking on the phone.",
+                    "Mr. Sento does not need to install the blinds."
+                ],
+                "correctAnswer": 2,
+                "explanation": "เพราะประโยค สายนั้นใช้เวลาน้อยกว่าที่ฉันคิดไว้ซะอีก (ต่อจากคำว่า Never mind) สื่อว่าคนที่กำลังรอสายอยู่นั้น คุยโทรศัพท์เสร็จเรียบร้อยและวางสายไปแล้ว จึงไม่ต้องกังวลเรื่องการรอคอย"
+            },
+            {
+                "id": 166,
+                "questionText": "166: What is a promise Mr. Sento made to Ms. Charbel?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 64-67.png"
+                ],
+                "options": [
+                    "He will obtain some information for her.",
+                    "He will put her in touch with his flooring contractor.",
+                    "He will complete the work by the end of the week.",
+                    "He will take the furniture out of a delivery truck."
+                ],
+                "correctAnswer": 0,
+                "explanation": "เพราะข้อความระบุว่า ฉันจะไปเช็กกับช่างปูพื้นก่อน และจะนำคำตอบหรือข้อมูลกลับมาแจ้งให้คุณทราบภายในสิ้นวันนี้"
+            },
+            {
+                "id": 167,
+                "questionText": "167: Why most likely is the work being done?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 64-67.png"
+                ],
+                "options": [
+                    "A new business is opening soon.",
+                    "An office space is going to be sold.",
+                    "A business wanted to update its work space.",
+                    "A property owner needed to remove some damaged materials."
+                ],
+                "correctAnswer": 2,
+                "explanation": "เพราะประโยคเปิดเรื่องระบุว่า เป็นการปรับปรุง ปรับเปลี่ยนรูปแบบสถานที่ทำงาน หรือสำนักงานแบบดั้งเดิมให้มีความเป็นออฟฟิศที่ทันสมัยยิ่งขึ้น (update its work space)"
+            },
+            {
+                "id": 168,
+                "questionText": "168: What is indicated about Tim?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 68-71.png"
+                ],
+                "options": [
+                    "He wants to work at a bicycle shop.",
+                    "He is a member of a sports team.",
+                    "He found something at the park.",
+                    "His father works as a clerk."
+                ],
+                "correctAnswer": 1,
+                "explanation": "เพราะเด็กชาย (Tim) บอกว่าเขาเดินขายช็อกโกแลตแท่งเพื่อหาเงินสมทบทุนไปซื้อชุดยูนิฟอร์มใหม่ให้แก่ทีมฟุตบอลของโรงเรียนมัธยมต้น ซึ่งแสดงว่าเขาเป็นหนึ่งในสมาชิกทีมกีฬา"
+            },
+            {
+                "id": 169,
+                "questionText": "169: What was NOT included in the wallet?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 68-71.png"
+                ],
+                "options": [
+                    "Cash",
+                    "Credit cards",
+                    "A photograph",
+                    "A driver's license"
+                ],
+                "correctAnswer": 3,
+                "explanation": "เพราะในเนื้อความระบุว่าในกระเป๋ามีเงินสด (ธนบัตรใบใหญ่), บัตรเครดิต และรูปถ่ายครอบครัว แต่ไม่มีส่วนใดที่เอ่ยถึงใบขับขี่รถยนต์เลย"
+            },
+            {
+                "id": 170,
+                "questionText": "170: What did Tim receive as a reward?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 68-71.png"
+                ],
+                "options": [
+                    "A new bicycle",
+                    "Clothes",
+                    "A donation",
+                    "Candy"
+                ],
+                "correctAnswer": 2,
+                "explanation": "เพราะเจ้าของกระเป๋าตังค์เหมาซื้อช็อกโกแลตที่เหลือทั้งหมด และยังมอบเงินพิเศษจำนวน $50 ให้เพื่อเข้ากองทุนซื้อชุดกีฬาของเด็ก ซึ่งก็คือเงินบริจาค/รางวัลช่วยเหลือ (donation)"
+            },
+            {
+                "id": 171,
+                "questionText": "171: The word \"deed\" in paragraph 6, line 1, is closest in meaning to",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 68-71.png"
+                ],
+                "options": [
+                    "act",
+                    "law",
+                    "sale",
+                    "property"
+                ],
+                "correctAnswer": 0,
+                "explanation": "เพราะคำว่า deed ในวลี a good deed หมายถึง พฤติกรรม หรือการกระทำความดี ซึ่งมีความหมายใกล้เคียงกับคำว่า act (การกระทำ) มากที่สุด"
+            },
+            {
+                "id": 172,
+                "questionText": "172: Who most likely is Mr. Ruzinski?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 72-75.png"
+                ],
+                "options": [
+                    "A salesperson",
+                    "An accountant",
+                    "An insurance agent",
+                    "A software designer"
+                ],
+                "correctAnswer": 1,
+                "explanation": "เพราะในอีเมลระบุว่า พวกเขาทำหน้าที่ดูแล ตรวจสอบระบบการเงิน และจัดทำเอกสารทางบัญชีสิ้นปีให้แก่บริษัทคู่ค้า จึงหมายถึงเขาทำงานในตำแหน่งนักบัญชี"
+            },
+            {
+                "id": 173,
+                "questionText": "173: What has Ms. Alves requested?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 72-75.png"
+                ],
+                "options": [
+                    "Permission to reassign an employee",
+                    "Instructions for handling new clients",
+                    "An evaluation of the team's effectiveness",
+                    "A record of the current inventory"
+                ],
+                "correctAnswer": 0,
+                "explanation": "เพราะผู้เขียนระบุว่า ได้ขออนุญาตและแจ้งหัวหน้างานของเขาแล้ว และหัวหน้ายินยอมที่จะให้ยืมตัวหรือโยกย้ายเขามาช่วยงานชั่วคราว (reassign an employee)"
+            },
+            {
+                "id": 174,
+                "questionText": "174: Why does Ms. Alves offer to meet with Mr. Ruzinski?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 72-75.png"
+                ],
+                "options": [
+                    "To demonstrate a software program",
+                    "To review his recent performance",
+                    "To plan the hiring of new employees",
+                    "To share tips on meeting deadlines"
+                ],
+                "correctAnswer": 0,
+                "explanation": "เพราะระบุข้อเสนอชัดเจนว่า ยินดีที่จะนัดพบปะกันเพื่อสอน อธิบาย หรือสาธิตวิธีการใช้งานระบบซอฟต์แวร์บัญชีตัวใหม่นี้ให้ (demonstrate a software program)"
+            },
+            {
+                "id": 175,
+                "questionText": "175: In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong? \"He says your team can take over your work for the time being.\"",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 72-75.png"
+                ],
+                "options": [
+                    "[1]",
+                    "[2]",
+                    "[3]",
+                    "[4]"
+                ],
+                "correctAnswer": 2,
+                "explanation": "เพราะคำว่า he สรรพนามในประโยคอ้างถึงหัวหน้าทีม (คุณ Hyun Shik) ที่เพิ่งกล่าวชื่อไปในประโยคก่อนหน้า การนำมาวางต่อท้ายในตำแหน่งช่อง [3] จึงสอดคล้องที่สุดตามหลักโครงสร้าง"
+            },
+            {
+                "id": 176,
+                "questionText": "176: What is indicated about Give-and-Take Bookstore?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 76-80 (1).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 76-80 (2).png"
+                ],
+                "options": [
+                    "It has two locations in Delford.",
+                    "It supports community projects.",
+                    "It is located next to Delford Park.",
+                    "It sells both new and used books."
+                ],
+                "correctAnswer": 1,
+                "explanation": "เพราะในกฎระบุไว้ว่า รายได้ 10% จากยอดขายทั้งหมดจะถูกจัดสรรนำไปบริจาคเพื่อช่วยเหลือโครงการพัฒนาชุมชนท้องถิ่นต่าง ๆ"
+            },
+            {
+                "id": 177,
+                "questionText": "177: According to the Web site, what do book donors receive?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 76-80 (1).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 76-80 (2).png"
+                ],
+                "options": [
+                    "A free book",
+                    "A £3 cash payment",
+                    "A merchandise credit",
+                    "A 10 percent discount coupon"
+                ],
+                "correctAnswer": 2,
+                "explanation": "เพราะระบุสิทธิประโยชน์ว่า ผู้ที่นำหนังสือมามอบให้จะได้รับผลตอบแทนกลับคืนไปในรูปแบบของ เครดิตสำหรับใช้ซื้อสินค้าภายในร้านค้า (merchandise credit) คิดเป็น 20% ของราคาประเมิน"
+            },
+            {
+                "id": 178,
+                "questionText": "178: In the e-mail, the word \"arrange\" in paragraph 1, line 2, is closest in meaning to",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 76-80 (1).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 76-80 (2).png"
+                ],
+                "options": [
+                    "put away",
+                    "place in order",
+                    "do a favor for",
+                    "make preparations"
+                ],
+                "correctAnswer": 3,
+                "explanation": "เพราะคำว่า arrange ในบริบทของการจัดหารถมารับพัสดุ แปลว่า เตรียมการ / จัดเตรียม ซึ่งมีความหมายเดียวกับคำว่า make preparations"
+            },
+            {
+                "id": 179,
+                "questionText": "179: What store policy was waived for Mr. Plum?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 76-80 (1).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 76-80 (2).png"
+                ],
+                "options": [
+                    "The distance traveled to collect books",
+                    "The genres of books that are accepted for donation",
+                    "The condition of books that are given to the store",
+                    "The minimum number of books that can be picked up"
+                ],
+                "correctAnswer": 0,
+                "explanation": "เพราะตามนโยบายปกติจะวิ่งบริการรับฟรีเฉพาะระยะไม่เกิน 10 กม. แต่เนื่องจากบริจาคเป็นจำนวนมากถึง 100 เล่ม ร้านจึงยอมละเว้นเกณฑ์และขับรถออกไปรับนอกพื้นที่ไกลเป็นพิเศษ"
+            },
+            {
+                "id": 180,
+                "questionText": "180: In the e-mail, what is Mr. Plum asked to do?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 76-80 (1).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 76-80 (2).png"
+                ],
+                "options": [
+                    "Seal books in a box",
+                    "Deliver books by 2 P.M.",
+                    "Provide a list of book titles",
+                    "Organize books by category"
+                ],
+                "correctAnswer": 3,
+                "explanation": "เพราะในเนื้อความจดหมายมีข้อร้องขอรบกวนให้ช่วยจัดกลุ่ม แยกประเภทของหนังสือ (genre/category) ไว้ให้เรียบร้อยก่อนที่เจ้าหน้าที่จะขับรถไปถึง"
+            },
+            {
+                "id": 181,
+                "questionText": "181: Who most likely is Ms. Myers?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 81-85 (1).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 81-85 (2).png"
+                ],
+                "options": [
+                    "An exhibitor at the museum",
+                    "A museum services representative",
+                    "A first-time visitor to the museum",
+                    "A current museum member"
+                ],
+                "correctAnswer": 3,
+                "explanation": "เพราะจดหมายส่งถึงสมาชิกปัจจุบันเพื่อเปิดรับฟังความเห็นและคำแนะนำติชมต่าง ๆ ไปปรับปรุงสถานที่ และในแบบฟอร์มระบุว่าเธอมาเยือนหลายรอบแล้ว"
+            },
+            {
+                "id": 182,
+                "questionText": "182: In the e-mail, the word \"meet\" in paragraph 1, line 3, is closest in meaning to",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 81-85 (1).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 81-85 (2).png"
+                ],
+                "options": [
+                    "get together",
+                    "be introduced",
+                    "join",
+                    "satisfy"
+                ],
+                "correctAnswer": 3,
+                "explanation": "เพราะวลี meet your needs หมายถึง ตอบสนองความต้องการ คืนความพึงพอใจให้แก่ผู้ใช้บริการ ซึ่งตรงกับความหมายของคำว่า satisfy"
+            },
+            {
+                "id": 183,
+                "questionText": "183: What was recently improved at the museum?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 81-85 (1).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 81-85 (2).png"
+                ],
+                "options": [
+                    "Exhibition halls",
+                    "Dining facilities",
+                    "Ticketing procedures",
+                    "Parking"
+                ],
+                "correctAnswer": 1,
+                "explanation": "เพราะในข้อความที่ตอบกลับมามีการชื่นชมและเอ่ยถึงโซนร้านกาแฟ คาเฟ่ ที่เพิ่งได้รับการปรับปรุงตกแต่งซ่อมแซมเสร็จใหม่ ๆ ซึ่งจัดอยู่ในหมวดหมู่ Dining facilities"
+            },
+            {
+                "id": 184,
+                "questionText": "184: What activity at the museum is Ms. Myers least likely to participate in?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 81-85 (1).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 81-85 (2).png"
+                ],
+                "options": [
+                    "Eating in the cafés",
+                    "Attending lectures",
+                    "Shopping for gifts",
+                    "Seeing the special exhibitions"
+                ],
+                "correctAnswer": 1,
+                "explanation": "เพราะในตารางคะแนนความถี่การร่วมกิจกรรม ตรงหัวข้อการฟังบรรยายช่วงเที่ยง (Noontime Lectures) ช่องที่เธอติ๊กเลือกคือ Never (ไม่เคยร่วมเลย)"
+            },
+            {
+                "id": 185,
+                "questionText": "185: When did Ms. Myers visit the museum?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 81-85 (1).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 81-85 (2).png"
+                ],
+                "options": [
+                    "In April",
+                    "In June",
+                    "In July",
+                    "In September"
+                ],
+                "correctAnswer": 0,
+                "explanation": "เพราะในเนื้อความอีเมลเขียนระบุว่า ดีใจและขอบคุณอย่างยิ่งที่คุณได้มาร่วมงานนิทรรศการเกี่ยวกับการเดินเรือที่จัดขึ้นเมื่อเดือนเมษายน (April)"
+            },
+            {
+                "id": 186,
+                "questionText": "186: What vehicle was Ms. Martinez unable to reserve?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 86-90 (1).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 86-90 (2).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 86-90 (3).png"
+                ],
+                "options": [
+                    "An economy vehicle",
+                    "A standard vehicle",
+                    "A premium vehicle",
+                    "An oversize vehicle"
+                ],
+                "correctAnswer": 2,
+                "explanation": "เพราะข้อมูลแจ้งเตือนระบุว่ารถยนต์ขนาดใหญ่ห้าที่นั่งเกิดหมดกะทันหัน ซึ่งเมื่อเทียบตามเกณฑ์ตารางรถยนต์แล้วคือประเภท Premium vehicle"
+            },
+            {
+                "id": 187,
+                "questionText": "187: What is the purpose of the e-mail?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 86-90 (1).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 86-90 (2).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 86-90 (3).png"
+                ],
+                "options": [
+                    "To stop a payment",
+                    "To question a charge",
+                    "To cancel a reservation",
+                    "To complain about a service"
+                ],
+                "correctAnswer": 1,
+                "explanation": "เพราะจุดประสงค์หลักคือการส่งอีเมลมาโต้แย้ง ทักท้วง และสอบถามเหตุผลว่าทำไมระบบยังหักเงินค่าประกันและค่าธรรมเนียม ทั้งที่กดยกเลิกไปล่วงหน้าแล้ว"
+            },
+            {
+                "id": 188,
+                "questionText": "188: In the e-mail, the word \"Shortly\" in paragraph 1, line 2, is closest in meaning to",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 86-90 (1).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 86-90 (2).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 86-90 (3).png"
+                ],
+                "options": [
+                    "soon",
+                    "still",
+                    "rudely",
+                    "concisely"
+                ],
+                "correctAnswer": 0,
+                "explanation": "เพราะคำว่า shortly after มีความหมายว่า หลังจากนั้นไม่นาน หรือในเวลาอันรวดเร็ว ซึ่งมีความหมายเหมือนกับคำว่า soon"
+            },
+            {
+                "id": 189,
+                "questionText": "189: What is probably true about Ms. Martinez?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 86-90 (1).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 86-90 (2).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 86-90 (3).png"
+                ],
+                "options": [
+                    "She does not have a valid driver's license.",
+                    "She did not need to travel to Istanbul.",
+                    "She canceled her reservation before August 27.",
+                    "She wanted a colleague to drive the rental vehicle."
+                ],
+                "correctAnswer": 2,
+                "explanation": "เพราะเนื่องจากตามกฎระบุว่าจะต้องเสียค่าปรับ $50 หากยกเลิกก่อนวันเวลานัดรับรถจริง ซึ่งกำหนดการนัดรับรถของเธอคือวันที่ 27 สิงหาคม แปลว่าเธอต้องกดยกเลิกไปก่อนหน้านั้นแน่นอน"
+            },
+            {
+                "id": 190,
+                "questionText": "190: What is indicated about Stellar Auto Rental?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 86-90 (1).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 86-90 (2).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 86-90 (3).png"
+                ],
+                "options": [
+                    "It provides local maps at no additional cost.",
+                    "It charges $100 per week for auto insurance.",
+                    "It has a membership program for frequent customers.",
+                    "It requires a payment upon reservation of a vehicle."
+                ],
+                "correctAnswer": 3,
+                "explanation": "เพราะเนื่องจากในตารางนโยบายระบุเงื่อนไขการหักเงินมัดจำส่วนต่างหากลูกค้ายกเลิกดีล แสดงให้เห็นว่าระบบการจองรถของที่นี่ ต้องมีขั้นตอนหักเงินหรือจ่ายเงินล่วงหน้าบางส่วนตอนกดจอง"
+            },
+            {
+                "id": 191,
+                "questionText": "191: What information about Norview City is mentioned in the interview?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 91-95 (1).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 91-95 (2).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 91-95 (3).png"
+                ],
+                "options": [
+                    "The size of its population",
+                    "The number of its municipal employees",
+                    "A list of its community services",
+                    "A description of its communications network"
+                ],
+                "correctAnswer": 0,
+                "explanation": "เพราะบทความระบุตัวเลขชัดเจนเกี่ยวกับประชากรในท้องถิ่นที่ขยายตัวพุ่งสูงขึ้นอย่างก้าวกระโดดจากอดีต 20,000 คน มาเป็นเกือบ 50,000 คนในปัจจุบัน (The size of its population)"
+            },
+            {
+                "id": 192,
+                "questionText": "192: In the letter to the editor, the word \"conducted\" in paragraph 1, line 1, is closest in meaning to",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 91-95 (1).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 91-95 (2).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 91-95 (3).png"
+                ],
+                "options": [
+                    "determined",
+                    "behaved",
+                    "administered",
+                    "designated"
+                ],
+                "correctAnswer": 2,
+                "explanation": "เพราะคำว่า conducted ในบริบทของการจัดทำแบบสำรวจความเห็นประชาชน มีความหมายว่า ดำเนินงาน / จัดการทำ ซึ่งตรงกับความหมายของคำว่า administered"
+            },
+            {
+                "id": 193,
+                "questionText": "193: What most likely is true about the letter to the editor?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 91-95 (1).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 91-95 (2).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 91-95 (3).png"
+                ],
+                "options": [
+                    "It was written by a business owner.",
+                    "It was discussed at July's public hearing.",
+                    "It was read aloud on a radio program.",
+                    "It was published in April."
+                ],
+                "correctAnswer": 3,
+                "explanation": "เพราะเนื่องจากจดหมายฉบับนี้มีการระบุเขียนพาดพิง อ้างอิงถึงตัวเลขผลโพลความเห็นของประชาชนที่พึ่งประกาศเปิดเผยออกมาเมื่อวันที่ 14 เมษายน จึงสรุปได้ว่าจัดพิมพ์ในช่วงเดือนเมษายน"
+            },
+            {
+                "id": 194,
+                "questionText": "194: What is the purpose of the article?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 91-95 (1).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 91-95 (2).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 91-95 (3).png"
+                ],
+                "options": [
+                    "To describe a change in public opinion",
+                    "To release information about a new community center",
+                    "To predict the outcome of a public hearing",
+                    "To explain the reason for a survey"
+                ],
+                "correctAnswer": 0,
+                "explanation": "เพราะภาพรวมโครงเรื่องเป็นการอธิบายให้เห็นว่า ความคิดเห็นของคนในชุมชนมีทิศทางปรับเปลี่ยนไปอย่างไร จากช่วงแรกที่ต่อต้านจนเริ่มเปิดใจและกลับมาให้การยอมรับโครงการมากขึ้น"
+            },
+            {
+                "id": 195,
+                "questionText": "195: What most likely did the city council do to get more support for the IRI?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 91-95 (1).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 91-95 (2).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 91-95 (3).png"
+                ],
+                "options": [
+                    "It improved the quality of government-sponsored programs.",
+                    "It used the media to provide more information to the public.",
+                    "It reduced the tax rate it had initially proposed.",
+                    "It contacted more than half of Norview City's residents."
+                ],
+                "correctAnswer": 2,
+                "explanation": "เพราะในเนื้อหาระบุว่า แผนในคราวแรกทางสภาเมืองตั้งใจจะเพิ่มอัตราภาษีท้องถิ่นขึ้น 1.5% แต่เมื่อโดนคัดค้าน จึงยอมถอยและปรับลดระดับตัวเลขลงมาเหลือเก็บเพิ่มแค่ 0.5% เพื่อลดแรงกดดันของชาวเมือง"
+            },
+            {
+                "id": 196,
+                "questionText": "196: What is suggested about Ms. Singh?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 96-100 (1).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 96-100 (2).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 96-100 (3).png"
+                ],
+                "options": [
+                    "She is a financial consultant for Comet Investing Group.",
+                    "She is an experienced financial professional.",
+                    "She gave a speech at City Business Expo last year.",
+                    "She provides one-on-one training for managers."
+                ],
+                "correctAnswer": 1,
+                "explanation": "เพราะรายละเอียดในประวัติการทำงานระบุชัดเจนว่าเธอควบตำแหน่งผู้บริหารระดับสูง (President/CEO) ของกลุ่มสถาบันทางการเงินหลายแห่งพร้อมกัน แสดงว่าเป็นผู้เชี่ยวชาญที่มีประสบการณ์สูง"
+            },
+            {
+                "id": 197,
+                "questionText": "197: In the online profile, the phrase \"Drawing on\" in paragraph 1, line 3, is closest in meaning to",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 96-100 (1).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 96-100 (2).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 96-100 (3).png"
+                ],
+                "options": [
+                    "making use of",
+                    "removing from",
+                    "attract to",
+                    "marking up"
+                ],
+                "correctAnswer": 0,
+                "explanation": "เพราะวลี Drawing on her extensive experience แปลว่า การดึงเอาหรือหยิบยกประสบการณ์ที่มีมาอย่างยาวนานออกมาใช้ประโยชน์ ซึ่งมีความหมายเดียวกับวลี making use of (การนำมาใช้)"
+            },
+            {
+                "id": 198,
+                "questionText": "198: What presentation by Ms. Singh did Mr. Beaumont attend?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 96-100 (1).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 96-100 (2).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 96-100 (3).png"
+                ],
+                "options": [
+                    "Sustaining Imagination",
+                    "Overcoming Financial Obstacles",
+                    "The Future of Finance",
+                    "How to Be a Dynamic Leader"
+                ],
+                "correctAnswer": 0,
+                "explanation": "เพราะในจดหมายระบุว่าเขาเดินทางไปฟังงานบรรยายวิชาการ ซึ่งหัวข้อการพูดเรื่องนี้ถูกจัดขึ้นที่ตึกอาคารของสถาบัน Makey School of Business ซึ่งเมื่อสอบถามตารางเวลาแล้วคือหัวข้อ Sustaining Imagination"
+            },
+            {
+                "id": 199,
+                "questionText": "199: When did Ms. Singh most likely present at City Business Expo?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 96-100 (1).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 96-100 (2).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 96-100 (3).png"
+                ],
+                "options": [
+                    "On March 7",
+                    "On March 8",
+                    "On March 9",
+                    "On March 10"
+                ],
+                "correctAnswer": 3,
+                "explanation": "เพราะเมื่อตรวจสอบกำหนดการจัดงานนิทรรศการ (7-10 มีนาคม) และระบุข้อมูลในแชตว่าเขาเลือกที่จะเข้าไปรับฟังใน วันสุดท้ายของการจัดงานพอดี ซึ่งก็คือวันที่ 10 มีนาคม"
+            },
+            {
+                "id": 200,
+                "questionText": "200: What critique did Mr. Katoa provide?",
+                "audioUrl": "",
+                "images": [
+                    "./assets/images/ฟ้าม่วง RC2/BP 96-100 (1).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 96-100 (2).png",
+                    "./assets/images/ฟ้าม่วง RC2/BP 96-100 (3).png"
+                ],
+                "options": [
+                    "The registration process took longer than expected.",
+                    "The opportunities for networking were limited.",
+                    "The venue for the expo was not ideal.",
+                    "The tips from the speakers were not practical."
+                ],
+                "correctAnswer": 2,
+                "explanation": "เพราะเขาระบุข้อติชมบ่นไว้ว่า ห้องโถงจัดนิทรรศการหลักไม่ค่อยเหมาะสมเท่าไหร่ ห้องเวิร์กช็อปสัมมนาก็ค่อนข้างเล็กเกินไป และร้านขายอาหารมีไม่เพียงพอ ซึ่งทั้งหมดเกี่ยวกับเรื่องสถานที่จัดงาน (venue)"
             }
-        ];
+        ]   
+    }
+];
 
 window.addEventListener('DOMContentLoaded', () => {
     console.log('examPackages:', typeof examPackages);
