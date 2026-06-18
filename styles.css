@@ -259,9 +259,6 @@ body.zoom-open .zoom-btn { display: none; }
     position: absolute;
     top: 0;
     left: 0;
-    /* ภาพไม่แตกเมื่อซูม — ให้ browser ใช้ high-quality resampling */
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
 }
 
 #viewport-workspace.panning {
@@ -326,10 +323,4 @@ body.zoom-open .zoom-btn { display: none; }
 body.drawing-mode #viewport-controls {
     pointer-events: none;
     opacity: 0.3;
-}
-
-/* ภาพคมชัดทุกระดับซูม */
-#zoomable-content img {
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: high-quality;
 }
