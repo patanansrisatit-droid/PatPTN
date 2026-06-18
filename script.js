@@ -5,35 +5,6 @@ let currentMode = 'mouse';
 let activeColor  = '#ef4444';
 let currentZoomElementId = null;
 
-// ── Asset Resolver ──────────────────────────────────────────────
-// แก้ปัญหา file:// protocol โดยแปลง relative path เป็น absolute
-function resolveAssetPath(path) {
-    if (!path) return path;
-    // ถ้าเป็น full URL อยู่แล้ว ไม่ต้องแปลง
-    if (path.startsWith('http://') || path.startsWith('https://') || path.startsWith('file://')) return path;
-    // ถ้าเป็น relative path → แปลงเป็น absolute path โดยเทียบจาก PROJECT/
-    if (path.startsWith('./')) {
-        // ใช้ window.location เป็นฐาน
-        const base = window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1);
-        return base + path.substring(2);
-    }
-    return path;
-}
-
-// ค้นหา audio file จาก assets/audio/ ตาม setId
-function resolveAudioPathBySet(setId) {
-    const audioDir = resolveAssetPath('./assets/audio/');
-    // map setId → folder name
-    const folderMap = {
-        'ฟ้าม่วง LC': 'ฟ้าม่วง LC2',
-    };
-    const folder = folderMap[setId];
-    if (!folder) return null;
-    // สร้าง full path ที่ถูกต้อง
-    const base = window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1);
-    return base + 'assets/audio/' + encodeURIComponent(folder) + '/';
-}
-
 const toolSettings = {
     pen:         { size: 3,  opacity: 1.00 },
     highlighter: { size: 14, opacity: 0.35 },
@@ -826,9 +797,6 @@ function openZoom(imgUrl, elementId) {
         setTimeout(setupZoomCanvas, 60);
     }
 
-    hideViewportControls();
-    viewportReset();
-
     if (!viewport._panSetup) {
         setupPan();
         viewport._panSetup = true;
@@ -1263,266 +1231,132 @@ function moveQuestion(step) {
     }
 }
 
-// ===== Viewport Control (Zoom & Pan) — Smooth Edition =====
+// ===== Viewport Control (Zoom & Pan) =====
 
 const viewportWorkspace = document.getElementById('viewport-workspace');
-const zoomableContent   = document.getElementById('zoomable-content');
-const viewportControls  = document.getElementById('viewport-controls');
+const zoomableContent = document.getElementById('zoomable-content');
 
-// --- Smooth zoom animation state ---
-let vpTargetScale = 1;
-let vpTargetPanX  = 0;
-let vpTargetPanY  = 0;
-let vpRafId       = null;
-const VP_LERP     = 0.18;   // ค่า lerp: 0.1=ช้านุ่ม, 0.25=เร็วกระชับ
-const VP_SNAP     = 0.0003; // หยุด animate เมื่อต่างกันน้อยกว่านี้
-
-// --- Zoom label element (สร้างครั้งเดียว) ---
-let vpZoomLabel = null;
-let vpLabelTimeout = null;
-
-function getOrCreateZoomLabel() {
-    if (!vpZoomLabel) {
-        vpZoomLabel = document.createElement('div');
-        vpZoomLabel.id = 'vp-zoom-label';
-        vpZoomLabel.style.cssText = `
-            position: absolute;
-            right: 52px;
-            bottom: 60px;
-            z-index: 99999;
-            background: rgba(15,23,42,0.82);
-            color: #e2e8f0;
-            font-size: 12px;
-            font-weight: 700;
-            font-family: monospace;
-            padding: 4px 10px;
-            border-radius: 8px;
-            pointer-events: none;
-            opacity: 0;
-            transition: opacity 0.2s ease;
-            border: 1px solid rgba(148,163,184,0.18);
-            backdrop-filter: blur(6px);
-        `;
-        const tutorScreen = document.getElementById('tutor-screen');
-        if (tutorScreen) tutorScreen.appendChild(vpZoomLabel);
-    }
-    return vpZoomLabel;
-}
-
-function showZoomLabel(scale) {
-    const lbl = getOrCreateZoomLabel();
-    lbl.textContent = Math.round(scale * 100) + '%';
-    lbl.style.opacity = '1';
-    clearTimeout(vpLabelTimeout);
-    vpLabelTimeout = setTimeout(() => {
-        lbl.style.opacity = '0';
-    }, 1200);
-}
-
-// --- Core: apply CSS transform ทันที (ไม่ lerp) ---
 function viewportApplyTransform() {
-    if (!zoomableContent) return;
-    zoomableContent.style.transform =
-        `translate(${panX}px, ${panY}px) scale(${zoomScale})`;
+    zoomableContent.style.transform = `translate(${panX}px, ${panY}px) scale(${zoomScale})`;
 
     const contentArea = document.getElementById('content-area');
-    if (contentArea && viewportWorkspace) {
+    if (contentArea) {
         const wsRect = viewportWorkspace.getBoundingClientRect();
-        const minW = Math.round(wsRect.width  * Math.max(zoomScale, 1));
-        const minH = Math.round(wsRect.height * Math.max(zoomScale, 1));
-        contentArea.style.minWidth  = minW + 'px';
-        contentArea.style.minHeight = minH + 'px';
+        if (zoomScale > 1) {
+            contentArea.style.minWidth = Math.round(wsRect.width * zoomScale) + 'px';
+            contentArea.style.minHeight = Math.round(wsRect.height * zoomScale) + 'px';
+        } else {
+            contentArea.style.minWidth = wsRect.width + 'px';
+            contentArea.style.minHeight = wsRect.height + 'px';
+        }
     }
 }
 
-// --- Smooth animate loop ---
-function vpAnimateLoop() {
-    const dScale = vpTargetScale - zoomScale;
-    const dX     = vpTargetPanX  - panX;
-    const dY     = vpTargetPanY  - panY;
+function viewportSetScale(newScale, centerX, centerY) {
+    const oldScale = zoomScale;
+    zoomScale = Math.min(Math.max(newScale, 0.5), 4);
 
-    if (Math.abs(dScale) < VP_SNAP && Math.abs(dX) < VP_SNAP && Math.abs(dY) < VP_SNAP) {
-        // snap to exact target
-        zoomScale = vpTargetScale;
-        panX      = vpTargetPanX;
-        panY      = vpTargetPanY;
-        viewportApplyTransform();
-        vpRafId = null;
-        return;
+    if (centerX !== undefined && centerY !== undefined && oldScale > 0) {
+        const contentPointX = (centerX - panX) / oldScale;
+        const contentPointY = (centerY - panY) / oldScale;
+        panX = centerX - contentPointX * zoomScale;
+        panY = centerY - contentPointY * zoomScale;
     }
-
-    zoomScale += dScale * VP_LERP;
-    panX      += dX     * VP_LERP;
-    panY      += dY     * VP_LERP;
 
     viewportApplyTransform();
-    vpRafId = requestAnimationFrame(vpAnimateLoop);
 }
 
-function vpStartAnimate() {
-    if (!vpRafId) {
-        vpRafId = requestAnimationFrame(vpAnimateLoop);
-    }
-}
-
-// --- Set target scale โดยโฟกัสที่จุด (cx, cy) บน screen ---
-function viewportSetScale(newScale, cx, cy, animate = true) {
-    const clampedScale = Math.min(Math.max(newScale, 0.4), 5);
-
-    // คำนวณ pan ใหม่เพื่อให้จุด (cx,cy) คงที่หลังซูม
-    if (cx !== undefined && cy !== undefined && vpTargetScale > 0) {
-        const contentPointX = (cx - vpTargetPanX) / vpTargetScale;
-        const contentPointY = (cy - vpTargetPanY) / vpTargetScale;
-        vpTargetPanX = cx - contentPointX * clampedScale;
-        vpTargetPanY = cy - contentPointY * clampedScale;
-    }
-    vpTargetScale = clampedScale;
-    showZoomLabel(clampedScale);
-
-    if (animate) {
-        vpStartAnimate();
-    } else {
-        // ซูมทันที ไม่ animate (ใช้ตอน pan)
-        zoomScale = vpTargetScale;
-        panX      = vpTargetPanX;
-        panY      = vpTargetPanY;
-        viewportApplyTransform();
-    }
-}
-
-// --- ปุ่ม +/- โฟกัสกลางจอ ---
 function viewportZoomIn() {
-    if (!viewportWorkspace) return;
     const rect = viewportWorkspace.getBoundingClientRect();
-    viewportSetScale(vpTargetScale * 1.25, rect.left + rect.width / 2, rect.top + rect.height / 2, true);
+    viewportSetScale(zoomScale + 0.2, rect.width / 2, rect.height / 2);
 }
 
 function viewportZoomOut() {
-    if (!viewportWorkspace) return;
     const rect = viewportWorkspace.getBoundingClientRect();
-    viewportSetScale(vpTargetScale / 1.25, rect.left + rect.width / 2, rect.top + rect.height / 2, true);
+    viewportSetScale(zoomScale - 0.2, rect.width / 2, rect.height / 2);
 }
 
 function viewportReset() {
-    vpTargetScale = 1;
-    vpTargetPanX  = 0;
-    vpTargetPanY  = 0;
-    // reset ทันที ไม่ animate
     zoomScale = 1; panX = 0; panY = 0;
     viewportApplyTransform();
-    if (vpRafId) { cancelAnimationFrame(vpRafId); vpRafId = null; }
 }
-
-// --- Wheel accumulator สำหรับ smooth trackpad ---
-let vpWheelAccum = 0;
-let vpWheelRafId = null;
-
-function vpFlushWheel(cx, cy) {
-    if (Math.abs(vpWheelAccum) < 0.001) { vpWheelRafId = null; return; }
-    const factor = Math.exp(-vpWheelAccum * 0.008);
-    viewportSetScale(vpTargetScale * factor, cx, cy, true);
-    vpWheelAccum *= 0.6; // decay
-    vpWheelRafId = requestAnimationFrame(() => vpFlushWheel(cx, cy));
-}
-
-// --- Init: ผูก events ทั้งหมด ---
-function initViewportControls() {
-    if (!viewportWorkspace) return;
-    const contentArea = document.getElementById('content-area');
-
-    // ---- Mouse Pan ----
+{
     function startPan(e) {
-        const isRightBtn  = e.button === 2;
-        const isLeftBtn   = e.button === 0;
-        const canPanLeft  = isLeftBtn && (spaceHeld || currentMode === 'mouse');
-
-        if (!isRightBtn && !canPanLeft) return;
-
-        if (isLeftBtn && currentMode === 'mouse') {
-            const tag = e.target.tagName.toLowerCase();
-            if (tag === 'button' || tag === 'input' || tag === 'select' || tag === 'textarea') return;
-            if (e.target.closest('button'))           return;
-            if (e.target.closest('.question-column')) return;
-            if (e.target.closest('#viewport-controls')) return;
+        if (e.button === 2 || (e.button === 0 && (spaceHeld || currentMode === 'mouse'))) {
+            if (e.button === 0 && currentMode === 'mouse') {
+                const tag = e.target.tagName.toLowerCase();
+                if (tag === 'button' || tag === 'input' || tag === 'select' || tag === 'textarea') return;
+                if (e.target.closest('button') || e.target.closest('.question-column')) return;
+                if (e.target.closest('#viewport-controls')) return;
+            }
+            e.preventDefault();
+            isPanning = true;
+            rightClickPanning = e.button === 2;
+            panStartX = e.clientX - panX;
+            panStartY = e.clientY - panY;
+            viewportWorkspace.classList.add('panning');
         }
-
-        e.preventDefault();
-        isPanning       = true;
-        rightClickPanning = isRightBtn;
-        panStartX       = e.clientX - panX;
-        panStartY       = e.clientY - panY;
-        // sync target กับ current เพื่อไม่ให้ animate กระโดด
-        vpTargetPanX    = panX;
-        vpTargetPanY    = panY;
-        vpTargetScale   = zoomScale;
-        if (vpRafId) { cancelAnimationFrame(vpRafId); vpRafId = null; }
-        viewportWorkspace.classList.add('panning');
     }
 
     function onPan(e) {
-        if (!isPanning) return;
-        e.preventDefault();
-        panX = e.clientX - panStartX;
-        panY = e.clientY - panStartY;
-        vpTargetPanX = panX;
-        vpTargetPanY = panY;
-        viewportApplyTransform(); // ไม่ animate — pan ตาม cursor ทันที
+        if (isPanning) {
+            e.preventDefault();
+            panX = e.clientX - panStartX;
+            panY = e.clientY - panStartY;
+            viewportApplyTransform();
+        }
     }
 
     function endPan() {
-        if (!isPanning) return;
-        isPanning         = false;
-        rightClickPanning = false;
-        viewportWorkspace.classList.remove('panning');
+        if (isPanning) {
+            isPanning = false;
+            rightClickPanning = false;
+            viewportWorkspace.classList.remove('panning');
+        }
     }
 
     viewportWorkspace.addEventListener('mousedown', startPan);
     if (contentArea) contentArea.addEventListener('mousedown', startPan);
-    window.addEventListener('mousemove', onPan, { passive: false });
-    window.addEventListener('mouseup',   endPan);
+    window.addEventListener('mousemove', onPan);
+    window.addEventListener('mouseup', endPan);
 
-    // ---- Ctrl + Wheel zoom (โฟกัสตาม cursor) ----
     viewportWorkspace.addEventListener('wheel', e => {
-        if (!(e.ctrlKey || e.metaKey)) return;
-        e.preventDefault();
-
-        // รวม delta เพื่อ smooth trackpad gesture
-        vpWheelAccum += e.deltaY;
-        const cx = e.clientX;
-        const cy = e.clientY;
-
-        if (!vpWheelRafId) {
-            vpWheelRafId = requestAnimationFrame(() => vpFlushWheel(cx, cy));
+        if (e.ctrlKey || e.metaKey) {
+            e.preventDefault();
+            const delta = e.deltaY > 0 ? -0.1 : 0.1;
+            viewportSetScale(zoomScale + delta, e.clientX, e.clientY);
         }
     }, { passive: false });
 
-    // ---- Pinch zoom (touch) ----
     viewportWorkspace.addEventListener('touchstart', e => {
-        if (e.touches.length !== 2) return;
-        e.preventDefault();
-        const dx = e.touches[0].clientX - e.touches[1].clientX;
-        const dy = e.touches[0].clientY - e.touches[1].clientY;
-        pinchStartDistance = Math.hypot(dx, dy);
-        pinchStartScale    = vpTargetScale;
-        if (vpRafId) { cancelAnimationFrame(vpRafId); vpRafId = null; }
+        if (e.touches.length === 2) {
+            e.preventDefault();
+            const dx = e.touches[0].clientX - e.touches[1].clientX;
+            const dy = e.touches[0].clientY - e.touches[1].clientY;
+            pinchStartDistance = Math.hypot(dx, dy);
+            pinchStartScale = zoomScale;
+        }
     }, { passive: false });
 
     viewportWorkspace.addEventListener('touchmove', e => {
-        if (e.touches.length !== 2 || pinchStartDistance === 0) return;
-        e.preventDefault();
-        const dx   = e.touches[0].clientX - e.touches[1].clientX;
-        const dy   = e.touches[0].clientY - e.touches[1].clientY;
-        const dist = Math.hypot(dx, dy);
-        const midX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
-        const midY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
-        viewportSetScale(pinchStartScale * (dist / pinchStartDistance), midX, midY, false);
+        if (e.touches.length === 2) {
+            e.preventDefault();
+            const dx = e.touches[0].clientX - e.touches[1].clientX;
+            const dy = e.touches[0].clientY - e.touches[1].clientY;
+            const currentDistance = Math.hypot(dx, dy);
+            if (pinchStartDistance > 0) {
+                const midX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
+                const midY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
+                const newScale = pinchStartScale * (currentDistance / pinchStartDistance);
+                viewportSetScale(newScale, midX, midY);
+            }
+        }
     }, { passive: false });
 
     viewportWorkspace.addEventListener('touchend', () => {
         pinchStartDistance = 0;
     });
 
-    // ---- Space key → pan mode ----
     document.addEventListener('keydown', e => {
         if (e.code === 'Space' && !spaceHeld && document.activeElement.tagName !== 'INPUT') {
             spaceHeld = true;
@@ -1532,19 +1366,14 @@ function initViewportControls() {
             }
         }
     });
+
     document.addEventListener('keyup', e => {
-        if (e.code === 'Space') spaceHeld = false;
+        if (e.code === 'Space') {
+            spaceHeld = false;
+        }
     });
 
-    // ---- Block context menu on workspace ----
-    viewportWorkspace.addEventListener('contextmenu', e => e.preventDefault());
-}
-
-function showViewportControls() {
-    if (viewportControls) viewportControls.classList.remove('hidden');
-    if (window.lucide) lucide.createIcons();
-}
-
-function hideViewportControls() {
-    if (viewportControls) viewportControls.classList.add('hidden');
+    viewportWorkspace.addEventListener('contextmenu', e => {
+        e.preventDefault();
+    });
 }
