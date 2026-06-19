@@ -933,6 +933,11 @@ function renderQuestion() {
         }
     } else {
         gallery.innerHTML = allImages.map(renderImage).join('');
+        if (allImages.length > 1) {
+            gallery.classList.add('multi-image');
+        } else {
+            gallery.classList.remove('multi-image');
+        }
         imagesArea.classList.add('hidden');
         imagesArea.innerHTML = '';
         imagesArea.style.display = 'none';
@@ -1125,7 +1130,8 @@ function generateQuestionHTML(q) {
                     }
                     else {
                         explanationVisible[qId] = true;
-                        box.innerHTML = `<div><strong class="text-emerald-700 text-base">เฉลย: ${String.fromCharCode(65+q.correctAnswer)}</strong></div><div class="mt-1 text-slate-600">${q.explanation}</div>`;
+                        const correctOptionText = q.options ? q.options[q.correctAnswer] : '';
+                        box.innerHTML = `<div><strong class="text-emerald-700 text-base">เฉลย: ${String.fromCharCode(65+q.correctAnswer)} ${correctOptionText}</strong></div><div class="mt-1 text-slate-600">${q.explanation}</div>`;
                         box.classList.remove('hidden');
 
                                         if (btn) {

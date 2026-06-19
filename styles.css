@@ -17,16 +17,27 @@ i[data-lucide] {
     align-items: center;
     height: 100%;
 }
+#tutor-screen.layout-vertical #image-gallery.multi-image {
+    overflow-y: auto;
+    justify-content: flex-start;
+}
 #tutor-screen.layout-vertical #image-gallery .relative {
     max-height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+#tutor-screen.layout-vertical #image-gallery.multi-image .relative {
+    max-height: none;
+    flex-shrink: 0;
+}
 #tutor-screen.layout-vertical #image-gallery .relative img {
     max-height: calc(100vh - 200px);
     width: auto;
     object-fit: contain;
+}
+#tutor-screen.layout-vertical #image-gallery.multi-image .relative img {
+    max-height: 600px;
 }
 #tutor-screen.layout-vertical #left-panel {
     display: block;
@@ -42,7 +53,8 @@ i[data-lucide] {
 }
 #tutor-screen.layout-horizontal #content-area {
     flex-direction: column;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 #tutor-screen.layout-horizontal #left-panel {
     display: none;
@@ -283,6 +295,9 @@ body.zoom-open .zoom-btn { display: none; }
     min-height: 0;
     contain: layout style;
 }
+#tutor-screen.layout-horizontal #viewport-workspace {
+    overflow-y: auto;
+}
 
 #zoomable-content {
     transform-origin: top left;
@@ -294,6 +309,11 @@ body.zoom-open .zoom-btn { display: none; }
     position: absolute;
     top: 0;
     left: 0;
+}
+#tutor-screen.layout-horizontal #zoomable-content {
+    position: relative;
+    height: auto;
+    min-height: 100%;
 }
 
 #viewport-workspace.panning {
