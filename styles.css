@@ -1,3 +1,19 @@
+/* ป้องกันการคัดลอกและลากเมาส์คลุม */
+* {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* อนุญาต selection สำหรับ input/textarea ถ้ามี */
+input, textarea {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
 i[data-lucide] {
     display: inline-flex;
     align-items: center;
@@ -93,7 +109,7 @@ i[data-lucide] {
 }
 #global-transcript-area {
     width: 100%;
-    background: #fefce8;
+    background: transparent;
     border-top: 1px solid #e2e8f0;
     border-bottom: 1px solid #e2e8f0;
 }
@@ -138,6 +154,33 @@ i[data-lucide] {
     z-index: 30;
     width: 100%;
     height: 100%;
+    pointer-events: none;
+    touch-action: none;
+}
+/* Answer Canvas - อยู่หลังเฉลย */
+.answer-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    pointer-events: none;
+    touch-action: none;
+}
+/* Transcript Canvas - อยู่หลัง transcript */
+.transcript-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    pointer-events: none;
+    touch-action: none;
+}
+/* Options Canvas - อยู่หลังปุ่มตัวเลือก ต้องไม่บล็อกคลิกตอนเริ่มต้น */
+.options-canvas {
     pointer-events: none;
     touch-action: none;
 }

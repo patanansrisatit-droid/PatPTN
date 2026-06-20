@@ -35,7 +35,7 @@ let explanationVisible = {};
 let currentLayoutMode = 'vertical';
 let carouselImages = [];
 let previousTool = 'mouse';
-let scrollTimeout = null;
+
 
 function getNormalizedId(id) {
     if (!id) return '';
@@ -48,6 +48,21 @@ window.onload = () => {
 
     const zCvs = document.getElementById('zoomCanvas');
     if (zCvs) setupCanvasDrawing(zCvs);
+
+    // === ป้องกันการคัดลอกและลากเมาส์คลุม ===
+    // ปิด context menu (คลิกขวา)
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    // ปิด copy / cut / paste
+    document.addEventListener('copy', e => e.preventDefault());
+    document.addEventListener('cut', e => e.preventDefault());
+    document.addEventListener('paste', e => e.preventDefault());
+    // ปิด drag ทั้งหมด
+    document.addEventListener('dragstart', e => e.preventDefault());
+    // ปิด text selection ด้วย CSS
+    document.body.style.userSelect = 'none';
+    document.body.style.webkitUserSelect = 'none';
+    document.body.style.MozUserSelect = 'none';
+    document.body.style.msUserSelect = 'none';
 
     initViewportControls();
 
@@ -70,49 +85,7 @@ window.onload = () => {
 
         setupJumpSelect();
 
-    document.addEventListener('wheel', () => {
-        if (currentMode !== 'mouse') {
-            previousTool = currentMode;
-            setTool('mouse');
-        }
-        clearTimeout(scrollTimeout);
-        scrollTimeout = setTimeout(() => {
-            if (previousTool !== 'mouse') {
-                setTool(previousTool);
-            }
-                }, 300);
-    }, { passive: true });
 
-    let touchStartX = 0, touchStartY = 0, isTouchScroll = false;
-    document.addEventListener('touchstart', (e) => {
-        if (e.touches.length === 1) {
-            touchStartX = e.touches[0].clientX;
-            touchStartY = e.touches[0].clientY;
-            isTouchScroll = false;
-        }
-    }, { passive: true });
-    document.addEventListener('touchmove', (e) => {
-        if (e.touches.length === 1 && !isTouchScroll) {
-            const dx = Math.abs(e.touches[0].clientX - touchStartX);
-            const dy = Math.abs(e.touches[0].clientY - touchStartY);
-            if (dx > 10 || dy > 10) {
-                isTouchScroll = true;
-                if (currentMode !== 'mouse') {
-                    previousTool = currentMode;
-                    setTool('mouse');
-                }
-            }
-        }
-    }, { passive: true });
-    document.addEventListener('touchend', () => {
-        if (isTouchScroll) {
-            setTimeout(() => {
-                if (previousTool !== 'mouse') {
-                    setTool(previousTool);
-                }
-            }, 300);
-        }
-    }, { passive: true });
 };
 
 function startExam(setId) {
@@ -307,13 +280,40 @@ function updateCanvasesPointerEvents() {
     const drawingCanvas = document.getElementById('drawing-canvas');
     const customCursor = document.getElementById('canvas-custom-cursor');
 
-        if (drawingCanvas) {
-            drawingCanvas.style.pointerEvents = currentMode === 'mouse' ? 'none' : 'auto';
-        }
+    if (drawingCanvas) {
+        drawingCanvas.style.pointerEvents = currentMode === 'mouse' ? 'none' : 'auto';
+    }
 
     document.querySelectorAll('.gallery-canvas').forEach(cvs => {
         cvs.style.pointerEvents = currentMode === 'mouse' ? 'none' : 'auto';
     });
+
+    // Answer canvas: รับ pointer events เมื่ออยู่ในโหมดวาด และแสดงอยู่
+    document.querySelectorAll('.answer-canvas').forEach(cvs => {
+        const isHidden = cvs.classList.contains('hidden');
+        cvs.style.pointerEvents = (currentMode === 'mouse' || isHidden) ? 'none' : 'auto';
+    });
+
+    // Transcript canvas: รับ pointer events เมื่ออยู่ในโหมดวาด และแสดงอยู่
+    document.querySelectorAll('.transcript-canvas').forEach(cvs => {
+        const isHidden = cvs.classList.contains('hidden');
+        const newPE = (currentMode === 'mouse' || isHidden) ? 'none' : 'auto';
+        console.log('[updateCanvasesPointerEvents] transcript-canvas:', cvs.id, 'isHidden:', isHidden, 'currentMode:', currentMode, 'pointerEvents:', newPE);
+        cvs.style.pointerEvents = newPE;
+    });
+
+    // Options canvas: รับ pointer events เมื่ออยู่ในโหมดวาด และแสดงอยู่
+    document.querySelectorAll('.options-canvas').forEach(cvs => {
+        const isHidden = cvs.classList.contains('hidden');
+        cvs.style.pointerEvents = (currentMode === 'mouse' || isHidden) ? 'none' : 'auto';
+    });
+
+    // Global transcript canvas
+    const globalTranscriptCanvas = document.getElementById('global-transcript-canvas');
+    if (globalTranscriptCanvas) {
+        const isHidden = globalTranscriptCanvas.classList.contains('hidden');
+        globalTranscriptCanvas.style.pointerEvents = (currentMode === 'mouse' || isHidden) ? 'none' : 'auto';
+    }
 
     const zoomCanv = document.getElementById('zoomCanvas');
     if (zoomCanv && !zoomOverlay.classList.contains('hidden')) {
@@ -397,44 +397,102 @@ function selectCustomColor(color) {
     document.querySelectorAll('.color-dot').forEach(d => { d.classList.remove('scale-110','border-white','border-2'); d.style.borderColor='transparent'; });
 }
 function resizeAllActiveCanvases() {
+    const dpr = window.devicePixelRatio || 1;
+
     const galleryCanvases = document.querySelectorAll('.gallery-canvas');
     galleryCanvases.forEach(c => {
         const img = c.parentElement.querySelector('img');
-        if (img && img.clientWidth > 0) {
-            c.width = img.clientWidth;
-            c.height = img.clientHeight;
-            redrawCanvas(c);
+        if (img) {
+            const rect = img.getBoundingClientRect();
+            if (rect.width > 0 && rect.height > 0) {
+                const dpr = window.devicePixelRatio || 1;
+                c.width = Math.round(rect.width * dpr);
+                c.height = Math.round(rect.height * dpr);
+                c.style.width = rect.width + 'px';
+                c.style.height = rect.height + 'px';
+                const ctx = c.getContext('2d');
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+                redrawCanvas(c);
+            }
         }
     });
 
-    const rightCanvas = document.getElementById('rightPanelCanvas');
-    if (rightCanvas) {
-        const wrap = document.getElementById('question-panel-wrapper');
-        rightCanvas.width = wrap.clientWidth;
-        rightCanvas.height = wrap.clientHeight;
-        redrawCanvas(rightCanvas);
-    }
+    // Resize options-canvas ตาม container ใหม่
+    document.querySelectorAll('.options-canvas').forEach(cvs => {
+        const container = cvs.parentElement.querySelector('[id^="options-container-"]');
+        if (container && !container.classList.contains('hidden')) {
+            const rect = container.getBoundingClientRect();
+            if (rect.width > 0 && rect.height > 0) {
+                cvs.width = Math.round(rect.width * dpr);
+                cvs.height = Math.round(rect.height * dpr);
+                cvs.style.width = rect.width + 'px';
+                cvs.style.height = rect.height + 'px';
+                const ctx = cvs.getContext('2d');
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+                redrawCanvas(cvs);
+            }
+        }
+    });
+
+    // Resize answer-canvas ตาม box ใหม่
+    document.querySelectorAll('.answer-canvas').forEach(cvs => {
+        const box = cvs.parentElement.querySelector('[id^="explanation-box-"]');
+        if (box && !box.classList.contains('hidden')) {
+            const rect = box.getBoundingClientRect();
+            if (rect.width > 0 && rect.height > 0) {
+                cvs.width = Math.round(rect.width * dpr);
+                cvs.height = Math.round(rect.height * dpr);
+                cvs.style.width = rect.width + 'px';
+                cvs.style.height = rect.height + 'px';
+                const ctx = cvs.getContext('2d');
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+                redrawCanvas(cvs);
+            }
+        }
+    });
+
+    // Resize transcript-canvas ตาม box ใหม่
+    document.querySelectorAll('.transcript-canvas').forEach(cvs => {
+        const box = cvs.parentElement.querySelector('[id^="transcript-box-"]');
+        if (box && !box.classList.contains('hidden')) {
+            const rect = box.getBoundingClientRect();
+            if (rect.width > 0 && rect.height > 0) {
+                cvs.width = Math.round(rect.width * dpr);
+                cvs.height = Math.round(rect.height * dpr);
+                cvs.style.width = rect.width + 'px';
+                cvs.style.height = rect.height + 'px';
+                const ctx = cvs.getContext('2d');
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+                redrawCanvas(cvs);
+            }
+        }
+    });
+
+    // rightPanelCanvas: ขนาดคงที่ ไม่ resize ซ้ำ (ตั้งค่าครั้งเดียวตอน setup)
+    // ไม่ resize rightPanelCanvas ที่นี่ เพราะจะทำให้ขนาดเปลี่ยนทุกครั้งที่ renderQuestion
 
     if (!zoomOverlay.classList.contains('hidden')) {
         const zoomedImg = document.getElementById('zoomed-image');
         if (zoomedImg && zoomedImg.clientWidth > 0) {
-            zoomCanvas.width = zoomedImg.clientWidth;
-            zoomCanvas.height = zoomedImg.clientHeight;
-            redrawCanvas(zoomCanvas);
+            const zRect = zoomedImg.getBoundingClientRect();
+            if (zRect.width > 0 && zRect.height > 0) {
+                zoomCanvas.width = Math.round(zRect.width * dpr);
+                zoomCanvas.height = Math.round(zRect.height * dpr);
+                zoomCanvas.style.width = zRect.width + 'px';
+                zoomCanvas.style.height = zRect.height + 'px';
+                const zCtx = zoomCanvas.getContext('2d');
+                zCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+                redrawCanvas(zoomCanvas);
+            }
         }
     }
 }
 
 function resizeQuestionPanelCanvas() {
-    const rightCanvas = document.getElementById('rightPanelCanvas');
-    const wrapper = document.getElementById('question-panel-wrapper');
-    if (rightCanvas && wrapper) {
-        requestAnimationFrame(() => {
-            rightCanvas.width = wrapper.clientWidth;
-            rightCanvas.height = wrapper.clientHeight;
-            redrawCanvas(rightCanvas);
-        });
-    }
+    // redraw canvases ที่มีอยู่
+    document.querySelectorAll('.options-canvas, .answer-canvas, .transcript-canvas').forEach(cvs => {
+        redrawCanvas(cvs);
+    });
 }
 function applyStrokeStyle(ctx, mode, color, size, opacity) {
     ctx.globalAlpha = opacity ?? 1.0;
@@ -449,9 +507,13 @@ function correctCoordinates(clientX, clientY, canvas) {
     const cRect = canvas.getBoundingClientRect();
     const visualX = clientX - cRect.left;
     const visualY = clientY - cRect.top;
-    const canvasX = visualX * (canvas.width / cRect.width);
-    const canvasY = visualY * (canvas.height / cRect.height);
-    return { x: canvasX, y: canvasY };
+    // Return normalized coordinates (0-1) สำหรับเก็บใน allStrokes
+    const normalizedX = visualX / cRect.width;
+    const normalizedY = visualY / cRect.height;
+    if (canvas.classList.contains('gallery-canvas')) {
+        console.log('[correctCoordinates] gallery-canvas id:', canvas.id, 'cRect:', cRect.width.toFixed(1), 'x', cRect.height.toFixed(1), 'canvas.width:', canvas.width, 'canvas.height:', canvas.height, 'normalized:', normalizedX.toFixed(3), normalizedY.toFixed(3));
+    }
+    return { x: normalizedX, y: normalizedY };
 }
 
 function setupCanvasDrawing(canvas) {
@@ -462,8 +524,8 @@ function setupCanvasDrawing(canvas) {
         const targetButton = elementsUnderPointer.find(el => el.id && el.id.startsWith('btn-answer-'));
 
         if (targetButton) {
-            targetButton.click(); // สั่งให้ปุ่มทำงาน
-            return; // หยุดการทำงานส่วนที่เหลือเพื่อไม่ให้เกิดการวาดจุด/เส้น
+            targetButton.click();
+            return;
         }
 
         e.preventDefault();
@@ -482,7 +544,7 @@ function setupCanvasDrawing(canvas) {
         if (currentMode === 'eraser') {
             handleVectorEraser(canvas, elementId, x, y);
         } else {
-            currentPath = [{ x: x / canvas.width, y: y / canvas.height }];
+            currentPath = [{ x: x, y: y }];
             redrawCanvas(canvas);
         }
     });
@@ -517,7 +579,7 @@ function setupCanvasDrawing(canvas) {
             handleVectorEraser(canvas, elementId, x, y);
             syncAllCanvasesById(elementId, canvas);
         } else {
-            currentPath.push({ x: x / canvas.width, y: y / canvas.height });
+            currentPath.push({ x: x, y: y });
             redrawCanvas(canvas);
             syncAllCanvasesById(elementId, canvas);
         }
@@ -565,8 +627,14 @@ function setupCanvasDrawing(canvas) {
 
 function redrawCanvas(canvas) {
     const ctx = canvas.getContext('2d');
+    const dpr = window.devicePixelRatio || 1;
+    // clearRect ใช้ขนาด canvas ที่รวม dpr แล้ว
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     const elementId = canvas.getAttribute('data-element-id');
+
+    // ขนาดจริง (ไม่รวม dpr) สำหรับการวาด
+    const displayWidth = canvas.width / dpr;
+    const displayHeight = canvas.height / dpr;
 
     const currentNormId = getNormalizedId(elementId);
 
@@ -579,9 +647,9 @@ function redrawCanvas(canvas) {
         if (s.points.length < 1) return;
         ctx.beginPath();
         applyStrokeStyle(ctx, s.mode, s.color, s.size, s.opacity);
-        ctx.moveTo(s.points[0].x * canvas.width, s.points[0].y * canvas.height);
+        ctx.moveTo(s.points[0].x * displayWidth, s.points[0].y * displayHeight);
         for(let i = 1; i < s.points.length; i++) {
-            ctx.lineTo(s.points[i].x * canvas.width, s.points[i].y * canvas.height);
+            ctx.lineTo(s.points[i].x * displayWidth, s.points[i].y * displayHeight);
         }
         ctx.stroke();
     });
@@ -590,9 +658,9 @@ function redrawCanvas(canvas) {
         ctx.beginPath();
         const s = toolSettings[currentMode];
         applyStrokeStyle(ctx, currentMode, activeColor, s.size, s.opacity);
-        ctx.moveTo(currentPath[0].x * canvas.width, currentPath[0].y * canvas.height);
+        ctx.moveTo(currentPath[0].x * displayWidth, currentPath[0].y * displayHeight);
         for(let i = 1; i < currentPath.length; i++) {
-            ctx.lineTo(currentPath[i].x * canvas.width, currentPath[i].y * canvas.height);
+            ctx.lineTo(currentPath[i].x * displayWidth, currentPath[i].y * displayHeight);
         }
         ctx.stroke();
     }
@@ -604,36 +672,59 @@ function redrawAllCanvasesOnScreen() {
     canvases.forEach(c => redrawCanvas(c));
 }
 
+function clearAllCanvases() {
+    const canvases = document.querySelectorAll('canvas');
+    canvases.forEach(c => {
+        const ctx = c.getContext('2d');
+        ctx.clearRect(0, 0, c.width, c.height);
+    });
+}
+
 function syncAllCanvasesById(elementId, sourceCanvas) {
     const normId = getNormalizedId(elementId);
+    const dpr = window.devicePixelRatio || 1;
     document.querySelectorAll(`canvas[data-element-id]`).forEach(cvs => {
         if (cvs === sourceCanvas) return;
         const cId = cvs.getAttribute('data-element-id');
         if (cId === elementId || getNormalizedId(cId) === normId) {
+            // Sync ขนาดที่รวม dpr
             cvs.width  = sourceCanvas.width;
             cvs.height = sourceCanvas.height;
+            // Sync CSS size
+            cvs.style.width = sourceCanvas.style.width;
+            cvs.style.height = sourceCanvas.style.height;
+            // Sync transform
+            const ctx = cvs.getContext('2d');
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
             redrawCanvas(cvs);
         }
     });
 }
 
 function handleVectorEraser(canvas, elementId, ex, ey) {
+    const dpr = window.devicePixelRatio || 1;
+    const displayWidth = canvas.width / dpr;
+    const displayHeight = canvas.height / dpr;
     const radius = toolSettings.eraser.size;
     let isMutated = false;
 
     const getNormalizedId = (id) => id ? id.replace(/^img-\d+-/, 'img-') : '';
     const currentNormId = getNormalizedId(elementId);
 
+    // ex, ey เป็น normalized coordinates (0-1) จาก correctCoordinates
+    const absEx = ex * displayWidth;
+    const absEy = ey * displayHeight;
+
     allStrokes = allStrokes.filter(s => {
         if (s.questionIdx !== currentIdx) return true;
         if (s.elementId !== elementId && getNormalizedId(s.elementId) !== currentNormId) return true;
 
         for (let i = 0; i < s.points.length - 1; i++) {
-            const x1 = s.points[i].x * canvas.width;
-            const y1 = s.points[i].y * canvas.height;
-            const x2 = s.points[i+1].x * canvas.width;
-            const y2 = s.points[i+1].y * canvas.height;
-            if (getDistanceToSegment(ex, ey, x1, y1, x2, y2) < radius) {
+            const x1 = s.points[i].x * displayWidth;
+            const y1 = s.points[i].y * displayHeight;
+            const x2 = s.points[i+1].x * displayWidth;
+            const y2 = s.points[i+1].y * displayHeight;
+            if (getDistanceToSegment(absEx, absEy, x1, y1, x2, y2) < radius) {
                 isMutated = true;
                 return false;
             }
@@ -782,16 +873,22 @@ function openZoom(imgUrl, elementId) {
     zoomedImg.src = imgUrl;
 
     const setupZoomCanvas = () => {
-        const w = zoomedImg.clientWidth || zoomedImg.naturalWidth || 800;
-        const h = zoomedImg.clientHeight || zoomedImg.naturalHeight || 600;
+        const rect = zoomedImg.getBoundingClientRect();
+        const w = rect.width || zoomedImg.naturalWidth || 800;
+        const h = rect.height || zoomedImg.naturalHeight || 600;
 
         if (w === 0 || h === 0) {
             setTimeout(setupZoomCanvas, 30);
             return;
         }
 
-        zoomCanvas.width = w;
-        zoomCanvas.height = h;
+        const dpr = window.devicePixelRatio || 1;
+        zoomCanvas.width = Math.round(w * dpr);
+        zoomCanvas.height = Math.round(h * dpr);
+        zoomCanvas.style.width = w + 'px';
+        zoomCanvas.style.height = h + 'px';
+        const ctx = zoomCanvas.getContext('2d');
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
         redrawCanvas(zoomCanvas);
         updateCanvasesPointerEvents();
         document.body.classList.add('zoom-open');
@@ -858,6 +955,9 @@ function renderQuestion() {
     const totalScreens = examScreens.length;
     const num = currentIdx + 1;
 
+    // Clear ทุก canvas ก่อน render หน้าใหม่ ป้องกันเส้นเก่าค้าง
+    clearAllCanvases();
+
     updateLayoutMode();
     const isHorizontal = currentLayoutMode === 'horizontal';
 
@@ -920,10 +1020,13 @@ function renderQuestion() {
             const btnIcon = isOn ? 'eye-off' : 'eye';
             globalTranscriptArea.innerHTML = `
                 <div class="px-6 py-3">
-                    <button id="btn-global-transcript" onpointerdown="event.stopPropagation(); event.preventDefault(); toggleGlobalTranscript()" class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold text-sm px-4 py-2.5 rounded-xl shadow-md shadow-yellow-200 transition flex items-center justify-center gap-2" style="position:relative;z-index:110;pointer-events:auto">
+                    <button id="btn-global-transcript" onpointerdown="event.stopPropagation(); event.preventDefault(); toggleGlobalTranscript()" class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold text-sm px-4 py-2.5 rounded-xl transition flex items-center justify-center gap-2" style="position:relative;z-index:110;pointer-events:auto">
                         <i data-lucide="${btnIcon}" class="w-4 h-4"></i> ${btnLabel}
                     </button>
-                    <div id="global-transcript-box" class="${isOn ? '' : 'hidden'} mt-3 bg-yellow-50 border border-slate-200 p-4 rounded-2xl text-slate-700 text-base whitespace-pre-line text-center">${firstTranscriptQ.transcript}</div>
+                    <div class="relative mt-3">
+                        <div id="global-transcript-box" class="${isOn ? '' : 'hidden'} bg-yellow-50 border border-slate-200 p-4 rounded-2xl text-slate-700 text-base whitespace-pre-line text-center relative">${firstTranscriptQ.transcript}</div>
+                        <canvas id="global-transcript-canvas" data-element-id="transcript-global-${firstTranscriptQ.id}" class="transcript-canvas absolute top-0 left-0 w-full h-full z-20 ${isOn ? '' : 'hidden'}"></canvas>
+                    </div>
                 </div>
             `;
             globalTranscriptArea.classList.toggle('hidden', false);
@@ -953,8 +1056,14 @@ function renderQuestion() {
         document.querySelectorAll(`canvas[data-element-id="${elementId}"]`).forEach(cvs => {
             const img = cvs.parentElement.querySelector('img');
             const setup = () => {
-                cvs.width = img.clientWidth || img.naturalWidth;
-                cvs.height = img.clientHeight || img.naturalHeight;
+                const rect = img.getBoundingClientRect();
+                const dpr = window.devicePixelRatio || 1;
+                cvs.width = Math.round(rect.width * dpr);
+                cvs.height = Math.round(rect.height * dpr);
+                cvs.style.width = rect.width + 'px';
+                cvs.style.height = rect.height + 'px';
+                const ctx = cvs.getContext('2d');
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
                 setupCanvasDrawing(cvs);
                 redrawCanvas(cvs);
             };
@@ -968,10 +1077,15 @@ function renderQuestion() {
 
     const numQuestions = screenQuestions.length;
 
+    // Initialize hiddenChoices for questions with hideOptions so options start hidden
     screenQuestions.forEach(q => {
         if (q.hideOptions && hiddenChoices[q.id] === undefined) {
             hiddenChoices[q.id] = true;
         }
+    });
+
+    screenQuestions.forEach(q => {
+        const isOptionsHidden = q.hideOptions && hiddenChoices[q.id] !== false;
 
         const col = document.createElement('div');
         if (isHorizontal) {
@@ -988,15 +1102,24 @@ function renderQuestion() {
         if (explanationVisible[q.id]) setTimeout(() => checkAnswer(q.id, true), 50);
     });
 
-    const rightCanvas = document.getElementById('rightPanelCanvas');
-    if (rightCanvas) {
-        rightCanvas.width = rightCanvas.clientWidth;
-        rightCanvas.height = rightCanvas.clientHeight;
-        if (!rightCanvas.dataset.drawingSetup) {
-            setupCanvasDrawing(rightCanvas);
-            rightCanvas.dataset.drawingSetup = '1';
+    // Setup canvases สำหรับแต่ละ question (เฉพาะที่ visible)
+    screenQuestions.forEach(q => {
+        if (explanationVisible[q.id]) setupAnswerCanvas(q.id);
+        if (q.transcript && transcriptVisible[q.id]) setupTranscriptCanvas(q.id);
+        // Setup options canvas เมื่อ options แสดงอยู่ (ไม่ใช่ซ่อน)
+        // ทำงานทั้ง question ที่มี hideOptions และไม่มี hideOptions
+        const isOptionsHidden = q.hideOptions && hiddenChoices[q.id];
+        if (!isOptionsHidden) {
+            setupOptionsCanvas(q.id);
         }
-        redrawCanvas(rightCanvas);
+    });
+
+    // Setup global transcript canvas สำหรับ horizontal layout
+    if (isHorizontal) {
+        const firstTranscriptQ = screenQuestions.find(q => q.transcript?.trim());
+        if (firstTranscriptQ) {
+            setupGlobalTranscriptCanvas(firstTranscriptQ.id);
+        }
     }
 
     if (isHorizontal && numQuestions <= 3) {
@@ -1025,6 +1148,103 @@ function setupDrawingCanvas() {
         redrawCanvas(canvas);
     }
 }
+
+function setupAnswerCanvas(qId) {
+    const canvas = document.getElementById(`answer-canvas-${qId}`);
+    const box = document.getElementById(`explanation-box-${qId}`);
+    if (!canvas || !box) return;
+
+    // ใช้ requestAnimationFrame เพื่อให้ DOM render เสร็จก่อน
+    requestAnimationFrame(() => {
+        const rect = box.getBoundingClientRect();
+        const dpr = window.devicePixelRatio || 1;
+        // ขนาด canvas = ขนาดจริงที่แสดงผล x devicePixelRatio
+        canvas.width = Math.round(rect.width * dpr);
+        canvas.height = Math.round(rect.height * dpr);
+        // CSS size คงที่ตามขนาดจริง
+        canvas.style.width = rect.width + 'px';
+        canvas.style.height = rect.height + 'px';
+        // Scale context ตาม dpr
+        const ctx = canvas.getContext('2d');
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        if (!canvas.dataset.drawingSetup) {
+            setupCanvasDrawing(canvas);
+            canvas.dataset.drawingSetup = '1';
+        }
+        redrawCanvas(canvas);
+        updateCanvasesPointerEvents();
+    });
+}
+
+function setupOptionsCanvas(qId) {
+    const canvas = document.getElementById(`options-canvas-${qId}`);
+    const container = document.getElementById(`options-container-${qId}`);
+    if (!canvas || !container) return;
+
+    requestAnimationFrame(() => {
+        const rect = container.getBoundingClientRect();
+        const dpr = window.devicePixelRatio || 1;
+        canvas.width = Math.round(rect.width * dpr);
+        canvas.height = Math.round(rect.height * dpr);
+        canvas.style.width = rect.width + 'px';
+        canvas.style.height = rect.height + 'px';
+        const ctx = canvas.getContext('2d');
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        if (!canvas.dataset.drawingSetup) {
+            setupCanvasDrawing(canvas);
+            canvas.dataset.drawingSetup = '1';
+        }
+        redrawCanvas(canvas);
+        updateCanvasesPointerEvents();
+    });
+}
+
+function setupTranscriptCanvas(qId) {
+    const canvas = document.getElementById(`transcript-canvas-${qId}`);
+    const box = document.getElementById(`transcript-box-${qId}`);
+    if (!canvas || !box) return;
+
+    requestAnimationFrame(() => {
+        const rect = box.getBoundingClientRect();
+        const dpr = window.devicePixelRatio || 1;
+        canvas.width = Math.round(rect.width * dpr);
+        canvas.height = Math.round(rect.height * dpr);
+        canvas.style.width = rect.width + 'px';
+        canvas.style.height = rect.height + 'px';
+        const ctx = canvas.getContext('2d');
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        if (!canvas.dataset.drawingSetup) {
+            setupCanvasDrawing(canvas);
+            canvas.dataset.drawingSetup = '1';
+        }
+        redrawCanvas(canvas);
+        console.log('[setupTranscriptCanvas] calling updateCanvasesPointerEvents, currentMode:', currentMode);
+        updateCanvasesPointerEvents();
+    });
+}
+
+function setupGlobalTranscriptCanvas(qId) {
+    const canvas = document.getElementById('global-transcript-canvas');
+    const box = document.getElementById('global-transcript-box');
+    if (!canvas || !box) return;
+
+    requestAnimationFrame(() => {
+        const rect = box.getBoundingClientRect();
+        const dpr = window.devicePixelRatio || 1;
+        canvas.width = Math.round(rect.width * dpr);
+        canvas.height = Math.round(rect.height * dpr);
+        canvas.style.width = rect.width + 'px';
+        canvas.style.height = rect.height + 'px';
+        const ctx = canvas.getContext('2d');
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        if (!canvas.dataset.drawingSetup) {
+            setupCanvasDrawing(canvas);
+            canvas.dataset.drawingSetup = '1';
+        }
+        redrawCanvas(canvas);
+        updateCanvasesPointerEvents();
+    });
+}
 function generateQuestionHTML(q) {
     const isH = currentLayoutMode === 'horizontal';
     const selected = (qId, i) => selectedAnswers[qId] === i;
@@ -1040,7 +1260,7 @@ function generateQuestionHTML(q) {
             : 'w-6 h-6 rounded-md bg-white shadow-sm border border-slate-200 flex items-center justify-center font-bold text-sm text-slate-500';
 
         return `
-                <button onclick="if(currentMode!=='mouse')return;selectOption(${q.id},${i})" class="${defaultClass} w-full text-left ${isH ? 'p-4' : 'p-5'} rounded-xl text-base font-medium transition flex items-center gap-3" style="position:relative;z-index:999999">
+                <button onclick="if(currentMode!=='mouse')return;selectOption(${q.id},${i})" class="${defaultClass} w-full text-left ${isH ? 'p-4' : 'p-5'} rounded-xl text-base font-medium transition flex items-center gap-3" style="position:relative;z-index:1">
                     <span class="${badgeClass}">${String.fromCharCode(65+i)}</span>
                     <span class="flex-1">${opt}</span>
                 </button>
@@ -1050,36 +1270,48 @@ function generateQuestionHTML(q) {
     const transcriptToggleLabel = transcriptShown ? 'Hide Transcript' : 'Show Transcript';
     const transcriptToggleIcon = transcriptShown ? 'eye-off' : 'eye';
     const transcriptToggleClass = transcriptShown
-        ? `w-full bg-transparent hover:bg-slate-100 text-slate-400 hover:text-slate-600 font-medium ${isH ? 'text-sm px-4 py-3' : 'text-base px-5 py-3'} rounded-xl transition flex items-center gap-1 border border-slate-200`
-        : `w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold ${isH ? 'text-sm px-4 py-3' : 'text-base px-5 py-3'} rounded-xl shadow-md shadow-yellow-200 transition flex items-center gap-1`;
+        ? `w-full bg-amber-50 hover:bg-amber-100 text-amber-700 hover:text-amber-800 font-medium ${isH ? 'text-sm px-4 py-3' : 'text-base px-5 py-3'} rounded-xl transition flex items-center gap-1 border border-amber-200`
+        : `w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold ${isH ? 'text-sm px-4 py-3' : 'text-base px-5 py-3'} rounded-xl transition flex items-center gap-1`;
     const toggleLabel = hideChoices ? 'Show Options' : 'Hide Options';
     const toggleIcon = hideChoices ? 'eye' : 'eye-off';
     const toggleClass = hideChoices
-        ? `w-full bg-red-600 hover:bg-red-700 text-white font-bold ${isH ? 'text-sm px-4 py-3' : 'text-base px-5 py-3'} rounded-xl shadow-md shadow-red-200 transition flex items-center gap-1`
-        : `w-full bg-transparent hover:bg-slate-100 text-slate-400 hover:text-slate-600 font-medium ${isH ? 'text-sm px-4 py-3' : 'text-base px-5 py-3'} rounded-xl transition flex items-center gap-1 border border-slate-200`;
+        ? `w-full bg-red-600 hover:bg-red-700 text-white font-bold ${isH ? 'text-sm px-4 py-3' : 'text-base px-5 py-3'} rounded-xl transition flex items-center gap-1`
+        : `w-full bg-rose-50 hover:bg-rose-100 text-rose-600 hover:text-rose-700 font-medium ${isH ? 'text-sm px-4 py-3' : 'text-base px-5 py-3'} rounded-xl transition flex items-center gap-1 border border-rose-200`;
 
     const btnGap = isH ? 'gap-2' : 'gap-3';
     const optionsBtnHTML = q.hideOptions ? `<button id="btn-options-${q.id}" onpointerdown="event.stopPropagation(); event.preventDefault(); toggleOptions(${q.id});" class="${toggleClass}" style="position:relative;z-index:110;pointer-events:auto"><i data-lucide="${toggleIcon}" class="w-4 h-4"></i> ${toggleLabel}</button>` : '';
     // In horizontal mode, transcript is shown globally above questions, not per-question
     const showTranscriptPerQuestion = q.transcript && !isH;
-    const transcriptBtnHTML = showTranscriptPerQuestion ? `<button id="btn-transcript-${q.id}" onpointerdown="event.stopPropagation(); event.preventDefault(); toggleTranscript(${q.id});" class="${transcriptToggleClass}" style="position:relative;z-index:110;pointer-events:auto"><i data-lucide="${transcriptToggleIcon}" class="w-4 h-4"></i> ${transcriptToggleLabel}</button>` : '';
-    const answerBtnHTML = `<button id="btn-answer-${q.id}" onpointerdown="event.stopPropagation(); event.preventDefault(); checkAnswer(${q.id});" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold ${isH ? 'text-sm px-4 py-3' : 'text-base px-5 py-3'} rounded-xl shadow-md shadow-emerald-200 transition flex items-center gap-1" style="position:relative;z-index:110;pointer-events:auto"><i data-lucide="check-check" class="w-4 h-4"></i> Show Answer</button>`;
-
-    // Collect action buttons that exist
-    const actionButtons = [optionsBtnHTML, transcriptBtnHTML, answerBtnHTML].filter(b => b);
+    const transcriptBtnHTML = showTranscriptPerQuestion ? `<button id="btn-transcript-${q.id}" onpointerdown="event.stopPropagation(); event.preventDefault(); console.log('TRANSCRIPT BTN CLICKED qId=${q.id}'); toggleTranscript(${q.id});" class="${transcriptToggleClass}" style="position:relative;z-index:110;pointer-events:auto"><i data-lucide="${transcriptToggleIcon}" class="w-4 h-4"></i> ${transcriptToggleLabel}</button>` : '';
+    console.log('[generateQuestionHTML] q.id:', q.id, 'showTranscriptPerQuestion:', showTranscriptPerQuestion, 'hasTranscript:', !!q.transcript);
+    const answerBtnHTML = `<button id="btn-answer-${q.id}" onpointerdown="event.stopPropagation(); event.preventDefault(); checkAnswer(${q.id});" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold ${isH ? 'text-sm px-4 py-3' : 'text-base px-5 py-3'} rounded-xl transition flex items-center gap-1" style="position:relative;z-index:110;pointer-events:auto"><i data-lucide="check-check" class="w-4 h-4"></i> Show Answer</button>`;
 
     return `
         <div class="${isH ? 'text-base' : 'text-lg'} font-bold text-slate-800 leading-snug mb-3">${q.questionText}</div>
-        ${showTranscriptPerQuestion ? `<div id="transcript-box-${q.id}" class="${transcriptShown ? '' : 'hidden'} mt-3 mb-3 bg-yellow-50 border border-slate-200 p-4 rounded-2xl text-slate-700 text-base whitespace-pre-line">${q.transcript}</div>` : ''}
-        <div id="options-wrapper-${q.id}" class="mb-2" style="position:relative;z-index:1">
+        ${showTranscriptPerQuestion ? `
+        <div class="flex flex-col ${btnGap} mb-2">
+            ${transcriptBtnHTML}
+        </div>
+        <div class="relative mt-1 mb-3">
+            <div id="transcript-box-${q.id}" class="${transcriptShown ? '' : 'hidden'} bg-yellow-50 border border-slate-200 p-4 rounded-2xl text-slate-700 text-base whitespace-pre-line relative">${q.transcript}</div>
+            <canvas id="transcript-canvas-${q.id}" data-element-id="transcript-${q.id}" class="transcript-canvas absolute top-0 left-0 w-full h-full z-10"></canvas>
+        </div>` : ''}
+        <div class="flex flex-col ${btnGap} mb-2">
+            ${optionsBtnHTML}
+        </div>
+        <div id="options-wrapper-${q.id}" class="mb-2" style="position:relative">
             <div id="options-container-${q.id}" class="flex flex-col ${isH ? 'gap-3' : 'gap-3'} ${hideChoices ? 'hidden' : ''}">
                 ${optionsMarkup}
             </div>
+            <canvas id="options-canvas-${q.id}" data-element-id="options-${q.id}" class="options-canvas absolute top-0 left-0 w-full h-full z-10"></canvas>
         </div>
         <div class="flex flex-col ${btnGap} mb-2">
-            ${actionButtons.join('\n            ')}
+            ${answerBtnHTML}
         </div>
-        <div id="explanation-box-${q.id}" class="${explanationVisible[q.id] ? '' : 'hidden'} mt-3 bg-emerald-50 border-l-4 border-emerald-500 p-4 rounded-r-xl text-emerald-800 text-base leading-relaxed shadow-sm"></div>
+        <div class="relative mt-1">
+            <div id="explanation-box-${q.id}" class="${explanationVisible[q.id] ? '' : 'hidden'} bg-emerald-50 border-l-4 border-emerald-500 p-4 rounded-r-xl text-emerald-800 text-base leading-relaxed shadow-sm relative"></div>
+            <canvas id="answer-canvas-${q.id}" data-element-id="answer-${q.id}" class="answer-canvas absolute top-0 left-0 w-full h-full z-10"></canvas>
+        </div>
     `;
 }
         function selectOption(qId, optIdx) {
@@ -1100,17 +1332,34 @@ function generateQuestionHTML(q) {
                     if (!q) return;
 
                     const box = document.getElementById(`explanation-box-${qId}`);
+                    const answerCanvas = document.getElementById(`answer-canvas-${qId}`);
                     const container = document.getElementById(`options-container-${qId}`);
                     const btn = document.getElementById(`btn-answer-${qId}`);
 
                     if (explanationVisible[qId] && !forceShow) {
+                        // ซ่อนเฉลย
                         explanationVisible[qId] = false;
                         box.classList.add('hidden');
+                        if (answerCanvas) answerCanvas.classList.add('hidden');
 
                         if (btn) {
-                            btn.className = "w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-5 py-3 rounded-xl text-base shadow-md shadow-emerald-200 transition flex items-center gap-1.5";
-                            btn.innerHTML = `<i data-lucide="check-check" class="w-4 h-4"></i> Show Answer`;
-                            if (window.lucide) { lucide.createIcons(); }
+                            // Show Answer state: emerald solid
+                            const showClasses = new Set('w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-5 py-3 rounded-xl text-base transition flex items-center gap-1'.split(/\s+/));
+                            const hideClasses = new Set('w-full bg-emerald-50 hover:bg-emerald-100 text-emerald-600 hover:text-emerald-700 font-medium px-5 py-3 rounded-xl text-base transition flex items-center gap-1 border border-emerald-200'.split(/\s+/));
+                            const showOnly = [...showClasses].filter(c => !hideClasses.has(c));
+                            const hideOnly = [...hideClasses].filter(c => !showClasses.has(c));
+                            hideOnly.forEach(c => btn.classList.remove(c));
+                            showOnly.forEach(c => btn.classList.add(c));
+                            const iconI = btn.querySelector('i[data-lucide]');
+                            if (iconI && window.lucide) {
+                                const newIcon = lucide.createElement('check-check');
+                                newIcon.setAttribute('class', 'w-4 h-4');
+                                iconI.replaceChildren(newIcon);
+                            }
+                            const lastNode = btn.childNodes[btn.childNodes.length - 1];
+                            if (lastNode && lastNode.nodeType === Node.TEXT_NODE) {
+                                lastNode.textContent = ' Show Answer';
+                            }
                         }
 
                         resizeQuestionPanelCanvas();
@@ -1129,18 +1378,37 @@ function generateQuestionHTML(q) {
                         }
                     }
                     else {
+                        // แสดงเฉลย
                         explanationVisible[qId] = true;
                         const correctOptionText = q.options ? q.options[q.correctAnswer] : '';
                         box.innerHTML = `<div><strong class="text-emerald-700 text-base">เฉลย: ${String.fromCharCode(65+q.correctAnswer)} ${correctOptionText}</strong></div><div class="mt-1 text-slate-600">${q.explanation}</div>`;
                         box.classList.remove('hidden');
+                        if (answerCanvas) answerCanvas.classList.remove('hidden');
 
-                                        if (btn) {
-                                            btn.className = "w-full bg-transparent hover:bg-slate-100 text-slate-400 hover:text-slate-600 font-medium px-5 py-3 rounded-xl text-base transition flex items-center gap-1.5 border border-slate-200";
-                                            btn.innerHTML = `<i data-lucide="eye-off" class="w-4 h-4"></i> Hide Answer`;
-                                            if (window.lucide) { lucide.createIcons(); }
-                                        }
+                        if (btn) {
+                            // Hide Answer state: emerald muted (matches explanation box)
+                            const showClasses = new Set('w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-5 py-3 rounded-xl text-base shadow-md shadow-emerald-200 transition flex items-center gap-1'.split(/\s+/));
+                            const hideClasses = new Set('w-full bg-emerald-50 hover:bg-emerald-100 text-emerald-600 hover:text-emerald-700 font-medium px-5 py-3 rounded-xl text-base transition flex items-center gap-1 border border-emerald-200'.split(/\s+/));
+                            const showOnly = [...showClasses].filter(c => !hideClasses.has(c));
+                            const hideOnly = [...hideClasses].filter(c => !showClasses.has(c));
+                            showOnly.forEach(c => btn.classList.remove(c));
+                            hideOnly.forEach(c => btn.classList.add(c));
+                            const iconI = btn.querySelector('i[data-lucide]');
+                            if (iconI && window.lucide) {
+                                const newIcon = lucide.createElement('eye-off');
+                                newIcon.setAttribute('class', 'w-4 h-4');
+                                iconI.replaceChildren(newIcon);
+                            }
+                            const lastNode = btn.childNodes[btn.childNodes.length - 1];
+                            if (lastNode && lastNode.nodeType === Node.TEXT_NODE) {
+                                lastNode.textContent = ' Hide Answer';
+                            }
+                        }
 
                         resizeQuestionPanelCanvas();
+
+                        // Setup answer canvas หลังจาก box แสดงผลแล้ว
+                        setTimeout(() => { setupAnswerCanvas(qId); updateCanvasesPointerEvents(); }, 50);
 
                         if (container) {
                             const buttons = container.getElementsByTagName('button');
@@ -1159,41 +1427,100 @@ function _togglePanel(stateMap, qId, boxId, btnId, cfg) {
     const btn   = document.getElementById(btnId);
     if (box) box.classList.toggle('hidden', !isOn);
     if (btn) {
+        // Collect all unique classes from both states
         const sz = btn.className.includes('text-sm') ? 'text-sm px-4 py-3' : 'text-base px-5 py-3';
-        btn.className = (isOn ? cfg.classOn : cfg.classOff).replace('{sz}', sz);
-        btn.innerHTML = `<i data-lucide="${isOn ? cfg.iconOn : cfg.iconOff}" class="w-4 h-4"></i> ${isOn ? cfg.labelOn : cfg.labelOff}`;
-        if (window.lucide) lucide.createIcons();
+        const onClasses  = new Set(cfg.classOn.replace('{sz}', sz).split(/\s+/).filter(Boolean));
+        const offClasses = new Set(cfg.classOff.replace('{sz}', sz).split(/\s+/).filter(Boolean));
+        // Classes common to both states — never touch these
+        const common = [...onClasses].filter(c => offClasses.has(c));
+        // Classes that differ — swap them
+        const onOnly  = [...onClasses].filter(c => !offClasses.has(c));
+        const offOnly = [...offClasses].filter(c => !onClasses.has(c));
+        if (isOn) {
+            offOnly.forEach(c => btn.classList.remove(c));
+            onOnly.forEach(c => btn.classList.add(c));
+        } else {
+            onOnly.forEach(c => btn.classList.remove(c));
+            offOnly.forEach(c => btn.classList.add(c));
+        }
+        // Update icon: replace only the SVG inside the <i> tag (no full re-render)
+        const iconI = btn.querySelector('i[data-lucide]');
+        if (iconI && window.lucide) {
+            const newIcon = lucide.createElement(isOn ? cfg.iconOn : cfg.iconOff);
+            newIcon.setAttribute('class', 'w-4 h-4');
+            iconI.replaceChildren(newIcon);
+        }
+        // Update only the trailing text node (preserve icon element)
+        const lastNode = btn.childNodes[btn.childNodes.length - 1];
+        if (lastNode && lastNode.nodeType === Node.TEXT_NODE) {
+            lastNode.textContent = ' ' + (isOn ? cfg.labelOn : cfg.labelOff);
+        }
     }
         }
         function toggleOptions(qId) {
     const q = currentSet?.questions.find(x => x.id === qId);
     if (!q || !q.hideOptions) return;
     const note = document.getElementById(`options-hidden-note-${qId}`);
-    _togglePanel(hiddenChoices, qId,
-        `options-container-${qId}`,
-        `btn-options-${qId}`,
-        {
-            labelOn:  'Hide Options', labelOff: 'Show Options',
-            iconOn:   'eye-off',      iconOff:  'eye',
-            classOn:  'w-full bg-transparent hover:bg-slate-100 text-slate-400 hover:text-slate-600 font-medium {sz} rounded-xl transition flex items-center gap-1 mb-2 border border-slate-200',
-            classOff: 'w-full bg-red-600 hover:bg-red-700 text-white font-bold {sz} rounded-xl shadow-md shadow-red-200 transition flex items-center gap-1 mb-2',
+    // hiddenChoices เก็บสถานะ "ซ่อน" (true = ซ่อน, false = แสดง)
+    // สลับสถานะ: ถ้าตอนนี้ซ่อนอยู่ → แสดง, ถ้าแสดงอยู่ → ซ่อน
+    const wasHidden = hiddenChoices[qId];
+    hiddenChoices[qId] = !wasHidden;
+    const box = document.getElementById(`options-container-${qId}`);
+    const btn = document.getElementById(`btn-options-${qId}`);
+    if (box) box.classList.toggle('hidden', !wasHidden);  // ถ้าเคยซ่อน → แสดง (remove hidden), ถ้าเคยแสดง → ซ่อน (add hidden)
+    if (btn) {
+        const sz = btn.className.includes('text-sm') ? 'text-sm px-4 py-3' : 'text-base px-5 py-3';
+        if (wasHidden) {
+            // กำลังแสดง options → ปุ่มเป็น "Hide Options" (สีอ่อน)
+            btn.className = `w-full bg-rose-50 hover:bg-rose-100 text-rose-600 hover:text-rose-700 font-medium ${sz} rounded-xl transition flex items-center gap-1 mb-2 border border-rose-200`;
+            const iconI = btn.querySelector('i[data-lucide]');
+            if (iconI && window.lucide) {
+                const newIcon = lucide.createElement('eye-off');
+                newIcon.setAttribute('class', 'w-4 h-4');
+                iconI.replaceChildren(newIcon);
+            }
+            const lastNode = btn.childNodes[btn.childNodes.length - 1];
+            if (lastNode && lastNode.nodeType === Node.TEXT_NODE) lastNode.textContent = ' Hide Options';
+        } else {
+            // กำลังซ่อน options → ปุ่มเป็น "Show Options" (สีแดงเข้ม)
+            btn.className = `w-full bg-red-600 hover:bg-red-700 text-white font-bold ${sz} rounded-xl transition flex items-center gap-1 mb-2`;
+            const iconI = btn.querySelector('i[data-lucide]');
+            if (iconI && window.lucide) {
+                const newIcon = lucide.createElement('eye');
+                newIcon.setAttribute('class', 'w-4 h-4');
+                iconI.replaceChildren(newIcon);
+            }
+            const lastNode = btn.childNodes[btn.childNodes.length - 1];
+            if (lastNode && lastNode.nodeType === Node.TEXT_NODE) lastNode.textContent = ' Show Options';
         }
-    );
+    }
     if (note) note.style.display = hiddenChoices[qId] ? 'none' : 'block';
+    // ซ่อน/แสดง options canvas ด้วย
+    const optionsCanvas = document.getElementById(`options-canvas-${qId}`);
+    if (optionsCanvas) optionsCanvas.classList.toggle('hidden', hiddenChoices[qId]);
+    // Setup canvas หลังแสดง options
+    if (!hiddenChoices[qId]) setTimeout(() => { setupOptionsCanvas(qId); updateCanvasesPointerEvents(); }, 50);
         }
         function toggleTranscript(qId) {
     const q = currentSet?.questions.find(x => x.id === qId);
     if (!q || !q.transcript) return;
+    const isOn = !transcriptVisible[qId];
     _togglePanel(transcriptVisible, qId,
         `transcript-box-${qId}`,
         `btn-transcript-${qId}`,
         {
             labelOn:  'Hide Transcript', labelOff: 'Show Transcript',
             iconOn:   'eye-off',         iconOff:  'eye',
-            classOn:  'w-full bg-transparent hover:bg-slate-100 text-slate-400 hover:text-slate-600 font-medium {sz} rounded-xl transition flex items-center gap-1 mb-2 border border-slate-200',
-            classOff: 'w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold {sz} rounded-xl shadow-md shadow-yellow-200 transition flex items-center gap-1 mb-2',
+            classOn:  'w-full bg-amber-50 hover:bg-amber-100 text-amber-700 hover:text-amber-800 font-medium {sz} rounded-xl transition flex items-center gap-1 mb-2 border border-amber-200',
+            classOff: 'w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold {sz} rounded-xl transition flex items-center gap-1 mb-2',
         }
     );
+    // ซ่อน/แสดง transcript canvas ด้วย
+    const transcriptCanvas = document.getElementById(`transcript-canvas-${qId}`);
+    if (transcriptCanvas) transcriptCanvas.classList.toggle('hidden', !isOn);
+    // Setup canvas หลังแสดงผล
+    console.log('[toggleTranscript] isOn:', isOn, 'currentMode:', currentMode);
+    if (isOn) setTimeout(() => setupTranscriptCanvas(qId), 50);
         }
         function toggleGlobalTranscript() {
     const screenQuestions = examScreens[currentIdx];
@@ -1204,13 +1531,37 @@ function _togglePanel(stateMap, qId, boxId, btnId, cfg) {
     const isOn = transcriptVisible[qId];
     const box = document.getElementById('global-transcript-box');
     const btn = document.getElementById('btn-global-transcript');
+    const transcriptCanvas = document.getElementById('global-transcript-canvas');
     if (box) box.classList.toggle('hidden', !isOn);
+    if (transcriptCanvas) transcriptCanvas.classList.toggle('hidden', !isOn);
     if (btn) {
-        const icon = isOn ? 'eye-off' : 'eye';
-        const label = isOn ? 'Hide Transcript' : 'Show Transcript';
-        btn.innerHTML = `<i data-lucide="${icon}" class="w-4 h-4"></i> ${label}`;
-        if (window.lucide) lucide.createIcons();
+        // Swap classes instead of rebuilding innerHTML
+        const onClasses  = new Set('w-full bg-amber-50 hover:bg-amber-100 text-amber-700 hover:text-amber-800 font-medium text-sm px-4 py-2.5 rounded-xl transition flex items-center justify-center gap-2 border border-amber-200'.split(/\s+/));
+        const offClasses = new Set('w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold text-sm px-4 py-2.5 rounded-xl transition flex items-center justify-center gap-2'.split(/\s+/));
+        const onOnly  = [...onClasses].filter(c => !offClasses.has(c));
+        const offOnly = [...offClasses].filter(c => !onClasses.has(c));
+        if (isOn) {
+            offOnly.forEach(c => btn.classList.remove(c));
+            onOnly.forEach(c => btn.classList.add(c));
+        } else {
+            onOnly.forEach(c => btn.classList.remove(c));
+            offOnly.forEach(c => btn.classList.add(c));
+        }
+        // Update icon: replace only the SVG inside the <i> tag (no full re-render)
+        const iconI = btn.querySelector('i[data-lucide]');
+        if (iconI && window.lucide) {
+            const newIcon = lucide.createElement(isOn ? 'eye-off' : 'eye');
+            newIcon.setAttribute('class', 'w-4 h-4');
+            iconI.replaceChildren(newIcon);
+        }
+        // Update label text node only
+        const lastNode = btn.childNodes[btn.childNodes.length - 1];
+        if (lastNode && lastNode.nodeType === Node.TEXT_NODE) {
+            lastNode.textContent = ' ' + (isOn ? 'Hide Transcript' : 'Show Transcript');
+        }
     }
+    // Setup canvas หลังแสดงผล
+    if (isOn) setTimeout(() => setupGlobalTranscriptCanvas(qId), 50);
         }
         function jumpToQuestion(index) {
             const idx = parseInt(index);
@@ -1363,38 +1714,18 @@ function initViewportControls() {
             spaceHeld = false;
         }
     });
-}
 
-    function onPan(e) {
-        if (isPanning) {
-            e.preventDefault();
-            panX = e.clientX - panStartX;
-            panY = e.clientY - panStartY;
-            viewportApplyTransform();
-        }
-    }
-
-    function endPan() {
-        if (isPanning) {
-            isPanning = false;
-            rightClickPanning = false;
-            viewportWorkspace.classList.remove('panning');
-        }
-    }
-
-    viewportWorkspace.addEventListener('mousedown', startPan);
-    if (contentArea) contentArea.addEventListener('mousedown', startPan);
-    window.addEventListener('mousemove', onPan);
-    window.addEventListener('mouseup', endPan);
-
+    // Ctrl+wheel = viewport zoom
     viewportWorkspace.addEventListener('wheel', e => {
         if (e.ctrlKey || e.metaKey) {
             e.preventDefault();
             const delta = e.deltaY > 0 ? -0.1 : 0.1;
             viewportSetScale(zoomScale + delta, e.clientX, e.clientY);
+            resizeAllActiveCanvases();
         }
     }, { passive: false });
 
+    // Pinch-to-zoom (2 fingers)
     viewportWorkspace.addEventListener('touchstart', e => {
         if (e.touches.length === 2) {
             e.preventDefault();
@@ -1416,6 +1747,7 @@ function initViewportControls() {
                 const midY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
                 const newScale = pinchStartScale * (currentDistance / pinchStartDistance);
                 viewportSetScale(newScale, midX, midY);
+                resizeAllActiveCanvases();
             }
         }
     }, { passive: false });
@@ -1424,25 +1756,11 @@ function initViewportControls() {
         pinchStartDistance = 0;
     });
 
-    document.addEventListener('keydown', e => {
-        if (e.code === 'Space' && !spaceHeld && document.activeElement.tagName !== 'INPUT') {
-            spaceHeld = true;
-            if (currentMode !== 'mouse') {
-                previousTool = currentMode;
-                setTool('mouse');
-            }
-        }
-    });
-
-    document.addEventListener('keyup', e => {
-        if (e.code === 'Space') {
-            spaceHeld = false;
-        }
-    });
     viewportWorkspace.addEventListener('contextmenu', e => {
         e.preventDefault();
     });
-    
+}
+
 function showViewportControls() {
     if (viewportControls) viewportControls.classList.remove('hidden');
     if (window.lucide) lucide.createIcons();
