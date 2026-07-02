@@ -1744,12 +1744,13 @@ function initViewportControls() {
     viewportWorkspace.addEventListener('touchmove', e => {
         if (e.touches.length === 2) {
             e.preventDefault();
-            const wsRect = viewportWorkspace.getBoundingClientRect();
-            const midX = (e.touches[0].clientX + e.touches[1].clientX) / 2 - wsRect.left;
-            const midY = (e.touches[0].clientY + e.touches[1].clientY) / 2 - wsRect.top;
+            const dx = e.touches[0].clientX - e.touches[1].clientX;
+            const dy = e.touches[0].clientY - e.touches[1].clientY;
+            const currentDistance = Math.hypot(dx, dy);
             if (pinchStartDistance > 0) {
-                const midX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
-                const midY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
+                const wsRect = viewportWorkspace.getBoundingClientRect();
+                const midX = (e.touches[0].clientX + e.touches[1].clientX) / 2 - wsRect.left;
+                const midY = (e.touches[0].clientY + e.touches[1].clientY) / 2 - wsRect.top;
                 const newScale = pinchStartScale * (currentDistance / pinchStartDistance);
                 viewportSetScale(newScale, midX, midY);
                 clearTimeout(wheelResizeTimeout);
