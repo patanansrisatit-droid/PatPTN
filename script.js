@@ -1721,7 +1721,10 @@ function initViewportControls() {
         if (e.ctrlKey || e.metaKey) {
             e.preventDefault();
             const delta = e.deltaY > 0 ? -0.1 : 0.1;
-            viewportSetScale(zoomScale + delta, e.clientX, e.clientY);
+            const wsRect = viewportWorkspace.getBoundingClientRect();
+            const localX = e.clientX - wsRect.left;
+            const localY = e.clientY - wsRect.top;
+            viewportSetScale(zoomScale + delta, localX, localY);
             clearTimeout(wheelResizeTimeout);
             wheelResizeTimeout = setTimeout(resizeAllActiveCanvases, 120);
         }
@@ -1741,9 +1744,9 @@ function initViewportControls() {
     viewportWorkspace.addEventListener('touchmove', e => {
         if (e.touches.length === 2) {
             e.preventDefault();
-            const dx = e.touches[0].clientX - e.touches[1].clientX;
-            const dy = e.touches[0].clientY - e.touches[1].clientY;
-            const currentDistance = Math.hypot(dx, dy);
+            const wsRect = viewportWorkspace.getBoundingClientRect();
+            const midX = (e.touches[0].clientX + e.touches[1].clientX) / 2 - wsRect.left;
+            const midY = (e.touches[0].clientY + e.touches[1].clientY) / 2 - wsRect.top;
             if (pinchStartDistance > 0) {
                 const midX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
                 const midY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
