@@ -403,13 +403,14 @@ function resizeAllActiveCanvases() {
     galleryCanvases.forEach(c => {
         const img = c.parentElement.querySelector('img');
         if (img) {
-            const rect = img.getBoundingClientRect();
-            if (rect.width > 0 && rect.height > 0) {
+            const w = img.offsetWidth;
+            const h = img.offsetHeight;
+            if (w > 0 && h > 0) {
                 const dpr = window.devicePixelRatio || 1;
-                c.width = Math.round(rect.width * dpr);
-                c.height = Math.round(rect.height * dpr);
-                c.style.width = rect.width + 'px';
-                c.style.height = rect.height + 'px';
+                c.width = Math.round(w * dpr);
+                c.height = Math.round(h * dpr);
+                c.style.width = w + 'px';
+                c.style.height = h + 'px';
                 const ctx = c.getContext('2d');
                 ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
                 redrawCanvas(c);
@@ -421,12 +422,13 @@ function resizeAllActiveCanvases() {
     document.querySelectorAll('.options-canvas').forEach(cvs => {
         const container = cvs.parentElement.querySelector('[id^="options-container-"]');
         if (container && !container.classList.contains('hidden')) {
-            const rect = container.getBoundingClientRect();
-            if (rect.width > 0 && rect.height > 0) {
-                cvs.width = Math.round(rect.width * dpr);
-                cvs.height = Math.round(rect.height * dpr);
-                cvs.style.width = rect.width + 'px';
-                cvs.style.height = rect.height + 'px';
+            const w = container.offsetWidth;
+            const h = container.offsetHeight;
+            if (w > 0 && h > 0) {
+                cvs.width = Math.round(w * dpr);
+                cvs.height = Math.round(h * dpr);
+                cvs.style.width = w + 'px';
+                cvs.style.height = h + 'px';
                 const ctx = cvs.getContext('2d');
                 ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
                 redrawCanvas(cvs);
@@ -438,12 +440,13 @@ function resizeAllActiveCanvases() {
     document.querySelectorAll('.answer-canvas').forEach(cvs => {
         const box = cvs.parentElement.querySelector('[id^="explanation-box-"]');
         if (box && !box.classList.contains('hidden')) {
-            const rect = box.getBoundingClientRect();
-            if (rect.width > 0 && rect.height > 0) {
-                cvs.width = Math.round(rect.width * dpr);
-                cvs.height = Math.round(rect.height * dpr);
-                cvs.style.width = rect.width + 'px';
-                cvs.style.height = rect.height + 'px';
+            const w = box.offsetWidth;
+            const h = box.offsetHeight;
+            if (w > 0 && h > 0) {
+                cvs.width = Math.round(w * dpr);
+                cvs.height = Math.round(h * dpr);
+                cvs.style.width = w + 'px';
+                cvs.style.height = h + 'px';
                 const ctx = cvs.getContext('2d');
                 ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
                 redrawCanvas(cvs);
@@ -451,16 +454,16 @@ function resizeAllActiveCanvases() {
         }
     });
 
-    // Resize transcript-canvas ตาม box ใหม่
-    document.querySelectorAll('.transcript-canvas').forEach(cvs => {
+document.querySelectorAll('.transcript-canvas').forEach(cvs => {
         const box = cvs.parentElement.querySelector('[id^="transcript-box-"]');
         if (box && !box.classList.contains('hidden')) {
-            const rect = box.getBoundingClientRect();
-            if (rect.width > 0 && rect.height > 0) {
-                cvs.width = Math.round(rect.width * dpr);
-                cvs.height = Math.round(rect.height * dpr);
-                cvs.style.width = rect.width + 'px';
-                cvs.style.height = rect.height + 'px';
+            const w = box.offsetWidth;
+            const h = box.offsetHeight;
+            if (w > 0 && h > 0) {
+                cvs.width = Math.round(w * dpr);
+                cvs.height = Math.round(h * dpr);
+                cvs.style.width = w + 'px';
+                cvs.style.height = h + 'px';
                 const ctx = cvs.getContext('2d');
                 ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
                 redrawCanvas(cvs);
