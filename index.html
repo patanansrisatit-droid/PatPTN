@@ -149,8 +149,8 @@
         </button>
     </div>
     <div id="zoom-viewport" class="flex-1 flex items-center justify-center overflow-hidden cursor-grab active:cursor-grabbing">
-        <div id="zoom-transform-container" class="relative">
-            <img id="zoomed-image" src="" alt="Zoomed" class="max-w-[95vw] max-h-[calc(85vh-80px)] object-contain pointer-events-none select-none" style="z-index:100">
+        <div id="zoom-transform-container" class="relative inline-block">
+            <img id="zoomed-image" src="" alt="Zoomed" class="block w-auto h-auto max-w-[95vw] max-h-[calc(85vh-80px)] pointer-events-none select-none" style="z-index:100">
             <canvas id="zoomCanvas" data-element-id="" class="gallery-canvas absolute top-0 left-0 w-full h-full" style="z-index:200"></canvas>
         </div>
     </div>
