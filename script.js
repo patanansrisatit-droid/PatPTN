@@ -1649,6 +1649,7 @@ function moveQuestion(step) {
 const viewportWorkspace = document.getElementById('viewport-workspace');
 const zoomableContent = document.getElementById('zoomable-content');
 const viewportControls = document.getElementById('viewport-controls');
+let wheelResizeTimeout = null;
 
 function viewportApplyTransform() {
     zoomableContent.style.transform = `translate(${panX}px, ${panY}px) scale(${zoomScale})`;
@@ -1721,7 +1722,8 @@ function initViewportControls() {
             e.preventDefault();
             const delta = e.deltaY > 0 ? -0.1 : 0.1;
             viewportSetScale(zoomScale + delta, e.clientX, e.clientY);
-            resizeAllActiveCanvases();
+            clearTimeout(wheelResizeTimeout);
+            wheelResizeTimeout = setTimeout(resizeAllActiveCanvases, 120);
         }
     }, { passive: false });
 
@@ -1747,7 +1749,8 @@ function initViewportControls() {
                 const midY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
                 const newScale = pinchStartScale * (currentDistance / pinchStartDistance);
                 viewportSetScale(newScale, midX, midY);
-                resizeAllActiveCanvases();
+                clearTimeout(wheelResizeTimeout);
+                wheelResizeTimeout = setTimeout(resizeAllActiveCanvases, 120);
             }
         }
     }, { passive: false });
