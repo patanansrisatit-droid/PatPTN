@@ -506,16 +506,31 @@ function applyStrokeStyle(ctx, mode, color, size, opacity) {
     ctx.lineJoin    = 'round';
 }
 
+function getObjectContainRect(boxW, boxH, natW, natH) {
+    const boxAspect = boxW / boxH;
+    const imgAspect = natW / natH;
+    let w, h;
+    if (imgAspect > boxAspect) {
+        w = boxW;
+        h = boxW / imgAspect;
+    } else {
+        h = boxH;
+        w = boxH * imgAspect;
+    }
+    return { x: (boxW - w) / 2, y: (boxH - h) / 2, w, h };
+}
+
 function correctCoordinates(clientX, clientY, canvas) {
     const cRect = canvas.getBoundingClientRect();
-    const visualX = clientX - cRect.left;
-    const visualY = clientY - cRect.top;
-    // Return normalized coordinates (0-1) สำหรับเก็บใน allStrokes
-    const normalizedX = visualX / cRect.width;
-    const normalizedY = visualY / cRect.height;
-    if (canvas.classList.contains('gallery-canvas')) {
-        console.log('[correctCoordinates] gallery-canvas id:', canvas.id, 'cRect:', cRect.width.toFixed(1), 'x', cRect.height.toFixed(1), 'canvas.width:', canvas.width, 'canvas.height:', canvas.height, 'normalized:', normalizedX.toFixed(3), normalizedY.toFixed(3));
+    const img = canvas.parentElement.querySelector('img');
+    let content = { x: 0, y: 0, w: cRect.width, h: cRect.height };
+    if (img && img.naturalWidth && img.naturalHeight) {
+        content = getObjectContainRect(cRect.width, cRect.height, img.naturalWidth, img.naturalHeight);
     }
+    const visualX = clientX - cRect.left - content.x;
+    const visualY = clientY - cRect.top - content.y;
+    const normalizedX = visualX / content.w;
+    const normalizedY = visualY / content.h;
     return { x: normalizedX, y: normalizedY };
 }
 
@@ -639,6 +654,13 @@ function redrawCanvas(canvas) {
     const displayWidth = canvas.width / dpr;
     const displayHeight = canvas.height / dpr;
 
+    // หาพื้นที่รูปจริง (หัก letterbox ของ object-contain ออก)
+    const img = canvas.parentElement.querySelector('img');
+    let content = { x: 0, y: 0, w: displayWidth, h: displayHeight };
+    if (img && img.naturalWidth && img.naturalHeight) {
+        content = getObjectContainRect(displayWidth, displayHeight, img.naturalWidth, img.naturalHeight);
+    }
+
     const currentNormId = getNormalizedId(elementId);
 
     const filtered = allStrokes.filter(s => {
@@ -650,9 +672,9 @@ function redrawCanvas(canvas) {
         if (s.points.length < 1) return;
         ctx.beginPath();
         applyStrokeStyle(ctx, s.mode, s.color, s.size, s.opacity);
-        ctx.moveTo(s.points[0].x * displayWidth, s.points[0].y * displayHeight);
+        ctx.moveTo(content.x + s.points[0].x * content.w, content.y + s.points[0].y * content.h);
         for(let i = 1; i < s.points.length; i++) {
-            ctx.lineTo(s.points[i].x * displayWidth, s.points[i].y * displayHeight);
+            ctx.lineTo(content.x + s.points[i].x * content.w, content.y + s.points[i].y * content.h);
         }
         ctx.stroke();
     });
@@ -661,9 +683,9 @@ function redrawCanvas(canvas) {
         ctx.beginPath();
         const s = toolSettings[currentMode];
         applyStrokeStyle(ctx, currentMode, activeColor, s.size, s.opacity);
-        ctx.moveTo(currentPath[0].x * displayWidth, currentPath[0].y * displayHeight);
+        ctx.moveTo(content.x + currentPath[0].x * content.w, content.y + currentPath[0].y * content.h);
         for(let i = 1; i < currentPath.length; i++) {
-            ctx.lineTo(currentPath[i].x * displayWidth, currentPath[i].y * displayHeight);
+            ctx.lineTo(content.x + currentPath[i].x * content.w, content.y + currentPath[i].y * content.h);
         }
         ctx.stroke();
     }
