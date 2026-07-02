@@ -773,6 +773,18 @@ function clearCurrentCanvas() {
     allStrokes = allStrokes.filter(s => s.questionIdx !== currentIdx);
     redrawAllCanvasesOnScreen();
     saveStrokesToStorage();
+
+    // Reset zoom/pan state ไปด้วยในตัว
+    clearTimeout(wheelResizeTimeout);
+    pinchStartDistance = 0;
+    zoomScale = 1;
+    panX = 0;
+    panY = 0;
+    viewportApplyTransform();
+    viewportWorkspace.classList.remove('panning');
+    requestAnimationFrame(() => {
+        resizeAllActiveCanvases();
+    });
 }
 
 function setupPan() {
