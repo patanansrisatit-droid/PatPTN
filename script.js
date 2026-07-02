@@ -910,28 +910,37 @@ function openZoom(imgUrl, elementId) {
     zoomedImg.src = imgUrl;
 
     const setupZoomCanvas = () => {
-        const rect = zoomedImg.getBoundingClientRect();
-        const w = rect.width || zoomedImg.naturalWidth || 800;
-        const h = rect.height || zoomedImg.naturalHeight || 600;
+        // 1. ใช้ขนาดดั้งเดิมของภาพเสมอ เพื่อป้องกันความเพี้ยนจากการที่ภาพกำลังถูกซูมอยู่
+        const w = zoomedImg.naturalWidth;
+        const h = zoomedImg.naturalHeight;
 
-        if (w === 0 || h === 0) {
+        // หากรูปยังโหลดขนาดดั้งเดิมไม่เสร็จ ให้รอแล้วเรียกใหม่
+        if (!w || !h) {
             setTimeout(setupZoomCanvas, 30);
             return;
         }
 
+        // 2. ตั้งค่า Resolution เชิงพิกัดของ Canvas ให้คมชัดตามหน้าจอ
         const dpr = window.devicePixelRatio || 1;
         zoomCanvas.width = Math.round(w * dpr);
         zoomCanvas.height = Math.round(h * dpr);
-        zoomCanvas.style.width = w + 'px';
-        zoomCanvas.style.height = h + 'px';
+        
+        // 3. (สำคัญมาก) ปล่อยให้ CSS เป็นตัวคุมขนาดการแสดงผลให้ครอบทับรูปภาพเป๊ะๆ 
+        // โดยไม่ต้องฟิกซ์ขนาดเป็น px อีกต่อไป
+        zoomCanvas.style.width = '100%';
+        zoomCanvas.style.height = '100%';
+
         const ctx = zoomCanvas.getContext('2d');
         ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        
+        // 4. วาดเส้นเก่าลงไป "เพียงครั้งเดียว"
         redrawCanvas(zoomCanvas);
+        
         updateCanvasesPointerEvents();
         document.body.classList.add('zoom-open');
         zoomOverlay.classList.remove('hidden');
     };
-
+    
     zoomedImg.onload = () => {
         setTimeout(setupZoomCanvas, 60);
     };
